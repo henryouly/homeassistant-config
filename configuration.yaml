@@ -162,7 +162,7 @@ logger:
   default: error
 
 # Amazon Echo
-emulated_hue:
+# emulated_hue:
 
 mqtt:
   broker: !secret mqtt_server
