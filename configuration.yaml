@@ -47,12 +47,6 @@ history:
       - sensor.downstairs_thermostat_humidity
       - sensor.upstairs_thermostat_temperature
       - sensor.upstairs_thermostat_humidity
-  exclude:
-    domains:
-      - sensor
-      - automation
-      - binary_sensor
-     
 
 # View all events in a logbook
 logbook:
