@@ -43,10 +43,15 @@ history:
       - sensor.work_to_home
       - sensor.pmu_current
       - sensor.pmu_voltage
+      - sensor.pmu_power
       - sensor.downstairs_thermostat_temperature
       - sensor.downstairs_thermostat_humidity
       - sensor.upstairs_thermostat_temperature
       - sensor.upstairs_thermostat_humidity
+      - sensor.average_load_1m
+      - sensor.average_load_5m
+      - sensor.average_load_15m
+      - sensor.cpu_speed
 
 # View all events in a logbook
 logbook:
