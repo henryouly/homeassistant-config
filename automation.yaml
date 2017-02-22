@@ -4,7 +4,9 @@
     entity_id: input_select.cctv
     to: "Main Entrance"
   action:
-    service: script.project_main_cctv
+    service: script.project_stream_to_kodi
+    data_template:
+      media_content_id: !secret MAIN_CCTV_RSTP
 
 - alias: Project Garage to CCTV
   trigger: 
@@ -12,7 +14,9 @@
     entity_id: input_select.cctv
     to: "Garage"
   action:
-    service: script.project_garage_cctv
+    service: script.project_stream_to_kodi
+    data_template:
+      media_content_id: !secret GARAGE_CCTV_RSTP
 
 - alias: Stop project to CCTV
   trigger: 
@@ -20,7 +24,9 @@
     entity_id: input_select.cctv
     to: "None"
   action:
-    service: script.stop_cctv
+    service: media_player.media_stop
+    data:
+      entity_id: media_player.kodi
 
 - alias: Turn off all lights after midnight
   trigger:

@@ -69,6 +69,7 @@ Automation:
   - automation.turn_off_all_lights_after_midnight
   - automation.turn_off_all_lights_when_no_one_at_home
   - automation.turn_off_nest_after_10_minutes
+  - input_boolean.speech_notification
 
 Information:
   - sensor.disk_free_usr

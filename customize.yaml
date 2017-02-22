@@ -28,3 +28,6 @@ zone.work:
   icon: mdi:briefcase
 zone.home:
   icon: mdi:home
+light.study_room_lights:
+  emulated_hue: true
+  emulated_hue_name: "study room"

@@ -135,8 +135,10 @@ tts:
 
 # Kodi
 media_player:
-  platform: kodi
-  host: kodi.lan
+  - platform: kodi
+    host: kodi.lan
+  - platform: cast
+  - platform: roku
 
 notify:
   platform: kodi
@@ -153,7 +155,6 @@ device_tracker:
 ffmpeg:
   ffmpeg_bin: /usr/bin/avconv
 
-
 nest:
   client_id: !secret NEST_CLIENT_ID
   client_secret: !secret NEST_CLIENT_SECRET
@@ -162,7 +163,8 @@ logger:
   default: error
 
 # Amazon Echo
-# emulated_hue:
+emulated_hue:
+  expose_by_default: false
 
 mqtt:
   broker: !secret mqtt_server
@@ -190,7 +192,7 @@ automation: !include automation.yaml
 group: !include group.yaml
 zone: !include zone.yaml
 camera: !include camera.yaml
-script: !include script.yaml
+script: !include_dir_merge_named script
 
 # CCTV
 input_select:
@@ -201,3 +203,9 @@ input_select:
       - Garage
       - None
     initial: None
+
+input_boolean:
+  speech_notification:
+    name: Speech Notification
+    icon: mdi:speaker-wireless
+    initial: on
