@@ -1,0 +1,64 @@
+- alias: Project Main to CCTV
+  trigger:
+    platform: state
+    entity_id: input_select.cctv
+    to: "Main Entrance"
+  action:
+    service: script.project_main_cctv
+
+- alias: Project Garage to CCTV
+  trigger: 
+    platform: state
+    entity_id: input_select.cctv
+    to: "Garage"
+  action:
+    service: script.project_garage_cctv
+
+- alias: Stop project to CCTV
+  trigger: 
+    platform: state
+    entity_id: input_select.cctv
+    to: "None"
+  action:
+    service: script.stop_cctv
+
+- alias: Turn off all lights after midnight
+  trigger:
+    platform: time
+    after: "23:59:59"
+  action:
+    service: light.turn_off
+    entity_id: group.all_lights
+
+- alias: Turn off all lights when no one at home
+  trigger:
+    - platform: state
+      entity_id: group.all_devices
+      from: "home"
+      to: "not_home"
+      for:
+        minutes: 10
+  action:
+    - service: light.turn_off
+      entity_id: group.all_lights
+    - service: climate.set_operation_mode
+      data:
+        entity_id: climate.downstairs
+        operation_mode: off
+    - service: climate.set_operation_mode
+      data:
+        entity_id: climate.upstairs
+        operation_mode: off
+   
+- alias: Turn off Nest after 10 minutes
+  trigger:
+    - platform: state
+      entity_id: climate.upstairs
+      to: "on"
+      for:
+        minutes: 10
+  action:
+    - service: climate.set_operation_mode
+      data:
+        entity_id: climate.upstairs
+        operation_mode: off

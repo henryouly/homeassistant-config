@@ -1,0 +1,203 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret home_lat
+  longitude: !secret home_long
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 29
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/Los_Angeles
+  # My customize
+  customize: !include customize.yaml
+
+# Show links to resources in log and frontend
+# introduction:
+
+# Enables the frontend
+frontend:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  # api_password: PASSWORD
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+  server_port: 15380
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+  include:
+    entities:
+      - sensor.home_to_work
+      - sensor.work_to_home
+      - sensor.pmu_current
+      - sensor.pmu_voltage
+      - sensor.downstairs_thermostat_temperature
+      - sensor.downstairs_thermostat_humidity
+      - sensor.upstairs_thermostat_temperature
+      - sensor.upstairs_thermostat_humidity
+  exclude:
+    domains:
+      - sensor
+      - automation
+      - binary_sensor
+     
+
+# View all events in a logbook
+logbook:
+  exclude:
+    entities:
+      - sensor.disk_free_usr
+      - sensor.disk_use_usr
+      - sensor.disk_free_mediadata
+      - sensor.disk_use_mediadata
+      - sensor.cpu_speed
+      - sensor.average_load_1m
+      - sensor.average_load_5m
+      - sensor.average_load_15m
+      - sensor.pmu_current
+      - sensor.pmu_voltage
+      - sensor.since_last_boot
+
+# Track the sun
+sun:
+
+# Weather Prediction
+sensor:
+  - platform: yr
+    monitored_conditions: 
+      - temperature
+      - humidity
+  - platform: google_travel_time
+    api_key: !secret GOOGLE_API_KEY
+    name: Home to Work
+    origin: zone.home
+    destination: zone.work
+  - platform: google_travel_time
+    api_key: !secret GOOGLE_API_KEY
+    name: Work to Home
+    origin: zone.work
+    destination: zone.home
+  - platform: google_travel_time
+    api_key: !secret GOOGLE_API_KEY
+    name: Henry Location To Home
+    origin: device_tracker.henry_phone
+    destination: zone.home
+  - platform: systemmonitor
+    resources:
+      - type: disk_free
+        arg: /usr
+      - type: disk_use_percent
+        arg: /usr
+      - type: disk_free
+        arg: /media/data
+      - type: disk_use_percent
+        arg: /media/data
+      - type: memory_free
+      - type: load_1m
+      - type: load_5m
+      - type: load_15m
+      - type: since_last_boot
+  - platform: cpuspeed
+  - platform: command_line
+    name: PMU Current
+    command: "cat /sys/devices/platform/soc@01c00000/1c2ac00.i2c/i2c-0/0-0034/ac/amperage"
+    unit_of_measurement: "mA"
+    value_template: '{{ value | multiply(0.001) | round(2) }}'
+  - platform: command_line
+    name: PMU Voltage
+    command: "cat /sys/devices/platform/soc@01c00000/1c2ac00.i2c/i2c-0/0-0034/ac/voltage"
+    unit_of_measurement: "V"
+    value_template: '{{ value | multiply(0.000001) | round(2) }}'
+  - platform: template
+    sensors:
+      pmu_power:
+        friendly_name: 'PMU Power'
+        value_template: '{{ (float(states.sensor.pmu_current.state) * float(states.sensor.pmu_voltage.state)) | multiply(0.001) | round(2) }}'
+        unit_of_measurement: "W"
+
+
+
+# Text to speech
+tts:
+  platform: google
+
+# Kodi
+media_player:
+  platform: kodi
+  host: kodi.lan
+
+notify:
+  platform: kodi
+  name: kodi
+  host: http://kodi.lan
+
+device_tracker:
+  - platform: asuswrt
+    host: !secret ROUTER_IP
+    username: !secret ROUTER_USERNAME
+    ssh_key: !secret ROUTER_SSH_KEY
+  - platform: owntracks
+
+ffmpeg:
+  ffmpeg_bin: /usr/bin/avconv
+
+
+nest:
+  client_id: !secret NEST_CLIENT_ID
+  client_secret: !secret NEST_CLIENT_SECRET
+
+logger:
+  default: error
+
+# Amazon Echo
+emulated_hue:
+
+mqtt:
+  broker: !secret mqtt_server
+  port: !secret mqtt_port
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+  client_id: home-assistant
+
+light:
+  platform: mqtt
+  name: "Study Room Lights"
+  state_topic: "smartthings/Study Room/switch"
+  command_topic: "smartthings/Study Room/switch"
+  brightness_state_topic: "smartthings/Study Room/level"
+  brightness_command_topic: "smartthings/Study Room/level"
+  brightness_scale: 99
+  brightness_value_template: '{{ value }}'
+  payload_on: "on"
+  payload_off: "off"
+  retain: true
+  optimistic: false
+  qos: 0
+
+automation: !include automation.yaml
+group: !include group.yaml
+zone: !include zone.yaml
+camera: !include camera.yaml
+script: !include script.yaml
+
+# CCTV
+input_select:
+  cctv:
+    name: CCTV
+    options:
+      - Main Entrance
+      - Garage
+      - None
+    initial: None

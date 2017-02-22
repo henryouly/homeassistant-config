@@ -1,0 +1,82 @@
+default_view:
+  view: yes
+  entities:
+    - device_tracker.henry_phone
+    - device_tracker.yingying_phone
+    - media_player.hrycast
+    - sensor.yr_temperature
+    - sensor.yr_humidity
+    - group.thermostats
+    - group.rooms
+    - group.travel
+
+camera_view:
+  name: Cameras
+  view: yes
+  entities:
+    - camera.garage
+    - camera.main
+
+room_view:
+  name: Rooms
+  view: yes
+  entities:
+    - group.living_room
+    - group.study_room
+
+setting_view:
+  name: Setting
+  view: yes
+  entities:
+    - group.automation
+    - group.script
+
+information_view:
+  name: Setting
+  view: yes
+  entities:
+    - group.information
+
+Rooms:
+  - group.living_room
+  - group.study_room
+
+Thermostats:
+  - climate.downstairs
+  - sensor.downstairs_thermostat_humidity
+  - climate.upstairs
+  - sensor.upstairs_thermostat_humidity
+
+Living Room:
+  - input_select.cctv
+  - media_player.kodi
+  - media_player.hrycast
+
+Study Room:
+  - light.study_room_lights
+
+Travel:
+  - sensor.home_to_work
+  - sensor.work_to_home
+  - sensor.henry_location_to_home
+
+Script:
+  - script.project_garage_cctv
+  - script.project_main_cctv
+  - script.stop_cctv
+
+Automation:
+  - automation.turn_off_all_lights_after_midnight
+  - automation.turn_off_all_lights_when_no_one_at_home
+  - automation.turn_off_nest_after_10_minutes
+
+Information:
+  - sensor.disk_free_usr
+  - sensor.disk_use_usr
+  - sensor.disk_free_mediadata
+  - sensor.disk_use_mediadata
+  - sensor.cpu_speed
+  - sensor.average_load_1m
+  - sensor.average_load_5m
+  - sensor.average_load_15m
+  - sensor.pmu_power

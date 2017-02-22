@@ -1,0 +1,30 @@
+media_player.hrycast:
+  friendly_name: Chromecast
+media_player.kodi:
+  friendly_name: Kodi
+sensor.yr_humidity:
+  friendly_name: Humidity 
+sensor.yr_temperature:
+  friendly_name: Temperature
+sensor.home_to_work:
+  icon: mdi:car
+sensor.work_to_home:
+  icon: mdi:car
+sensor.henry_location_to_home:
+  icon: mdi:car  
+group.camera_view:
+  icon: mdi:camcorder
+group.room_view:
+  icon: mdi:home
+group.setting_view:
+  icon: mdi:settings
+group.information_view:
+  icon: mdi:information
+group.living_room:
+  icon: mdi:home
+group.study_room:
+  icon: mdi:home
+zone.work:
+  icon: mdi:briefcase
+zone.home:
+  icon: mdi:home
