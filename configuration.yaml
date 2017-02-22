@@ -41,17 +41,17 @@ history:
     entities:
       - sensor.home_to_work
       - sensor.work_to_home
-      - sensor.pmu_current
-      - sensor.pmu_voltage
       - sensor.pmu_power
       - sensor.downstairs_thermostat_temperature
-      - sensor.downstairs_thermostat_humidity
       - sensor.upstairs_thermostat_temperature
+      - sensor.yr_temperature
+      - sensor.downstairs_thermostat_humidity
       - sensor.upstairs_thermostat_humidity
-      - sensor.average_load_1m
-      - sensor.average_load_5m
-      - sensor.average_load_15m
-      - sensor.cpu_speed
+      - sensor.yr_humidity
+    domains:
+      - light
+      - device_tracker
+      - media_player
 
 # View all events in a logbook
 logbook:
@@ -68,6 +68,8 @@ logbook:
       - sensor.pmu_current
       - sensor.pmu_voltage
       - sensor.since_last_boot
+    domains:
+      - group
 
 # Track the sun
 sun:
@@ -125,7 +127,6 @@ sensor:
         friendly_name: 'PMU Power'
         value_template: '{{ (float(states.sensor.pmu_current.state) * float(states.sensor.pmu_voltage.state)) | multiply(0.001) | round(2) }}'
         unit_of_measurement: "W"
-
 
 
 # Text to speech
