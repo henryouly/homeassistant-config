@@ -1,0 +1,48 @@
+######################################################################
+##  Awesome [Etekcity Outlets](http://amzn.to/2efNoBP) control via RF
+### connected to 
+## [433Mhz Transmitter and receiver](http://amzn.to/2dceNY2)
+######################################################################
+
+- platform: rpi_rf
+  gpio: 17
+  switches:
+# Outlet 304_1
+    Living_Room_Outlet:
+      protocol: 1
+      pulselength: 183
+      code_on: 5330227
+      code_off: 5330236
+      signal_repetitions: 40
+      
+# Outlet 304_2
+    Outlet_304_2:
+      protocol: 1
+      pulselength: 183
+      code_on: 5330371
+      code_off: 5330380
+      signal_repetitions: 40
+
+# Outlet 304_3
+    Bedroom_Outlet:
+      protocol: 1
+      pulselength: 183
+      code_on: 5330691
+      code_off: 5330700
+      signal_repetitions: 40
+      
+# Outlet_304_4
+    Outlet_304_4:
+      protocol: 1
+      pulselength: 183
+      code_on: 5332227
+      code_off: 5332236
+      signal_repetitions: 40
+
+# Outlet_304_5
+    Outlet_304_5:
+      protocol: 1
+      pulselength: 183
+      code_on: 5338371
+      code_off: 5338380
+      signal_repetitions: 40
