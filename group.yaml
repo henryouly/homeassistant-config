@@ -23,6 +23,7 @@ room_view:
   entities:
     - group.living_room
     - group.study_room
+    - group.bedroom
 
 setting_view:
   name: Setting
@@ -40,6 +41,7 @@ information_view:
 Rooms:
   - group.living_room
   - group.study_room
+  - group.bedroom
 
 Thermostats:
   - climate.downstairs
@@ -48,12 +50,16 @@ Thermostats:
   - sensor.upstairs_thermostat_humidity
 
 Living Room:
+  - switch.living_room_outlet
   - input_select.cctv
   - media_player.kodi
   - media_player.hrycast
 
 Study Room:
   - light.study_room_lights
+
+Bedroom:
+  - switch.bedroom_outlet
 
 Travel:
   - sensor.home_to_work

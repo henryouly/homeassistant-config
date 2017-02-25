@@ -71,6 +71,14 @@ logbook:
     domains:
       - group
 
+recorder:
+  purge_days: 5
+  include:
+    domains:
+      - light
+      - device_tracker
+      - sensor
+
 # Track the sun
 sun:
 
@@ -114,7 +122,6 @@ sensor:
       - type: load_5m
       - type: load_15m
       - type: since_last_boot
-  - platform: cpuspeed
   - platform: command_line
     name: PMU Current
     command: "cat /sys/devices/platform/soc@01c00000/1c2ac00.i2c/i2c-0/0-0034/ac/amperage"
@@ -165,6 +172,8 @@ nest:
 
 logger:
   default: error
+  logs:
+    homeassistant.components.switch.rpi_rf: debug
 
 # Amazon Echo
 emulated_hue:
@@ -197,6 +206,7 @@ group: !include group.yaml
 zone: !include zone.yaml
 camera: !include camera.yaml
 script: !include_dir_merge_named script
+switch: !include switch.yaml
 
 # CCTV
 input_select:

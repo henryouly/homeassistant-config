@@ -24,6 +24,8 @@ group.living_room:
   icon: mdi:home
 group.study_room:
   icon: mdi:home
+group.bedroom:
+  icon: mdi:home
 zone.work:
   icon: mdi:briefcase
 zone.home:
@@ -31,3 +33,15 @@ zone.home:
 light.study_room_lights:
   emulated_hue: true
   emulated_hue_name: "study room"
+switch.living_room_outlet:
+  friendly_name: 'Living Room Outlet'
+  icon: mdi:lightbulb
+  assumed_state: true
+  emulated_hue: true
+  emulated_hue_name: "living room"
+switch.bedroom_outlet:
+  friendly_name: 'Bedroom Outlet'
+  icon: mdi:lightbulb
+  assumed_state: true
+  emulated_hue: true
+  emulated_hue_name: "bedroom"

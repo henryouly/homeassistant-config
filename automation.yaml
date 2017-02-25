@@ -4,8 +4,10 @@
     entity_id: input_select.cctv
     to: "Main Entrance"
   action:
-    service: script.project_stream_to_kodi
-    data_template:
+    service: media_player.play_media
+    data:
+      entity_id: media_player.kodi
+      media_content_type: VIDEO
       media_content_id: !secret MAIN_CCTV_RSTP
 
 - alias: Project Garage to CCTV
@@ -14,8 +16,10 @@
     entity_id: input_select.cctv
     to: "Garage"
   action:
-    service: script.project_stream_to_kodi
+    service: media_player.play_media
     data_template:
+      entity_id: media_player.kodi
+      media_content_type: VIDEO
       media_content_id: !secret GARAGE_CCTV_RSTP
 
 - alias: Stop project to CCTV
