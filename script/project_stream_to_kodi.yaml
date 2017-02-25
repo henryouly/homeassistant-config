@@ -1,0 +1,27 @@
+#############################################
+# Project the stream to Kodi when we are home 
+# action:
+#   service: script.project_stream_to_kodi
+#   data_template:
+#     value: "rstp://..."
+#############################################
+
+project_stream_to_kodi:
+  sequence:
+    - condition: and
+      conditions:
+        - condition: state
+          entity_id: group.all_devices
+          state: 'home'
+        - condition: template
+          value_template: >
+            {% if is_state('media_player.kodi', 'playing') and states('input_select.cctv') == 'None' %}
+              false
+            {% else %}
+              true
+            {% endif %}
+    - service: media_player.play_media
+      data_template:
+        entity_id: media_player.kodi
+        media_content_id: '{{ value }}'
+        media_content_type: VIDEO

@@ -4,11 +4,9 @@
     entity_id: input_select.cctv
     to: "Main Entrance"
   action:
-    service: media_player.play_media
-    data:
-      entity_id: media_player.kodi
-      media_content_type: VIDEO
-      media_content_id: !secret MAIN_CCTV_RSTP
+    service: script.project_stream_to_kodi
+    data_template:
+      value: "{{ states('sensor.main_cctv_content_id') }}"
 
 - alias: Project Garage to CCTV
   trigger: 
@@ -16,11 +14,9 @@
     entity_id: input_select.cctv
     to: "Garage"
   action:
-    service: media_player.play_media
+    service: script.project_stream_to_kodi
     data_template:
-      entity_id: media_player.kodi
-      media_content_type: VIDEO
-      media_content_id: !secret GARAGE_CCTV_RSTP
+      value: "{{ states('sensor.garage_cctv_content_id') }}"
 
 - alias: Stop project to CCTV
   trigger: 
