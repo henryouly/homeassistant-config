@@ -46,6 +46,5 @@ switch.bedroom_outlet:
 switch.tv_outlet:
   friendly_name: 'TV Outlet'
   icon: mdi:television
-  assumed_state: true
   emulated_hue: true
   emulated_hue_name: "tv"
