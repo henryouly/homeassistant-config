@@ -60,7 +60,7 @@
   trigger:
     - platform: state
       entity_id: climate.upstairs
-      to: "on"
+      to: "heat"
       for:
         minutes: 10
   action:
