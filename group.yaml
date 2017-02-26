@@ -51,6 +51,7 @@ Thermostats:
 
 Living Room:
   - switch.living_room_outlet
+  - switch.tv_outlet
   - input_select.cctv
   - media_player.kodi
   - media_player.hrycast

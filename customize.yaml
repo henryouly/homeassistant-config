@@ -36,12 +36,16 @@ light.study_room_lights:
 switch.living_room_outlet:
   friendly_name: 'Living Room Outlet'
   icon: mdi:lightbulb
-  assumed_state: true
   emulated_hue: true
   emulated_hue_name: "living room"
 switch.bedroom_outlet:
   friendly_name: 'Bedroom Outlet'
   icon: mdi:lightbulb
-  assumed_state: true
   emulated_hue: true
   emulated_hue_name: "bedroom"
+switch.tv_outlet:
+  friendly_name: 'TV Outlet'
+  icon: mdi:television
+  assumed_state: true
+  emulated_hue: true
+  emulated_hue_name: "tv"
