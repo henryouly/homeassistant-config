@@ -1,4 +1,4 @@
-My [Home Assistant](https://home-assistant.io/) Config
+# [![Build Status](https://travis-ci.org/henryouly/homeassistant-config.svg?branch=master)](https://travis-ci.org/henryouly/homeassistant-config) My [Home Assistant](https://home-assistant.io/) Config
 
 **Environment:**
 * [Banana Pi Pro](http://www.lemaker.org/product-bananapro-specification.html) running [armbian](https://www.armbian.com/)
