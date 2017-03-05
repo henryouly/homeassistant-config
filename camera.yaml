@@ -1,6 +1,6 @@
 - platform: ffmpeg
-  input: !secret GARAGE_CCTV_RSTP
+  input: !secret GARAGE_CCTV_RTSP
   name: Garage
 - platform: ffmpeg
-  input: !secret MAIN_CCTV_RSTP
+  input: !secret MAIN_CCTV_RTSP
   name: Main

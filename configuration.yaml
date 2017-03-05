@@ -137,9 +137,9 @@ sensor:
       # A workaround to pass !secret to templating engine
       # https://community.home-assistant.io/t/make-secrets-available-in-templating-engine/10507
       main_cctv_content_id:
-        value_template: !secret MAIN_CCTV_RSTP
+        value_template: !secret MAIN_CCTV_RTSP
       garage_cctv_content_id:
-        value_template: !secret GARAGE_CCTV_RSTP
+        value_template: !secret GARAGE_CCTV_RTSP
       pmu_power:
         friendly_name: 'PMU Power'
         value_template: '{{ (float(states.sensor.pmu_current.state) * float(states.sensor.pmu_voltage.state)) | multiply(0.001) | round(2) }}'
