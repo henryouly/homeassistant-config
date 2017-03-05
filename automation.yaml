@@ -69,11 +69,20 @@
         entity_id: climate.upstairs
         operation_mode: off
 
-- alias: Dash Button Quartet turns on TV
+- alias: Dash Button Milkbaby turns on TV
+  trigger:
+    - platform: mqtt
+      topic: dashbutton/dash_milkbaby
+  action:
+    - service: switch.toggle
+      data:
+        entity_id: switch.tv_outlet
+
+- alias: Dash button Quartet turns on bedroom
   trigger:
     - platform: mqtt
       topic: dashbutton/dash_quartet
   action:
     - service: switch.toggle
       data:
-        entity_id: switch.tv_outlet
+        entity_id: switch.bedroom_outlet
