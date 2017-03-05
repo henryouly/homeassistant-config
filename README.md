@@ -13,6 +13,7 @@
 * [Mosquitto](https://mosquitto.org/)
 * My own python script to listen to dash button clicks.
 * [Smartthings MQTT Bridge](https://github.com/stjohnjohnson/smartthings-mqtt-bridge)
+* [Home Assistant Alexa Skill Adapter](https://github.com/auchter/haaska)
 * [OwnTracks](http://owntracks.org/) running on my cellphone.
 
 **Devices:**
