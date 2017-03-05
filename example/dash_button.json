@@ -1,0 +1,8 @@
+{
+    "mqtt": "localhost",
+    "port": 1883,
+    "dash_buttons": {
+        "A002DCE3E148": "dash_quartet",
+    },
+    "discover": false
+}
