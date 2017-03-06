@@ -164,9 +164,12 @@ media_player:
   - platform: roku
 
 notify:
-  platform: kodi
-  name: kodi
-  host: http://kodi.lan
+  - platform: kodi
+    name: kodi
+    host: http://kodi.lan
+  - platform: pushbullet
+    name: pushbullet
+    api_key: !secret PUSHBULLET_API_KEY
 
 device_tracker:
   - platform: asuswrt
