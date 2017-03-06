@@ -69,6 +69,24 @@
         entity_id: climate.upstairs
         operation_mode: "off"
 
+- alias: Notify me when off-work traffic is good
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.work_to_home
+      value_template: '{{ state.state }}'
+      below: 20
+    - platform: state
+      entity_id: device_tracker.henry_phone
+      state: work
+  condition:
+    - condition: time
+      after: '18:00:00'
+  action:
+    - service: notify.pushbullet
+      data:
+        message: 'Back home traffic is down to 20min'
+        title: 'Traffic'
+
 - alias: Dash Button Milkbaby turns on TV
   trigger:
     - platform: mqtt
