@@ -50,11 +50,11 @@
     - service: climate.set_operation_mode
       data:
         entity_id: climate.downstairs
-        operation_mode: off
+        operation_mode: "off"
     - service: climate.set_operation_mode
       data:
         entity_id: climate.upstairs
-        operation_mode: off
+        operation_mode: "off"
    
 - alias: Turn off Nest after 10 minutes
   trigger:
@@ -67,7 +67,7 @@
     - service: climate.set_operation_mode
       data:
         entity_id: climate.upstairs
-        operation_mode: off
+        operation_mode: "off"
 
 - alias: Dash Button Milkbaby turns on TV
   trigger:
