@@ -48,7 +48,6 @@ history:
       - sensor.upstairs_thermostat_humidity
       - sensor.yr_humidity
     domains:
-      - climate
       - light
       - device_tracker
       - media_player
@@ -57,18 +56,6 @@ history:
 # View all events in a logbook
 logbook:
   exclude:
-    entities:
-      - sensor.disk_free_usr
-      - sensor.disk_use_usr
-      - sensor.disk_free_mediadata
-      - sensor.disk_use_mediadata
-      - sensor.cpu_speed
-      - sensor.average_load_1m
-      - sensor.average_load_5m
-      - sensor.average_load_15m
-      - sensor.pmu_current
-      - sensor.pmu_voltage
-      - sensor.since_last_boot
     domains:
       - group
 
@@ -76,20 +63,17 @@ recorder:
   purge_days: 2
   exclude:
     domains:
-      - automation
+      - sun
+      - camera
     entities:
-      - sensor.disk_free_usr
-      - sensor.disk_use_usr
-      - sensor.disk_free_mediadata
-      - sensor.disk_use_mediadata
-      - sensor.cpu_speed
+      - sensor.since_last_boot
       - sensor.average_load_1m
       - sensor.average_load_5m
       - sensor.average_load_15m
       - sensor.pmu_current
       - sensor.pmu_voltage
       - sensor.pmu_power
-      - sensor.since_last_boot
+      - sensor.ram_free
 
 # Track the sun
 sun:

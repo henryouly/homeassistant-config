@@ -84,6 +84,7 @@ Information:
   - sensor.disk_use_usr
   - sensor.disk_free_mediadata
   - sensor.disk_use_mediadata
+  - sensor.ram_free
   - sensor.cpu_speed
   - sensor.average_load_1m
   - sensor.average_load_5m
