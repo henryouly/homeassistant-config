@@ -47,8 +47,8 @@ history:
       - sensor.downstairs_thermostat_humidity
       - sensor.upstairs_thermostat_humidity
       - sensor.yr_humidity
-      - sensor.downstairs_away_mode
-      - sensor.upstairs_away_mode
+      - binary_sensor.downstairs_away_mode
+      - binary_sensor.upstairs_away_mode
     domains:
       - light
       - device_tracker
@@ -142,6 +142,8 @@ sensor:
         friendly_name: 'PMU Power'
         value_template: '{{ (float(states.sensor.pmu_current.state) * float(states.sensor.pmu_voltage.state)) | multiply(0.001) | round(2) }}'
         unit_of_measurement: "W"
+
+binary_sensor:
   - platform: template
     sensors:
       upstairs_away_mode:
