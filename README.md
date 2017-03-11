@@ -19,7 +19,6 @@
 **Devices:**
 * 2 [Nest Thermostats](http://amzn.to/2eAhB1k)
 * 2 [Amazon Echo Dot](http://amzn.to/2e3vHFQ)
-* 1Gen Chromecast
 * [Roku TV stick](http://a.co/8if0VE4)
 * [GE Light bulb](http://a.co/doGICUe)
 * [Smartthings Hub](http://a.co/dK3FlQT)

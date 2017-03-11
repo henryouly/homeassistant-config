@@ -1,5 +1,3 @@
-media_player.hrycast:
-  friendly_name: Chromecast
 media_player.kodi:
   friendly_name: Kodi
 sensor.yr_humidity:

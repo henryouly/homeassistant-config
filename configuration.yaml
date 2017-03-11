@@ -163,7 +163,6 @@ tts:
 media_player:
   - platform: kodi
     host: kodi.lan
-  - platform: cast
   - platform: roku
 
 notify:

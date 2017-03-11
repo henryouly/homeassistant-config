@@ -3,7 +3,7 @@ default_view:
   entities:
     - device_tracker.henry_phone
     - device_tracker.yingying_phone
-    - media_player.hrycast
+    - media_player.kodi
     - sensor.yr_temperature
     - sensor.yr_humidity
     - group.thermostats
@@ -56,7 +56,7 @@ Living Room:
   - switch.tv_outlet
   - input_select.cctv
   - media_player.kodi
-  - media_player.hrycast
+  - media_player.roku
 
 Study Room:
   - light.study_room_lights
