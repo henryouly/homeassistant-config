@@ -24,6 +24,7 @@ room_view:
     - group.living_room
     - group.study_room
     - group.bedroom
+    - group.garage
 
 setting_view:
   name: Setting
@@ -42,6 +43,7 @@ Rooms:
   - group.living_room
   - group.study_room
   - group.bedroom
+  - group.garage
 
 Thermostats:
   - climate.downstairs
@@ -61,6 +63,9 @@ Study Room:
 
 Bedroom:
   - switch.bedroom_outlet
+
+Garage:
+  - cover.garage
 
 Travel:
   - sensor.home_to_work

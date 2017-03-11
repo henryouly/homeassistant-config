@@ -219,6 +219,12 @@ light:
   optimistic: false
   qos: 0
 
+cover:
+  - platform: myq
+    username: !secret MYQ_USERNAME
+    password: !secret MYQ_PASSWORD
+    type: liftmaster
+
 automation: !include automation.yaml
 group: !include group.yaml
 zone: !include zone.yaml

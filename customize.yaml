@@ -26,6 +26,8 @@ group.study_room:
   icon: mdi:home
 group.bedroom:
   icon: mdi:home
+group.garage:
+  icon: mdi:car
 zone.work:
   icon: mdi:briefcase
 zone.home:
@@ -48,3 +50,5 @@ switch.tv_outlet:
   icon: mdi:television
   emulated_hue: true
   emulated_hue_name: "tv"
+cover.garage:
+  icon: mdi:car

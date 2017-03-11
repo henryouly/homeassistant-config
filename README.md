@@ -27,6 +27,6 @@
 * Some [Amazon Dash Buttons](http://amzn.to/2dPKZhM)
 * 2 Xiaomi Yi Ants Camera (with [RTSP hack](https://github.com/fritz-smh/yi-hack))
 * ASUS RT-AC68U router running [ASUSWRT-Merlin](https://asuswrt.lostrealm.ca/)
-* MyQ Garage Door Controller (still working on)
+* [MyQ Garage Door Controller](http://a.co/duB4Jwy)
 * LG Washer & Dryer (still working on)
 * Hunter Douglas motorized blinds (not yet connected)
