@@ -224,7 +224,7 @@ cover:
     password: !secret MYQ_PASSWORD
     type: liftmaster
 
-automation: !include automation.yaml
+automation: !include_dir_merge_named automation
 group: !include group.yaml
 zone: !include zone.yaml
 camera: !include camera.yaml

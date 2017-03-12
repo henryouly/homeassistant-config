@@ -1,0 +1,19 @@
+- alias: Notify me when off-work traffic is good
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.work_to_home
+      value_template: '{{ state.state }}'
+      below: 20
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: device_tracker.henry_phone
+        state: work
+      - condition: time
+        after: '18:00:00'
+  action:
+    - service: notify.pushbullet
+      data_template:
+        title: 'Traffic'
+        message: 'Back home traffic is down to {{ states.sensor.work_to_home.state }}min'

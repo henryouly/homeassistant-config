@@ -1,0 +1,30 @@
+- alias: Project Main to CCTV
+  trigger:
+    platform: state
+    entity_id: input_select.cctv
+    to: "Main Entrance"
+  action:
+    service: script.project_stream_to_kodi
+    data_template:
+      value: "{{ states('sensor.main_cctv_content_id') }}"
+
+- alias: Project Garage to CCTV
+  trigger: 
+    platform: state
+    entity_id: input_select.cctv
+    to: "Garage"
+  action:
+    service: script.project_stream_to_kodi
+    data_template:
+      value: "{{ states('sensor.garage_cctv_content_id') }}"
+
+- alias: Stop project to CCTV
+  trigger: 
+    platform: state
+    entity_id: input_select.cctv
+    to: "None"
+  action:
+    service: media_player.media_stop
+    data:
+      entity_id: media_player.kodi
+
