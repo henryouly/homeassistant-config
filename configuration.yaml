@@ -20,11 +20,18 @@ homeassistant:
 frontend:
 
 http:
-  # Uncomment this to add a password (recommended!)
-  # api_password: PASSWORD
-  # Uncomment this if you are using SSL or running in Docker etc
-  # base_url: example.duckdns.org:8123
-  server_port: 15380
+  server_port: !secret server_port
+  api_password: !secret http_api_password
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
+  cors_allowed_origins:
+    - https://google.com
+    - https://home-assistant.io
+  trusted_networks:
+    - 192.168.30.0/24
+    - 127.0.0.1
+  ip_ban_enabled: True
+  login_attempts_threshold: 3
 
 # Checks for available updates
 updater:
@@ -240,6 +247,12 @@ input_select:
       - Garage
       - None
     initial: None
+  channel:
+    name: Channel
+    options:
+      - ABC News
+      - Reuters TV
+    initial: ABC News
 
 input_boolean:
   speech_notification:

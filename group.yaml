@@ -3,12 +3,12 @@ default_view:
   entities:
     - device_tracker.henry_phone
     - device_tracker.yingying_phone
-    - media_player.kodi
     - sensor.yr_temperature
     - sensor.yr_humidity
     - group.thermostats
     - group.rooms
     - group.travel
+    - media_player.roku
 
 camera_view:
   name: Cameras
@@ -25,6 +25,7 @@ room_view:
     - group.study_room
     - group.bedroom
     - group.garage
+    - group.tv
 
 setting_view:
   name: Setting
@@ -54,6 +55,7 @@ Thermostats:
 Living Room:
   - switch.living_room_outlet
   - switch.tv_outlet
+  - input_select.channel
   - input_select.cctv
   - media_player.kodi
   - media_player.roku
