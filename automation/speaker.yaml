@@ -1,0 +1,10 @@
+- alias: Turn off speaker if idle for 10 min
+  trigger:
+    - platform: state
+      entity_id: media_player.vlc
+      state: "idle"
+      for:
+        minutes: 10
+  action:
+    - service: switch.turn_off
+      entity_id: switch.speaker_outlet
