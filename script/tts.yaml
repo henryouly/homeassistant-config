@@ -21,7 +21,7 @@ tts:
           state: 'home'
     - service: switch.turn_on
       entity_id: switch.speaker_outlet
-    - delay: '00:00:05'
+    - delay: '00:00:01'
     - service: mqtt.publish
       data_template:
         payload: "{{ value1 }}"
