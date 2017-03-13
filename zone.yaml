@@ -1,7 +1,7 @@
 - name: Home
   latitude: !secret home_lat
   longitude: !secret home_long
-  radius: 150
+  radius: 50
 
 - name: Work
   latitude: !secret henry_work_lat
