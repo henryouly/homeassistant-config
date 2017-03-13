@@ -32,7 +32,7 @@
       signal_repetitions: 40
       
 # Outlet_304_4
-    Outlet_304_4:
+    Speaker_Outlet:
       protocol: 1
       pulselength: 183
       code_on: 5332227

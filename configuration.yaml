@@ -257,7 +257,6 @@ input_select:
 input_boolean:
   speech_notification:
     name: Speech Notification
-    icon: mdi:speaker-wireless
     initial: on
 
 # New config panel in 0.39
