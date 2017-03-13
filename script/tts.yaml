@@ -1,0 +1,34 @@
+######################################################################################################
+###Script to send notifications to the usb audio device during normal hours and only when we are home! Call like this:
+  # action:
+    # service: script.tts
+    # data_template:
+      # value1: 'Startup: Home Assistant is Up and Running!'
+      # OR
+      # value1: "{{ trigger.to_state.state }}"
+
+######################################################################################################
+
+tts:
+  sequence:
+    - condition: and
+      conditions:
+        - condition: state
+          entity_id: input_boolean.speech_notification
+          state: 'on'
+        - condition: state
+          entity_id: group.all_devices
+          state: 'home'
+    - service: switch.turn_on
+      entity_id: switch.speaker_outlet
+    - delay: '00:00:05'
+    - service: mqtt.publish
+      data_template:
+        payload: "{{ value1 }}"
+        topic: "tts/lastmsg"
+        retain: true
+    - service: tts.google_say
+      entity_id: media_player.vlc
+      data_template:
+        message: "{{ value1 }}"
+        cache: true
