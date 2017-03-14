@@ -1,7 +1,9 @@
 - alias: Welcome home
   trigger:
     - platform: state
-      entity_id: device_tracker.henry_phone
+      entity_id: 
+        - device_tracker.henry_phone
+        - device_tracker.yingying_phone
       from: "not_home"
       to: "home"
       for: "00:02:00"
@@ -10,7 +12,8 @@
     - service: script.tts
       data_template:
         value1: >
-          Henry, {{ [
-          "Welcome home",
-          "Welcome back"
-          ] | random }}
+          {{ [
+          "Welcome back home",
+          "Welcome home"
+          ] | random }},
+          {{ trigger.entity_id.split('.')[1]|replace('_phone', '') }}
