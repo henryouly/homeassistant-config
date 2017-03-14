@@ -150,6 +150,9 @@ sensor:
         friendly_name: 'PMU Power'
         value_template: '{{ (float(states.sensor.pmu_current.state) * float(states.sensor.pmu_voltage.state)) | multiply(0.001) | round(2) }}'
         unit_of_measurement: "W"
+      leave_for_work_time:
+        friendly_name: 'Time for work'
+        value_template: '{{ strptime("08:30", "%H:%M").time() }}'
 
 binary_sensor:
   - platform: template
