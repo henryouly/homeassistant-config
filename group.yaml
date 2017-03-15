@@ -74,6 +74,7 @@ Travel:
   - sensor.home_to_work
   - sensor.work_to_home
   - sensor.henry_location_to_home
+  - sensor.leave_for_work_time
 
 Script:
   - script.project_garage_cctv
