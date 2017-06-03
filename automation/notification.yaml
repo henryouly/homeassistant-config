@@ -1,0 +1,17 @@
+- alias: Mute speech notification after midnight
+  trigger:
+    platform: time
+    after: "23:59:59"
+  action:
+    service: input_boolean.turn_off
+    data:
+      entity_id: input_boolean.speech_notification
+
+- alias: Resume speech notification in the morning
+  trigger:
+    platform: time
+    after: "09:00:00"
+  action:
+    service: input_boolean.turn_on
+    data:
+      entity_id: input_boolean.speech_notification
