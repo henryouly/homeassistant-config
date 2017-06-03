@@ -20,6 +20,9 @@ homeassistant:
 frontend:
 
 http:
+  base_url: !secret base_url
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
   server_port: !secret server_port
   api_password: !secret http_api_password
   cors_allowed_origins:
