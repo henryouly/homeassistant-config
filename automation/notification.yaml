@@ -15,3 +15,14 @@
     service: input_boolean.turn_on
     data:
       entity_id: input_boolean.speech_notification
+
+- alias: Notify when garage door is open
+  trigger:
+    platform: state
+    entity_id: cover.garage
+    from: "closed"
+    to: "open"
+  action:
+    - service: script.tts
+      data_template:
+        value1: "Garage door is opening"
