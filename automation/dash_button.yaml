@@ -11,6 +11,8 @@
   trigger:
     - platform: mqtt
       topic: dashbutton/dash_quartet
+    - platform: mqtt
+      topic: dashbutton/dash_wilsonjones
   action:
     - service: switch.toggle
       data:

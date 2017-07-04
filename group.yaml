@@ -56,6 +56,7 @@ Living Room:
   - switch.living_room_outlet
   - switch.tv_outlet
   - switch.speaker_outlet
+  - light.living_room
   - input_select.channel
   - input_select.cctv
   - media_player.kodi
