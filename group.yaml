@@ -87,6 +87,7 @@ Automation:
   - automation.turn_off_all_lights_when_no_one_at_home
   - automation.turn_off_nest_after_10_minutes
   - automation.notify_me_when_offwork_traffic_is_good
+  - automation.notify_when_garage_door_is_open
   - input_boolean.speech_notification
 
 Information:
