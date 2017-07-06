@@ -97,14 +97,6 @@ sensor:
       - temperature
       - humidity
     scan_interval: 600
-  - platform: template
-    sensors:
-      # A workaround to pass !secret to templating engine
-      # https://community.home-assistant.io/t/make-secrets-available-in-templating-engine/10507
-      main_cctv_content_id:
-        value_template: !secret MAIN_CCTV_RTSP
-      garage_cctv_content_id:
-        value_template: !secret GARAGE_CCTV_RTSP
 
 binary_sensor:
   - platform: template
@@ -205,19 +197,11 @@ cover:
 automation: !include_dir_merge_list automation
 group: !include group.yaml
 zone: !include zone.yaml
-camera: !include camera.yaml
 script: !include_dir_merge_named script
 switch: !include switch.yaml
 
 # CCTV
 input_select:
-  cctv:
-    name: CCTV
-    options:
-      - Main Entrance
-      - Garage
-      - None
-    initial: None
   channel:
     name: Channel
     options:
