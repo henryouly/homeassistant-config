@@ -1,0 +1,38 @@
+homeassistant:
+  customize:
+    sensor.pmu_power:
+      friendly_name: 'PMU Power'
+#---------------------------------------
+sensor:
+  - platform: systemmonitor
+    resources:
+      - type: disk_free
+        arg: /usr
+      - type: disk_use_percent
+        arg: /usr
+      - type: disk_free
+        arg: /media/data
+      - type: disk_use_percent
+        arg: /media/data
+      - type: memory_free
+      - type: load_1m
+      - type: load_5m
+      - type: load_15m
+      - type: since_last_boot
+      - type: process
+        arg: mosquitto
+  - platform: command_line
+    name: PMU Current
+    command: "cat /sys/devices/platform/soc@01c00000/1c2ac00.i2c/i2c-0/0-0034/ac/amperage"
+    unit_of_measurement: "mA"
+    value_template: '{{ value | multiply(0.001) | round(2) }}'
+  - platform: command_line
+    name: PMU Voltage
+    command: "cat /sys/devices/platform/soc@01c00000/1c2ac00.i2c/i2c-0/0-0034/ac/voltage"
+    unit_of_measurement: "V"
+    value_template: '{{ value | multiply(0.000001) | round(2) }}'
+  - platform: template
+    sensors:
+      pmu_power:
+        value_template: '{{ (float(states.sensor.pmu_current.state) * float(states.sensor.pmu_voltage.state)) | multiply(0.001) | round(2) }}'
+        unit_of_measurement: "W"

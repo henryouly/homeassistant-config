@@ -12,6 +12,7 @@ homeassistant:
   time_zone: America/Los_Angeles
   # My customize
   customize: !include customize.yaml
+  packages: !include_dir_named packages
 
 # Show links to resources in log and frontend
 # introduction:
@@ -114,31 +115,6 @@ sensor:
     origin: device_tracker.henry_phone
     destination: zone.home
     scan_interval: 120
-  - platform: systemmonitor
-    resources:
-      - type: disk_free
-        arg: /usr
-      - type: disk_use_percent
-        arg: /usr
-      - type: disk_free
-        arg: /media/data
-      - type: disk_use_percent
-        arg: /media/data
-      - type: memory_free
-      - type: load_1m
-      - type: load_5m
-      - type: load_15m
-      - type: since_last_boot
-  - platform: command_line
-    name: PMU Current
-    command: "cat /sys/devices/platform/soc@01c00000/1c2ac00.i2c/i2c-0/0-0034/ac/amperage"
-    unit_of_measurement: "mA"
-    value_template: '{{ value | multiply(0.001) | round(2) }}'
-  - platform: command_line
-    name: PMU Voltage
-    command: "cat /sys/devices/platform/soc@01c00000/1c2ac00.i2c/i2c-0/0-0034/ac/voltage"
-    unit_of_measurement: "V"
-    value_template: '{{ value | multiply(0.000001) | round(2) }}'
   - platform: template
     sensors:
       # A workaround to pass !secret to templating engine
@@ -147,10 +123,6 @@ sensor:
         value_template: !secret MAIN_CCTV_RTSP
       garage_cctv_content_id:
         value_template: !secret GARAGE_CCTV_RTSP
-      pmu_power:
-        friendly_name: 'PMU Power'
-        value_template: '{{ (float(states.sensor.pmu_current.state) * float(states.sensor.pmu_voltage.state)) | multiply(0.001) | round(2) }}'
-        unit_of_measurement: "W"
       leave_for_work_time:
         friendly_name: 'Leave for work'
         value_template: '{{ strptime("08:30", "%H:%M") - strptime(states.sensor.home_to_work.state, "%M") }}'
