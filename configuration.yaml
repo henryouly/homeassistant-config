@@ -97,24 +97,6 @@ sensor:
       - temperature
       - humidity
     scan_interval: 600
-  - platform: google_travel_time
-    api_key: !secret GOOGLE_API_KEY
-    name: Home to Work
-    origin: zone.home
-    destination: zone.work
-    scan_interval: 120
-  - platform: google_travel_time
-    api_key: !secret GOOGLE_API_KEY
-    name: Work to Home
-    origin: zone.work
-    destination: zone.home
-    scan_interval: 120
-  - platform: google_travel_time
-    api_key: !secret GOOGLE_API_KEY
-    name: Henry Location To Home
-    origin: device_tracker.henry_phone
-    destination: zone.home
-    scan_interval: 120
   - platform: template
     sensors:
       # A workaround to pass !secret to templating engine
@@ -123,9 +105,6 @@ sensor:
         value_template: !secret MAIN_CCTV_RTSP
       garage_cctv_content_id:
         value_template: !secret GARAGE_CCTV_RTSP
-      leave_for_work_time:
-        friendly_name: 'Leave for work'
-        value_template: '{{ strptime("08:30", "%H:%M") - strptime(states.sensor.home_to_work.state, "%M") }}'
 
 binary_sensor:
   - platform: template
