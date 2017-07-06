@@ -4,12 +4,6 @@ sensor.yr_humidity:
   friendly_name: Humidity 
 sensor.yr_temperature:
   friendly_name: Temperature
-sensor.home_to_work:
-  icon: mdi:car
-sensor.work_to_home:
-  icon: mdi:car
-sensor.henry_location_to_home:
-  icon: mdi:car  
 group.camera_view:
   icon: mdi:camcorder
 group.room_view:

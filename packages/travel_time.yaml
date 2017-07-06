@@ -1,5 +1,11 @@
 homeassistant:
   customize:
+    sensor.home_to_work:
+      icon: mdi:car
+    sensor.work_to_home:
+      icon: mdi:car
+    sensor.henry_location_to_home:
+      icon: mdi:car
     sensor.leave_for_work_time:
       friendly_name: 'Leave for work'
 #---------------------------------------
