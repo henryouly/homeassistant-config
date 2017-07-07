@@ -70,6 +70,7 @@ Bedroom:
 
 Garage:
   - cover.garage
+  - sensor.garage_status
 
 Travel:
   - sensor.home_to_work

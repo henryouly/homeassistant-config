@@ -1,0 +1,18 @@
+cover:
+  - platform: myq
+    username: !secret MYQ_USERNAME
+    password: !secret MYQ_PASSWORD
+    type: liftmaster
+#---------------------------------------
+sensor:
+- platform: template
+  sensors:
+    garage_status:
+      value_template: '{{ states.cover.garage.state }}'
+#---------------------------------------
+homeassistant:
+  customize:
+    cover.garage:
+      icon: mdi:car
+    sensor.garage_status:
+      friendly_name: 'State of the door'

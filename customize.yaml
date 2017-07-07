@@ -45,7 +45,5 @@ switch.tv_outlet:
 switch.speaker_outlet:
   friendly_name: 'Speaker'
   icon: mdi:speaker-wireless
-cover.garage:
-  icon: mdi:car
 input_boolean.speech_notification:
   icon: mdi:speaker-wireless
