@@ -12,8 +12,19 @@
     - service: script.tts
       data_template:
         value1: >
+          {% set person = trigger.entity_id.split('.')[1]|replace('_phone', '')%}
+          {%- macro greeting_sentence(person) -%}
           {{ [
-          "Welcome back home",
-          "Welcome home"
-          ] | random }},
-          {{ trigger.entity_id.split('.')[1]|replace('_phone', '') }}
+          "Welcome back home " ~ person,
+          "Guess who is home?" ~ person +" is!",
+          person + " is now in the house.",
+          "Welcome Home " ~ person + ".  We have missed you. Or at least Anton did.",
+          "Our home is now complete, Rest your head and relax your feet! Welcome Back " ~ person,
+          "Life is like a song, you’re back where you belong. Welcome home " ~ person,
+          "Hey there " ~ person + " Welcome Home!",
+          "Knock Knock. Who is There? "   ~ person +" is!",
+          person ~ "! You are home!",
+          "I know a secret! "  ~ person +" is home!"
+          ] | random }}
+          {%- endmacro -%}
+          {{ greeting_sentence(person) }}
