@@ -2,9 +2,10 @@
   trigger:
     - platform: state
       entity_id: media_player.vlc
-      state: "idle"
+      to: "idle"
       for:
         minutes: 10
   action:
     - service: switch.turn_off
-      entity_id: switch.speaker_outlet
+      data:
+        entity_id: switch.speaker_outlet
