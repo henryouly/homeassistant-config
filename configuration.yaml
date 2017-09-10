@@ -181,7 +181,7 @@ light:
     qos: 0
   - platform: yeelight
     devices:
-      192.168.30.201:
+      192.168.30.202:
         name: Living Room
         transition: 1000
         use_music_mode: True
