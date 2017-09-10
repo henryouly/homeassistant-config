@@ -10,10 +10,6 @@ sensor:
         arg: /usr
       - type: disk_use_percent
         arg: /usr
-      - type: disk_free
-        arg: /media/data
-      - type: disk_use_percent
-        arg: /media/data
       - type: memory_free
       - type: load_1m
       - type: load_5m
