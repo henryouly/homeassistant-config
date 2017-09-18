@@ -1,0 +1,13 @@
+- alias: Turn off Nest after 10 minutes
+  trigger:
+    - platform: state
+      entity_id: climate.upstairs
+      to: "heat"
+      for:
+        minutes: 10
+  action:
+    - service: climate.set_operation_mode
+      data:
+        entity_id: climate.upstairs
+        operation_mode: "off"
+
