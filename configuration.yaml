@@ -167,11 +167,11 @@ mqtt:
 
 light:
   - platform: mqtt
-    name: "Study Room Lights"
-    state_topic: "smartthings/Study Room/switch"
-    command_topic: "smartthings/Study Room/switch"
-    brightness_state_topic: "smartthings/Study Room/level"
-    brightness_command_topic: "smartthings/Study Room/level"
+    name: "Hallway Lights"
+    state_topic: "smartthings/Hallway/switch"
+    command_topic: "smartthings/Hallway/switch"
+    brightness_state_topic: "smartthings/Hallway/level"
+    brightness_command_topic: "smartthings/Hallway/level"
     brightness_scale: 99
     brightness_value_template: '{{ value }}'
     payload_on: "on"

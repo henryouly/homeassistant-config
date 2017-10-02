@@ -63,7 +63,7 @@ Living Room:
   - media_player.roku
 
 Study Room:
-  - light.study_room_lights
+  - light.hallway_lights
 
 Bedroom:
   - switch.bedroom_outlet
@@ -78,6 +78,10 @@ Travel:
   - sensor.henry_location_to_home
   - sensor.leave_for_work_time
 
+Upstairs:
+  - climate.upstairs
+  - light.hallway_lights
+
 Script:
   - script.project_garage_cctv
   - script.project_main_cctv
@@ -89,6 +93,8 @@ Automation:
   - automation.turn_off_nest_after_10_minutes
   - automation.notify_me_when_offwork_traffic_is_good
   - automation.notify_when_garage_door_is_open
+  - automation.upstairs_light_turn_on
+  - automation.upstairs_light_turn_off
   - input_boolean.speech_notification
 
 Information:
