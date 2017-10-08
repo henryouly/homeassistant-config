@@ -110,3 +110,7 @@ Information:
   - sensor.average_load_15m
   - sensor.pmu_power
   - sensor.since_last_boot
+
+Family:
+  - device_tracker.henry_phone
+  - device_tracker.yingying_phone

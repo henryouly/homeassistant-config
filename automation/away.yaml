@@ -1,7 +1,7 @@
 - alias: Turn off all lights when no one at home
   trigger:
     - platform: state
-      entity_id: group.all_devices
+      entity_id: group.family
       from: "home"
       to: "not_home"
       for:

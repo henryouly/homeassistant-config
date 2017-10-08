@@ -11,7 +11,7 @@ project_stream_to_kodi:
     - condition: and
       conditions:
         - condition: state
-          entity_id: group.all_devices
+          entity_id: group.family
           state: 'home'
         - condition: template
           value_template: >
