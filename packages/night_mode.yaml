@@ -1,0 +1,22 @@
+input_boolean:
+  night_mode:
+    name: 'Night Mode'
+
+automation:
+  - alias: Turn on night mode after midnight
+    trigger:
+      platform: time
+      at: "23:59:59"
+    action:
+      service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.night_mode
+  
+  - alias: Turn off night mode in the morning
+    trigger:
+      platform: time
+      at: "09:00:00"
+    action:
+      service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.night_mode
