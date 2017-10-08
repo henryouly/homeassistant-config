@@ -96,6 +96,7 @@ Automation:
   - automation.upstairs_light_turn_on
   - automation.upstairs_light_turn_off
   - input_boolean.speech_notification
+  - input_boolean.night_mode
 
 Information:
   - sensor.disk_free_usr

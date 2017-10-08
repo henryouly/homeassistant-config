@@ -17,6 +17,9 @@ tts:
           entity_id: input_boolean.speech_notification
           state: 'on'
         - condition: state
+          entity_id: input_boolean.night_mode
+          state: 'off'
+        - condition: state
           entity_id: group.all_devices
           state: 'home'
     - service: switch.turn_on
