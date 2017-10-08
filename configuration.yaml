@@ -140,7 +140,7 @@ device_tracker:
     host: !secret ROUTER_IP
     username: !secret ROUTER_USERNAME
     password: !secret ROUTER_PASSWORD
-#  - platform: owntracks
+# - platform: owntracks
 
 ffmpeg:
   ffmpeg_bin: /usr/bin/avconv
@@ -161,8 +161,8 @@ emulated_hue:
 mqtt:
   broker: !secret mqtt_server
   port: !secret mqtt_port
-  username: !secret mqtt_username
-  password: !secret mqtt_password
+# username: !secret mqtt_username
+# password: !secret mqtt_password
   client_id: home-assistant
 
 light:
