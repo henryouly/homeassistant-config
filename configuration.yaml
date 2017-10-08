@@ -192,6 +192,7 @@ group: !include group.yaml
 zone: !include zone.yaml
 script: !include_dir_merge_named script
 switch: !include switch.yaml
+input_boolean: !include input_boolean.yaml
 
 # CCTV
 input_select:
@@ -202,13 +203,6 @@ input_select:
       - Reuters TV
     initial: ABC News
 
-input_boolean:
-  speech_notification:
-    name: Speech Notification
-    initial: on
-  night_mode:
-    name: Night Mode
-    initial: off
 
 # New config panel in 0.39
 config:
