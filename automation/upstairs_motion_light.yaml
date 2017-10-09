@@ -1,8 +1,5 @@
 - alias: 'Upstairs Light Turn on'
   trigger:
-    - platform: sun
-      event: sunset
-      offset: '-00:30:00'
     - platform: state
       entity_id: binary_sensor.upstairs_away_mode
       to: 'off'
