@@ -56,6 +56,7 @@ history:
       - sensor.downstairs_thermostat_humidity
       - sensor.upstairs_thermostat_humidity
       - sensor.yr_humidity
+      - sensor.washer_power
       - binary_sensor.downstairs_away_mode
       - binary_sensor.upstairs_away_mode
     domains:
