@@ -11,7 +11,11 @@
     - service: light.turn_off
       entity_id: group.all_lights
     - service: switch.turn_off
-      entity_id: group.all_switches
+      data:
+        entity_id: 
+          - switch.living_room_outlet
+          - switch.tv_outlet
+          - switch.bedroom_outlet
     - service: climate.set_operation_mode
       data:
         entity_id: climate.downstairs
