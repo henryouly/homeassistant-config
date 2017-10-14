@@ -45,7 +45,10 @@ switch.tv_outlet:
 switch.speaker_outlet:
   friendly_name: 'Speaker'
   icon: mdi:speaker-wireless
-switch.washer:
+switch.washer_outlet:
   friendly_name: 'Washer'
 input_boolean.speech_notification:
   icon: mdi:speaker-wireless
+input_boolean.laundry_done:
+  emulated_hue: true
+  emulated_hue_name: "laundry"

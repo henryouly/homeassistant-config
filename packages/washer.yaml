@@ -1,11 +1,21 @@
 switch:
   - platform: edimax
     host: 192.168.30.245
-    name: washer
+    name: washer_outlet
 
 sensor:
   - platform: template
     sensors:
       washer_power:
-        value_template: '{{ states.switch.washer.attributes["current_power_w"] | float * 1000000 | round(2) }}'
+        value_template: '{{ states.switch.washer_outlet.attributes["current_power_w"] | float * 1000000 | round(2) }}'
         unit_of_measurement: 'W'
+
+binary_sensor:
+  - platform: template
+    sensors:
+      washer_mode:
+        value_template: '{{ states.sensor.washer_power.state | int > 10 }}'
+
+input_boolean:
+  laundry_done:
+    name: Laundry notification

@@ -137,6 +137,18 @@ notify:
     name: pushbullet
     api_key: !secret PUSHBULLET_API_KEY
 
+alert:
+  laundry_done:
+    name: Laundry is done
+    done_message: Laundry is retrieved
+    entity_id: input_boolean.laundry_done
+    state: 'on'
+    repeat: 10
+    can_acknowledge: True
+    skip_first: False
+    notifiers:
+      - pushbullet
+
 device_tracker:
   - platform: asuswrt
     host: !secret ROUTER_IP

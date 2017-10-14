@@ -26,6 +26,7 @@ room_view:
     - group.bedroom
     - group.garage
     - group.tv
+    - group.laundry
 
 setting_view:
   name: Setting
@@ -72,6 +73,10 @@ Garage:
   - cover.garage
   - sensor.garage_status
 
+Laundry:
+  - switch.washer_outlet
+  - sensor.washer_power
+
 Travel:
   - sensor.home_to_work
   - sensor.work_to_home
@@ -96,6 +101,7 @@ Automation:
   - automation.upstairs_light_turn_on
   - automation.upstairs_light_turn_off
   - input_boolean.speech_notification
+  - input_boolean.laundry_done
   - input_boolean.night_mode
 
 Information:
