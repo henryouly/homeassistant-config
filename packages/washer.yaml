@@ -40,5 +40,5 @@ automation:
         from: "on"
         to: "off"
     action:
-      - service: alert.turn_on
-        entity_id: alert.laundry_done
+      - service: input_boolean.turn_on
+        entity_id: input_boolean.laundry_done
