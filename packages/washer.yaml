@@ -19,3 +19,26 @@ binary_sensor:
 input_boolean:
   laundry_done:
     name: Laundry notification
+
+alert:
+  laundry_done:
+    name: Laundry is done
+    done_message: Laundry is retrieved
+    entity_id: input_boolean.laundry_done
+    state: 'on'
+    repeat: 10
+    can_acknowledge: True
+    skip_first: False
+    notifiers:
+      - yingying_phone
+
+automation:
+  - alias: Laundary is done
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.washer_mode
+        from: "on"
+        to: "off"
+    action:
+      - service: alert.turn_on
+        entity_id: alert.laundry_done
