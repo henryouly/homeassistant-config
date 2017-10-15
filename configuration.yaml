@@ -136,6 +136,12 @@ notify:
   - platform: pushbullet
     name: pushbullet
     api_key: !secret PUSHBULLET_API_KEY
+  - platform: group
+    name: yingying_phone
+    services:
+      - service: pushbullet
+        data:
+          target: !secret yingying_email
 
 alert:
   laundry_done:
@@ -147,7 +153,7 @@ alert:
     can_acknowledge: True
     skip_first: False
     notifiers:
-      - pushbullet
+      - yingying_phone
 
 device_tracker:
   - platform: asuswrt
