@@ -46,7 +46,7 @@ switch.speaker_outlet:
   friendly_name: 'Speaker'
   icon: mdi:speaker-wireless
 switch.washer_outlet:
-  friendly_name: 'Washer'
+  friendly_name: 'Washer Outlet'
 input_boolean.speech_notification:
   icon: mdi:speaker-wireless
 input_boolean.laundry_done:

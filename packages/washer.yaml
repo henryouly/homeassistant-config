@@ -37,8 +37,8 @@ automation:
     trigger:
       - platform: state
         entity_id: binary_sensor.washer_mode
-        from: "on"
         to: "off"
+        for: "00:03:00"
     action:
       - service: input_boolean.turn_on
         entity_id: input_boolean.laundry_done
