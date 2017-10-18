@@ -19,9 +19,9 @@
     - service: climate.set_operation_mode
       data:
         entity_id: climate.downstairs
-        operation_mode: "off"
+        operation_mode: "eco"
     - service: climate.set_operation_mode
       data:
         entity_id: climate.upstairs
-        operation_mode: "off"
+        operation_mode: "eco"
 
