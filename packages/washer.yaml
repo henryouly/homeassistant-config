@@ -26,7 +26,7 @@ alert:
     done_message: Laundry is retrieved
     entity_id: input_boolean.laundry_done
     state: 'on'
-    repeat: 10,20,30,60
+    repeat: 10
     can_acknowledge: True
     skip_first: False
     notifiers:
