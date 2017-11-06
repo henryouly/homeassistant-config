@@ -199,7 +199,7 @@ automation: !include_dir_merge_list automation
 group: !include group.yaml
 zone: !include zone.yaml
 script: !include_dir_merge_named script
-switch: !include switch.yaml
+switch: !include mqtt_switch.yaml
 input_boolean: !include input_boolean.yaml
 
 # CCTV
