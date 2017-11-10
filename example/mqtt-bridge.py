@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import json
 import logging
 import paho.mqtt.client as mqtt
 
@@ -8,11 +9,12 @@ from tornado.ioloop import IOLoop
 from tornado.web import RequestHandler, Application
 from tornado.escape import json_decode
 
-PREFACE = "smartthings"
-PORT = 15382
+CONFIG_FILE = "config.json"
+STATE_FILE = "state.json"
 client = Client(client_id="mqtt_bridge", clean_session=False)
 subscriptions = []
 callback = ""
+config = {"host":"localhost", "port":15382, "preface":"smartthings"}
 
 class PushHandler(RequestHandler):
   """
@@ -22,10 +24,8 @@ class PushHandler(RequestHandler):
   """
   def post(self):
     data = json_decode(self.request.body)
-    device = data["name"]
-    property = data["type"]
     value = data["value"]
-    topic = "/".join([PREFACE, device, property])
+    topic = getTopicFor(data["name"], data["type"])
     logging.info("Incoming message from SmartThings: {0} = {1}".format(topic, value))
     res, mid = client.publish(topic, value, retain=True)
     if res == MQTT_ERR_SUCCESS:
@@ -34,30 +34,31 @@ class PushHandler(RequestHandler):
 class SubscribeHandler(RequestHandler):
   def post(self):
     data = json_decode(self.request.body)
-    global subscriptions
+    global subscriptions,callback
     subscriptions = []
     devices = data["devices"]
     for property in devices:
       for device in devices[property]:
-        topic = "/".join([PREFACE, device, property])
+        topic = getTopicFor(device, property)
         subscriptions.append(topic)
+    logging.info("Subscribing to {0}".format(subscriptions))
     global callback
     callback = data["callback"]
     logging.info("Received callback: {0}".format(callback))
       
-    logging.info("Subscribing to {0}".format(subscriptions))
     for topic in subscriptions:
       client.subscribe(topic)
     self.write({"status": "OK"})
+    saveState()
 
 def on_message(client, userdata, message):
   topic = message.topic
   value = message.payload.decode()
   logging.info("Incoming message from MQTT: {0} = {1}".format(topic, value))
   _, device, property = topic.strip().split('/') 
-  topicState = "/".join([PREFACE, device, property])
-  topicSwitchState = "/".join([PREFACE, device, "switch"])
-  topicLevelCommand = "/".join([PREFACE, device, "level"])
+  topicState = getTopicFor(device, property)
+  topicSwitchState = getTopicFor(device, "switch")
+  topicLevelCommand = getTopicFor(device, "level")
   
   logging.info("Sending message to {0}".format(callback))
   import requests
@@ -67,8 +68,8 @@ def on_message(client, userdata, message):
 
 def on_connect(client, userdata, flags, rc):
   logging.info("Connected to MQTT, code {0}".format(rc))
-  if len(subscriptions) > 0:
-    client.subscribe(subscripts)
+  for topic in subscriptions:
+    client.subscribe(topic)
 
 def connectToMQTT(host):
   logging.info("Connecting to MQTT at {0}".format(host))
@@ -77,6 +78,35 @@ def connectToMQTT(host):
   client.connect(host, port=1883)
   client.loop_start()
 
+def getTopicFor(device, property):
+  return "/".join([config["preface"], device, property])
+
+def loadConfig():
+  try:
+    with open(CONFIG_FILE) as f:
+      global config
+      config = json.load(f)
+  except IOError as e:
+    logging.info("Not loading config {0}: {1}".format(CONFIG_FILE, e))
+
+def loadSavedState():
+  try:
+    with open(STATE_FILE) as f:
+      state = json.load(f)
+      global callback,subscriptions
+      subscriptions = state["subscriptions"]
+      callback = state["callback"]
+  except IOError as e:
+    logging.info("Not loading state {0}: {1}".format(STATE_FILE, e))
+
+def saveState():
+  try:
+    with open(STATE_FILE, "w") as out:
+      state = {"subscriptions":subscriptions, "callback":callback}
+      json.dump(state, out)
+  except IOError as e:
+    logging.info("Not saving state: {0}".format(e))
+
 if __name__ == "__main__":
   logging.basicConfig(level=logging.INFO, datefmt='%Y-%m-%d %H:%M:%S',
                       format='%(asctime)-15s - [%(levelname)s] %(module)s: %(message)s',)
@@ -84,7 +114,10 @@ if __name__ == "__main__":
       (r"/push", PushHandler),
       (r"/subscribe", SubscribeHandler),
   ])
-  app.listen(PORT)
-  logging.info("Listening at http://localhost:{0}".format(PORT))
-  connectToMQTT("localhost")
+  loadConfig()
+  port = config["port"]
+  app.listen(port)
+  logging.info("Listening at http://localhost:{0}".format(port))
+  loadSavedState()
+  connectToMQTT(config["host"])
   IOLoop.current().start()
