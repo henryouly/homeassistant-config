@@ -19,7 +19,7 @@
   qos: 0
 
 - platform: mqtt
-  name: "Speaker"
+  name: "Speaker Outlet"
   state_topic: "home/switch/speaker/switch"
   command_topic: "home/switch/speaker/switch"
   payload_on: "on"
