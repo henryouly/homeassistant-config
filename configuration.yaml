@@ -124,10 +124,8 @@ media_player:
   - platform: kodi
     host: kodi.lan
   - platform: roku
-# Require vlc-nox installed
-  - platform: vlc
-    name: vlc
-    arguments: "--alsa-audio-device=plughw:1,0"
+  - platform: mpd
+    host: localhost
 
 notify:
   - platform: kodi

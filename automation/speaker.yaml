@@ -1,7 +1,7 @@
 - alias: Turn off speaker if idle for 10 min
   trigger:
     - platform: state
-      entity_id: media_player.vlc
+      entity_id: media_player.mpd
       to: "idle"
       for:
         minutes: 10

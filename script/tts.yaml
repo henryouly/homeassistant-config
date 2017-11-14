@@ -31,7 +31,7 @@ tts:
         topic: "tts/lastmsg"
         retain: true
     - service: tts.google_say
-      entity_id: media_player.vlc
+      entity_id: media_player.mpd
       data_template:
         message: "{{ value1 }}"
         cache: true
