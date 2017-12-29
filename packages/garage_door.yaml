@@ -16,3 +16,27 @@ homeassistant:
       icon: mdi:car
     sensor.garage_status:
       friendly_name: 'State of the door'
+
+alert:
+  garage_door_open_long:
+    name: Garage Door is still open
+    entity_id: sensor.garage_status
+    state: 'open'
+    repeat: 10
+    can_acknowledge: true
+    skip_first: true
+    notifiers:
+      - pushbullet
+    
+automation:
+  - alias: Notify when garage door is open
+    trigger:
+      platform: state
+      entity_id: cover.garage
+      from: "closed"
+      to: "open"
+    action:
+      - service: script.tts
+        data_template:
+          value1: "Garage door is opening"
+
