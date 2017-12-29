@@ -35,6 +35,12 @@ setting_view:
     - group.automation
     - group.script
 
+device_view:
+  name: Device
+  view: yes
+  entities:
+    - group.device
+
 information_view:
   name: Setting
   view: yes
@@ -93,13 +99,11 @@ Script:
   - script.stop_cctv
 
 Automation:
-  - automation.turn_off_all_lights_after_midnight
   - automation.turn_off_all_lights_when_no_one_at_home
-  - automation.turn_off_nest_after_10_minutes
+  - automation.set_nest_to_eco_after_10_minutes
   - automation.notify_me_when_offwork_traffic_is_good
   - automation.notify_when_garage_door_is_open
   - automation.upstairs_light_turn_on
-  - automation.upstairs_light_turn_off
   - input_boolean.speech_notification
   - input_boolean.laundry_done
   - input_boolean.night_mode
@@ -121,3 +125,9 @@ Information:
 Family:
   - device_tracker.henry_phone
   - device_tracker.yingying_phone
+
+Device:
+  - device_tracker.antscam_1
+  - device_tracker.antscam_2
+  - device_tracker.oxnas
+  - device_tracker.smarttings

@@ -10,6 +10,8 @@ group.room_view:
   icon: mdi:home
 group.setting_view:
   icon: mdi:settings
+group.device_view:
+  icon: mdi:laptop
 group.information_view:
   icon: mdi:information
 group.living_room:
