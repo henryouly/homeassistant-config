@@ -17,8 +17,9 @@
     - condition: state
       entity_id: sun.sun
       state: 'below_horizon'
-    - condition: time
-      before: '23:45'
+    - condition: state
+      entity_id: input_boolean.night_mode
+      state: 'off'
 
   action:
     service: light.turn_on
