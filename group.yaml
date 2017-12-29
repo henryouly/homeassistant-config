@@ -97,6 +97,7 @@ Script:
   - script.project_garage_cctv
   - script.project_main_cctv
   - script.stop_cctv
+  - script.turn_off_everything
 
 Automation:
   - automation.turn_off_all_lights_when_no_one_at_home
@@ -104,6 +105,8 @@ Automation:
   - automation.notify_me_when_offwork_traffic_is_good
   - automation.notify_when_garage_door_is_open
   - automation.upstairs_light_turn_on
+  - automation.turn_off_night_mode_in_the_morning
+  - automation.turn_off_all_lights_at_night_mode
   - input_boolean.speech_notification
   - input_boolean.laundry_done
   - input_boolean.night_mode
