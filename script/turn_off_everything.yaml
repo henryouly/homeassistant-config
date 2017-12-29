@@ -1,0 +1,25 @@
+#############################################
+# Turn off everything like lights, switches
+# Used by good night routine, no one at home.
+#############################################
+
+turn_off_everything:
+  sequence:
+    # turn off all lights
+    - service: light.turn_off
+      entity_id: group.all_lights
+    # turn off any switch controlled lights
+    - service: switch.turn_off
+      data:
+        entity_id: 
+          - switch.living_room_outlet
+          - switch.tv_outlet
+          - switch.bedroom_outlet
+          - switch.speaker_outlet
+    # set nest to eco
+    - service: climate.set_operation_mode
+      data:
+        entity_id: 
+          - climate.downstairs
+          - climate.upstairs
+        operation_mode: "eco"
