@@ -3,6 +3,12 @@
     - platform: state
       entity_id: binary_sensor.upstairs_away_mode
       to: 'off'
+    - platform: state
+      entity_id: group.family
+      to: 'home'
+    - platform: state
+      entity_id: sun.sun
+      to: 'below_horizon'
   
   condition:
     - condition: state
@@ -18,12 +24,3 @@
     service: light.turn_on
     entity_id: group.upstairs
 
-- alias: 'Upstairs Light Turn off'
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.upstairs_away_mode
-      to: 'on'
-        
-  action:
-    service: light.turn_off
-    entity_id: group.upstairs

@@ -1,4 +1,4 @@
-- alias: Turn off Nest after 10 minutes
+- alias: Set Nest to Eco after 10 minutes
   trigger:
     - platform: state
       entity_id: climate.upstairs
@@ -9,5 +9,5 @@
     - service: climate.set_operation_mode
       data:
         entity_id: climate.upstairs
-        operation_mode: "off"
+        operation_mode: "eco"
 

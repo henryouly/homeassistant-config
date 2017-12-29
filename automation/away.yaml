@@ -8,20 +8,5 @@
         minutes: 10
 
   action:
-    - service: light.turn_off
-      entity_id: group.all_lights
-    - service: switch.turn_off
-      data:
-        entity_id: 
-          - switch.living_room_outlet
-          - switch.tv_outlet
-          - switch.bedroom_outlet
-    - service: climate.set_operation_mode
-      data:
-        entity_id: climate.downstairs
-        operation_mode: "eco"
-    - service: climate.set_operation_mode
-      data:
-        entity_id: climate.upstairs
-        operation_mode: "eco"
+    - service: script.turn_off_everything
 
