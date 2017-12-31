@@ -72,3 +72,13 @@ input_boolean.night_mode:
   emulated_hue_name: "HA Night Routine"
 light.yeelightstrip:
   friendly_name: 'TV Back Light'
+switch.living_room_outlet:
+  friendly_name: 'Living Room Light'
+switch.bedroom_outlet:
+  friendly_name: 'Bedroom Light'
+switch.tv_outlet:
+  friendly_name: 'TV Switch'
+switch.living_room_outlet:
+  friendly_name: 'Living Room Light'
+light.hallway_light:
+  friendly_name: 'Hallway Light'

@@ -29,7 +29,7 @@ alert:
       - pushbullet
     
 automation:
-  - alias: Notify when garage door is open
+  - alias: Notify me when garage door is open
     trigger:
       platform: state
       entity_id: cover.garage

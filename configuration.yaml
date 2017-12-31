@@ -174,7 +174,7 @@ mqtt:
 
 light:
   - platform: mqtt
-    name: "Hallway Lights"
+    name: hallway_light
     state_topic: "smartthings/Hallway/switch"
     command_topic: "smartthings/Hallway/switch"
     brightness_state_topic: "smartthings/Hallway/level"

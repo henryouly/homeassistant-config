@@ -1,4 +1,4 @@
-- alias: Notify me when off-work traffic is good
+- alias: Notify me after rush hour
   trigger:
     - platform: numeric_state
       entity_id: sensor.work_to_home

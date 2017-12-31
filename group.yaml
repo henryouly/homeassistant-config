@@ -59,21 +59,24 @@ Thermostats:
   - climate.upstairs
   - sensor.upstairs_thermostat_humidity
 
-Living Room:
-  - switch.living_room_outlet
+TV:
   - switch.tv_outlet
   - light.yeelightstrip
-  - switch.speaker_outlet
   - input_select.channel
   - input_select.cctv
   - media_player.kodi
   - media_player.roku
 
+Living Room:
+  - switch.living_room_outlet
+  - switch.speaker_outlet
+
 Study Room:
-  - light.hallway_lights
+#  - light.hallway_light
 
 Bedroom:
   - switch.bedroom_outlet
+  - light.hallway_light
 
 Garage:
   - cover.garage
@@ -91,7 +94,7 @@ Travel:
 
 Upstairs:
   - climate.upstairs
-  - light.hallway_lights
+  - light.hallway_light
 
 Script:
   - script.project_garage_cctv
@@ -101,9 +104,9 @@ Script:
 
 Automation:
   - automation.turn_off_all_lights_when_no_one_at_home
-  - automation.set_nest_to_eco_after_10_minutes
-  - automation.notify_me_when_offwork_traffic_is_good
-  - automation.notify_when_garage_door_is_open
+  - automation.set_nest_to_eco
+  - automation.notify_me_after_rush_hour
+  - automation.notify_me_when_garage_door_is_open
   - automation.upstairs_light_turn_on
   - automation.turn_off_night_mode_in_the_morning
   - automation.turn_off_all_lights_at_night_mode

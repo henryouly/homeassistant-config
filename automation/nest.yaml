@@ -1,4 +1,4 @@
-- alias: Set Nest to Eco after 10 minutes
+- alias: Set Nest to Eco
   trigger:
     - platform: state
       entity_id: climate.upstairs
