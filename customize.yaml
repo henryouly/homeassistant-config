@@ -56,6 +56,12 @@ sensor.washer_power:
 sensor.pmu_power:
   friendly_name: 'PMU Power'
   icon: mdi:flash
+sensor.downstairs_thermostat_humidity:
+  friendly_name: 'Downstairs Humidity'
+  icon: mdi:nest-thermostat
+sensor.upstairs_thermostat_humidity:
+  friendly_name: 'Upstairs Humidity'
+  icon: mdi:nest-thermostat
 input_boolean.speech_notification:
   icon: mdi:speaker-wireless
 input_boolean.laundry_done:
@@ -64,3 +70,5 @@ input_boolean.laundry_done:
 input_boolean.night_mode:
   emulated_hue: true
   emulated_hue_name: "HA Night Routine"
+light.yeelightstrip:
+  friendly_name: 'TV Back Light'
