@@ -49,6 +49,13 @@ switch.speaker_outlet:
   icon: mdi:speaker-wireless
 switch.washer_outlet:
   friendly_name: 'Washer Outlet'
+  icon: mdi:power-plug
+sensor.washer_power:
+  friendly_name: 'Washer Power'
+  icon: mdi:flash
+sensor.pmu_power:
+  friendly_name: 'PMU Power'
+  icon: mdi:flash
 input_boolean.speech_notification:
   icon: mdi:speaker-wireless
 input_boolean.laundry_done:

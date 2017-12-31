@@ -1,7 +1,3 @@
-homeassistant:
-  customize:
-    sensor.pmu_power:
-      friendly_name: 'PMU Power'
 #---------------------------------------
 sensor:
   - platform: systemmonitor
