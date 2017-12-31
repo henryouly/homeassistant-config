@@ -2,7 +2,7 @@
   trigger:
     - platform: state
       entity_id: media_player.mpd
-      to: "idle"
+      to: "off"
       for:
         minutes: 10
   action:
