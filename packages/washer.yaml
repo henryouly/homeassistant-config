@@ -1,6 +1,6 @@
 switch:
   - platform: edimax
-    host: 192.168.30.245
+    host: 192.168.30.244
     name: washer_outlet
 
 sensor:
