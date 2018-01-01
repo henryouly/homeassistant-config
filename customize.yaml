@@ -26,21 +26,22 @@ zone.work:
   icon: mdi:briefcase
 zone.home:
   icon: mdi:home
-light.study_room_lights:
-  emulated_hue: true
-  emulated_hue_name: "study room"
+light.yeelightstrip:
+  friendly_name: 'TV Back Light'
+light.hallway_light:
+  friendly_name: 'Hallway Light'
 switch.living_room_outlet:
-  friendly_name: 'Living Room Outlet'
+  friendly_name: 'Living Room Light'
   icon: mdi:lightbulb
   emulated_hue: true
   emulated_hue_name: "living room"
 switch.bedroom_outlet:
-  friendly_name: 'Bedroom Outlet'
+  friendly_name: 'Bedroom Light'
   icon: mdi:lightbulb
   emulated_hue: true
   emulated_hue_name: "bedroom"
 switch.tv_outlet:
-  friendly_name: 'TV Outlet'
+  friendly_name: 'TV Switch'
   icon: mdi:television
   emulated_hue: true
   emulated_hue_name: "tv"
@@ -70,15 +71,3 @@ input_boolean.laundry_done:
 input_boolean.night_mode:
   emulated_hue: true
   emulated_hue_name: "HA Night Routine"
-light.yeelightstrip:
-  friendly_name: 'TV Back Light'
-switch.living_room_outlet:
-  friendly_name: 'Living Room Light'
-switch.bedroom_outlet:
-  friendly_name: 'Bedroom Light'
-switch.tv_outlet:
-  friendly_name: 'TV Switch'
-switch.living_room_outlet:
-  friendly_name: 'Living Room Light'
-light.hallway_light:
-  friendly_name: 'Hallway Light'

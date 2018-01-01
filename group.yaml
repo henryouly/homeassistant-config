@@ -49,7 +49,7 @@ information_view:
 
 Rooms:
   - group.living_room
-  - group.study_room
+  #- group.study_room
   - group.bedroom
   - group.garage
 
