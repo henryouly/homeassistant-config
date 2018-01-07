@@ -1,8 +1,8 @@
 {
-    "mqtt": "localhost",
-    "port": 1883,
     "dash_buttons": {
-        "A002DCE3E148": "dash_quartet",
-    },
-    "discover": false
+        "A0:02:DC:E3:E1:48": "dash_quartet",
+        "44:65:0D:15:9F:0B": "dash_dasani",
+        "44:65:0D:B2:48:E9": "dash_wilsonjones",
+        "44:65:0D:7A:12:D0": "dash_milkbaby"
+    }
 }
