@@ -18,11 +18,11 @@
       data:
         entity_id: switch.bedroom_outlet
 
-- alias: Dash button Dasani turns on study room
+- alias: Dash button Dasani turns on hallway
   trigger:
     - platform: mqtt
       topic: dashbutton/dash_dasani
   action:
     - service: light.toggle
       data:
-        entity_id: light.study_room_lights
+        entity_id: light.hallway_light
