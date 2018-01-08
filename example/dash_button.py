@@ -37,9 +37,9 @@ def extract_mac(packet):
 
 logging.basicConfig(format="%(relativeCreated)5d %(name)-15s %(levelname)-8s %(message)s")
 parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument("--mqtt", dest="mqtt", action="store_const", const=str, default="localhost")
-parser.add_argument("--port", dest="port", action="store_const", const=int, default=1883)
-parser.add_argument("--discovery", dest="discovery", action="store_true")
+parser.add_argument("--mqtt", default="localhost")
+parser.add_argument("--port", type=int, default=1883)
+parser.add_argument("--discovery", action="store_true")
 parser.add_argument("--debug", dest="loglevel", action="store_const", const=logging.DEBUG, default=logging.INFO)
 args = parser.parse_args()
 logger = logging.getLogger("dash_button")
