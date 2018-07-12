@@ -11,8 +11,6 @@ sensor:
       - type: load_5m
       - type: load_15m
       - type: since_last_boot
-#     - type: process
-#       arg: mosquitto
   - platform: command_line
     name: PMU Current
     command: "cat /sys/devices/platform/soc@01c00000/1c2ac00.i2c/i2c-0/0-0034/ac/amperage"

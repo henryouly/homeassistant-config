@@ -1,30 +1,18 @@
 homeassistant:
-  # Name of the location where Home Assistant is running
   name: Home
-  # Location required to calculate the time the sun rises and sets
   latitude: !secret home_lat
   longitude: !secret home_long
-  # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 29
-  # metric for Metric, imperial for Imperial
   unit_system: imperial
-  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/Los_Angeles
-  # My customize
   customize: !include customize.yaml
   packages: !include_dir_named packages
 
-# Show links to resources in log and frontend
-# introduction:
-
-# Enables the frontend
-frontend:
-
 http:
   base_url: !secret base_url
+  server_port: !secret server_port
   ssl_certificate: !secret ssl_certificate
   ssl_key: !secret ssl_key
-  server_port: !secret server_port
   api_password: !secret http_api_password
   cors_allowed_origins:
     - https://google.com
@@ -35,16 +23,6 @@ http:
   ip_ban_enabled: True
   login_attempts_threshold: 3
 
-# Checks for available updates
-updater:
-
-# Discover some devices automatically
-discovery:
-
-# Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
-
-# Enables support for tracking state changes over time.
 history:
   include:
     entities:
@@ -64,7 +42,6 @@ history:
       - device_tracker
       - switch
 
-# View all events in a logbook
 logbook:
   exclude:
     domains:
@@ -89,17 +66,6 @@ recorder:
       - sensor.leave_for_work_time
       - binary_sensor.washer_mode
 
-# Track the sun
-sun:
-
-# Weather Prediction
-sensor:
-  - platform: yr
-    monitored_conditions: 
-      - temperature
-      - humidity
-    scan_interval: 600
-
 binary_sensor:
   - platform: template
     sensors:
@@ -112,25 +78,13 @@ binary_sensor:
         entity_id: climate.downstairs
         value_template: "{{ is_state_attr('climate.downstairs', 'away_mode', 'on') }}"
 
-# Text to speech
 tts:
   platform: google
   cache: true
   cache_dir: /tmp/tts
   time_memory: 300
 
-# Kodi
-media_player:
-  - platform: kodi
-    host: kodi.lan
-  - platform: roku
-  - platform: mpd
-    host: localhost
-
 notify:
-  - platform: kodi
-    name: kodi
-    host: http://kodi.lan
   - platform: pushbullet
     name: pushbullet
     api_key: !secret PUSHBULLET_API_KEY
@@ -146,12 +100,11 @@ device_tracker:
     host: !secret ROUTER_IP
     port: !secret ROUTER_PORT
     username: !secret ROUTER_USERNAME
-    password: !secret ROUTER_PASSWORD
+    ssh_key: !secret ROUTER_SSH_KEY
     interval_seconds: 120
+    track_new_devices: False
   - platform: owntracks
 
-ffmpeg:
-  ffmpeg_bin: /usr/bin/avconv
 
 nest:
   client_id: !secret NEST_CLIENT_ID
@@ -187,13 +140,6 @@ light:
     retain: true
     optimistic: false
     qos: 0
-  - platform: yeelight
-    devices:
-      192.168.30.202:
-        name: yeelightstrip
-        transition: 1000
-        use_music_mode: True
-        save_on_change: False
 
 automation: !include_dir_merge_list automation
 group: !include group.yaml
@@ -211,6 +157,17 @@ input_select:
       - Reuters TV
     initial: ABC News
 
-
-# New config panel in 0.39
+ffmpeg:
 config:
+frontend:
+updater:
+discovery:
+conversation:
+sun:
+map:
+sensor:
+  - platform: yr
+    monitored_conditions: 
+      - temperature
+      - humidity
+    scan_interval: 600

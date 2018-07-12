@@ -1,4 +1,5 @@
 default_view:
+  name: Home
   view: yes
   entities:
     - device_tracker.henry_phone
@@ -116,14 +117,12 @@ Automation:
 
 Information:
   - sensor.disk_free_usr
-  - sensor.disk_use_usr
-  - sensor.disk_free_mediadata
-  - sensor.disk_use_mediadata
+  - sensor.disk_use_percent_usr
   - sensor.ram_free
   - sensor.cpu_speed
-  - sensor.average_load_1m
-  - sensor.average_load_5m
-  - sensor.average_load_15m
+  - sensor.load_1m
+  - sensor.load_5m
+  - sensor.load_15m
   - sensor.pmu_power
   - sensor.washer_power
   - sensor.since_last_boot
@@ -137,3 +136,14 @@ Device:
   - device_tracker.antscam_2
   - device_tracker.oxnas
   - device_tracker.smartthings
+  - device_tracker.edimax_switch_1
+  - device_tracker.edimax_switch_2
+  - device_tracker.henrypc
+  - device_tracker.googlehome
+  - device_tracker.echodot_garage
+  - device_tracker.echodot_livingroom
+  - device_tracker.echodot_bedroom
+  - device_tracker.chromecast
+  - device_tracker.roku
+  - device_tracker.hmedia
+  - device_tracker.myq
