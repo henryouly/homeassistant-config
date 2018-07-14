@@ -1,19 +1,5 @@
-media_player.kodi:
-  friendly_name: Kodi
-sensor.yr_humidity:
-  friendly_name: Humidity 
-sensor.yr_temperature:
-  friendly_name: Temperature
-group.camera_view:
-  icon: mdi:camcorder
-group.room_view:
+group.default_view:
   icon: mdi:home
-group.setting_view:
-  icon: mdi:settings
-group.device_view:
-  icon: mdi:laptop
-group.information_view:
-  icon: mdi:information
 group.living_room:
   icon: mdi:home
 group.study_room:
@@ -26,8 +12,10 @@ zone.work:
   icon: mdi:briefcase
 zone.home:
   icon: mdi:home
-light.yeelightstrip:
-  friendly_name: 'TV Back Light'
+zone.dance:
+  icon: mdi:karate
+zone.school:
+  icon: mdi:school
 light.hallway_light:
   friendly_name: 'Hallway Light'
 switch.living_room_outlet:
@@ -59,10 +47,10 @@ sensor.pmu_power:
   icon: mdi:flash
 sensor.downstairs_thermostat_humidity:
   friendly_name: 'Downstairs Humidity'
-  icon: mdi:nest-thermostat
+  icon: mdi:thermostat
 sensor.upstairs_thermostat_humidity:
   friendly_name: 'Upstairs Humidity'
-  icon: mdi:nest-thermostat
+  icon: mdi:thermostat
 input_boolean.speech_notification:
   icon: mdi:speaker-wireless
 input_boolean.laundry_done:

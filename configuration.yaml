@@ -165,9 +165,3 @@ discovery:
 conversation:
 sun:
 map:
-sensor:
-  - platform: yr
-    monitored_conditions: 
-      - temperature
-      - humidity
-    scan_interval: 600

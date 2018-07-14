@@ -1,0 +1,127 @@
+title: Home
+views:
+  - icon: mdi:home
+    title: Home
+    id: home
+    cards:
+      - type: weather-forecast
+        title: Weather
+        entity: weather.yweather
+      - type: glance
+        title: People
+        entities:
+          - device_tracker.henry_phone
+          - device_tracker.yingying_phone
+          - device_tracker.henry_yz
+      - type: entities
+        title: Room
+        show_header_toggle: false
+        entities:
+          - group.living_room
+          - group.bedroom
+          - group.garage
+          - group.tv
+      - type: entities
+        title: Travel
+        entities:
+          - sensor.home_to_work
+          - sensor.work_to_home
+          - sensor.henry_location_to_home
+      - type: entities
+        title: Thermostats
+        entities:
+          - climate.downstairs
+          - sensor.downstairs_thermostat_humidity
+          - climate.upstairs
+          - sensor.upstairs_thermostat_humidity
+      - type: entities
+        title: Vacuum
+        show_header_toggle: false
+        entities:
+          - vacuum.xiaomi_vacuum_cleaner
+  - icon: mdi:camcorder
+    title: Cameras
+    id: camera
+    cards:
+      - type: picture-entity
+        title: Main Camera
+        entity: camera.main
+        camera-image: camera.main
+        show_info: false
+      - type: picture-entity
+        title: Garage Camera
+        entity: camera.garage
+        camera-image: camera.garage
+        show_info: false
+  - icon: mdi:settings
+    title: Setting
+    id: setting
+    cards:
+      - type: entities
+        title: Automation
+        entities:
+          - automation.turn_off_all_lights_when_no_one_at_home
+          - automation.set_nest_to_eco
+          - automation.notify_me_after_rush_hour
+          - automation.notify_me_when_garage_door_is_open
+          - automation.upstairs_light_turn_on
+          - automation.turn_off_night_mode_in_the_morning
+          - automation.turn_off_all_lights_at_night_mode
+          - input_boolean.speech_notification
+          - input_boolean.laundry_done
+          - input_boolean.night_mode
+      - type: entities
+        title: Script
+        entities:
+          - script.turn_off_everything
+  - icon: mdi:laptop
+    title: Device
+    id: device
+    cards:
+      - type: entities
+        title: Smart Home Device
+        entities:
+          - device_tracker.smartthings
+          - device_tracker.edimax_switch_1
+          - device_tracker.edimax_switch_2
+          - device_tracker.googlehome
+          - device_tracker.echodot_livingroom
+          - device_tracker.echodot_bedroom
+          - device_tracker.echodot_garage
+          - device_tracker.myq
+      - type: glance
+        title: Media Player
+        entities:
+          - device_tracker.chromecast
+          - device_tracker.roku
+          - device_tracker.hmedia
+      - type: glance
+        title: Server
+        entities:
+          - device_tracker.oxnas
+          - device_tracker.henrypc
+          - device_tracker.bananapi
+          - device_tracker.bananapi_2
+
+      - type: glance
+        title: Cameras
+        entities:
+          - device_tracker.antscam_1
+          - device_tracker.antscam_2
+
+  - icon: mdi:information
+    title: Information
+    id: info
+    cards:
+      - type: entities
+        title: Information
+        entities:
+          - sensor.disk_free_usr
+          - sensor.disk_use_percent_usr
+          - sensor.memory_free
+          - sensor.load_1m
+          - sensor.load_5m
+          - sensor.load_15m
+          - sensor.pmu_power
+          - sensor.washer_power
+          - sensor.since_last_boot

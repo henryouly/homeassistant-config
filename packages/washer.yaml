@@ -1,3 +1,13 @@
+group:
+  washer_card:
+    name: Laundary
+    view: no
+    entities:
+      - input_boolean.laundry_done
+      - switch.washer_outlet
+      - sensor.washer_mode
+      - sensor.washer_power
+
 switch:
   - platform: edimax
     host: 192.168.30.244
@@ -19,18 +29,6 @@ binary_sensor:
 input_boolean:
   laundry_done:
     name: Laundry notification
-
-alert:
-  laundry_done:
-    name: Laundry is done
-    done_message: Laundry is retrieved
-    entity_id: input_boolean.laundry_done
-    state: 'on'
-    repeat: 10
-    can_acknowledge: True
-    skip_first: False
-    notifiers:
-      - yingying_phone
 
 automation:
   - alias: Laundary is done
