@@ -20,12 +20,11 @@ views:
       - type: weather-forecast
         title: Weather
         entity: weather.yweather
-      - type: glance
+      - type: entities
         title: People
         entities:
           - device_tracker.henry_phone
           - device_tracker.yingying_phone
-          - device_tracker.henry_yz
       - type: entities
         title: Room
         show_header_toggle: false
@@ -52,7 +51,8 @@ views:
         show_header_toggle: false
         entities:
           - vacuum.xiaomi_vacuum_cleaner
-          - sensor.last_vacuum_time
+          - entity: sensor.last_vacuum_time
+            name: Last Time
   - icon: mdi:camcorder
     title: Cameras
     id: camera
@@ -104,21 +104,19 @@ views:
           - device_tracker.echodot_bedroom
           - device_tracker.echodot_garage
           - device_tracker.myq
-      - type: glance
+      - type: entities
         title: Media Player
         entities:
           - device_tracker.chromecast
           - device_tracker.roku
           - device_tracker.hmedia
-      - type: glance
+      - type: entities
         title: Server
         entities:
           - device_tracker.oxnas
           - device_tracker.henrypc
           - device_tracker.bananapi
-          - device_tracker.bananapi_2
-
-      - type: glance
+      - type: entities
         title: Cameras
         entities:
           - device_tracker.antscam_1
