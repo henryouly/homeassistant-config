@@ -4,6 +4,19 @@ views:
     title: Home
     id: home
     cards:
+      - type: entity-filter
+        entities:
+          - entity: input_boolean.laundry_done
+            name: Laundry
+          - light.hallway_light
+          - switch.tv_outlet
+          - switch.living_room_outlet
+          - switch.bedroom_outlet
+        state_filter:
+          - 'on'
+        card:
+          type: entities
+          title: Alert
       - type: weather-forecast
         title: Weather
         entity: weather.yweather
@@ -39,6 +52,7 @@ views:
         show_header_toggle: false
         entities:
           - vacuum.xiaomi_vacuum_cleaner
+          - sensor.last_vacuum_time
   - icon: mdi:camcorder
     title: Cameras
     id: camera
@@ -69,6 +83,7 @@ views:
           - automation.turn_off_all_lights_at_night_mode
           - input_boolean.speech_notification
           - input_boolean.laundry_done
+          - input_boolean.vacuum_done
           - input_boolean.night_mode
       - type: entities
         title: Script

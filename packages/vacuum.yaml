@@ -2,3 +2,28 @@ vacuum:
   - platform: xiaomi_miio
     host: 192.168.30.124
     token: 417a537556545764474a505330443153
+
+input_boolean:
+  vacuum_done:
+    name: Vacuum is done
+
+automation:
+  - alias: Vacuum is done
+    trigger:
+      - platform: state
+        entity_id: vacuum.xiaomi_vacuum_cleaner
+        from: "on"
+        to: "off"
+    action:
+      - service: input_boolean.turn_on
+        entity_id: input_boolean.vacuum_done
+
+sensor:
+  - platform: template
+    sensors:
+      last_vacuum_time:
+        value_template: >-
+          {{as_timestamp(state_attr('automation.vacuum_is_done', 'last_triggered'))
+            | timestamp_custom("%m/%d", true)}}
+        
+    
