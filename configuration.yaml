@@ -26,21 +26,14 @@ http:
 history:
   include:
     entities:
-      - sensor.home_to_work
-      - sensor.work_to_home
       - sensor.downstairs_thermostat_temperature
       - sensor.upstairs_thermostat_temperature
-      - sensor.yr_temperature
       - sensor.downstairs_thermostat_humidity
       - sensor.upstairs_thermostat_humidity
-      - sensor.yr_humidity
-      - sensor.washer_power
-      - binary_sensor.downstairs_away_mode
-      - binary_sensor.upstairs_away_mode
     domains:
-      - light
       - device_tracker
       - switch
+      - light
 
 logbook:
   exclude:
@@ -56,14 +49,15 @@ recorder:
       - camera
     entities:
       - sensor.since_last_boot
-      - sensor.average_load_1m
-      - sensor.average_load_5m
-      - sensor.average_load_15m
+      - sensor.load_1m
+      - sensor.load_5m
+      - sensor.load_15m
       - sensor.pmu_current
       - sensor.pmu_voltage
       - sensor.pmu_power
-      - sensor.ram_free
-      - sensor.leave_for_work_time
+      - sensor.memory_free
+      - sensor.washer_power
+      - sensor.washer_mode
       - binary_sensor.washer_mode
 
 binary_sensor:
