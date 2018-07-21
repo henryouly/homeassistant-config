@@ -10,13 +10,6 @@ default_view:
     - group.rooms
     - group.travel
 
-TV:
-  - switch.tv_outlet
-  - light.yeelightstrip
-  - input_select.channel
-  - input_select.cctv
-  - media_player.roku
-
 Living Room:
   - switch.living_room_outlet
   - switch.speaker_outlet
@@ -29,6 +22,9 @@ Garage:
   - cover.garage
   - sensor.garage_status
 
-Upstairs:
-  - climate.upstairs
-  - light.hallway_light
+TV:
+  - switch.tv_outlet
+  - light.yeelightstrip
+  - input_select.channel
+  - input_select.cctv
+  - media_player.roku

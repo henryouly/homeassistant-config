@@ -31,8 +31,8 @@ views:
         entities:
           - group.living_room
           - group.bedroom
-          - group.garage
           - group.tv
+          - group.garage
       - type: entities
         title: Travel
         entities:
@@ -109,7 +109,6 @@ views:
         entities:
           - device_tracker.chromecast
           - device_tracker.roku
-          - device_tracker.hmedia
       - type: entities
         title: Server
         entities:
