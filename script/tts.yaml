@@ -22,16 +22,8 @@ tts:
         - condition: state
           entity_id: group.family
           state: 'home'
-    - service: switch.turn_on
-      entity_id: switch.speaker_outlet
-    - delay: '00:00:01'
-    - service: mqtt.publish
-      data_template:
-        payload: "{{ value1 }}"
-        topic: "tts/lastmsg"
-        retain: true
     - service: tts.google_say
-      entity_id: media_player.mpd
+      entity_id: media_player.google_home
       data_template:
         message: "{{ value1 }}"
         cache: true

@@ -28,3 +28,7 @@ TV:
   - input_select.channel
   - input_select.cctv
   - media_player.roku
+
+Family:
+  - device_tracker.henry_phone
+  - device_tracker.yingying_phone
