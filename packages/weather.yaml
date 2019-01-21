@@ -1,2 +1,54 @@
+group:
+  weather_card_today:
+    name: Today
+    view: no
+    entities:
+      - sensor.forecast_summary
+      - sensor.forecast_temperature
+      - sensor.forecast_humidity
+
+  weather_card_forecast:
+    name: Forecast
+    view: no
+    entities:
+      - sensor.forecast_1
+      - sensor.forecast_2
+
 weather:
-  - platform: yweather
+  - platform: darksky
+    api_key: !secret DARKSKY_API_KEY
+    mode: daily
+
+sensor:
+  - platform: darksky
+    name: forecast
+    api_key: !secret DARKSKY_API_KEY
+    forecast:
+      - 1
+      - 2
+    monitored_conditions: 
+      - summary
+      - icon
+      - temperature
+      - temperature_high
+      - temperature_low
+      - humidity
+  - platform: template
+    sensors:
+      forecast_1:
+        value_template: >-
+          {{ states('sensor.forecast_summary_1') }}
+          ({{ states.sensor.forecast_overnight_low_temperature_1.state_with_unit }} / 
+           {{ states.sensor.forecast_daytime_high_temperature_1.state_with_unit }})
+        friendly_name_template: >-
+          {%- set date = as_timestamp(now()) + (1 * 86400) -%}
+          {{ date | timestamp_custom("%A (%-m/%-d)") }}
+      forecast_2:
+        value_template: >-
+          {{ states('sensor.forecast_summary_2') }}
+          ({{ states.sensor.forecast_overnight_low_temperature_2.state_with_unit }} / 
+           {{ states.sensor.forecast_daytime_high_temperature_2.state_with_unit }})
+        friendly_name_template: >-
+          {%- set date = as_timestamp(now()) + (2 * 86400) -%}
+          {{ date | timestamp_custom("%A (%-m/%-d)") }}
+

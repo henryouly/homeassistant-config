@@ -1,0 +1,39 @@
+- platform: mqtt
+  name: "Living Room Outlet"
+  state_topic: "home/switch/living_room/switch"
+  command_topic: "home/switch/living_room/switch"
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false
+  retain: true
+  qos: 0
+
+#- platform: mqtt
+#  name: "TV Outlet"
+#  state_topic: "home/switch/tv/switch"
+#  command_topic: "home/switch/tv/switch"
+#  payload_on: "on"
+#  payload_off: "off"
+#  optimistic: false
+#  retain: true
+#  qos: 0
+
+- platform: mqtt
+  name: "Speaker Outlet"
+  state_topic: "home/switch/speaker/switch"
+  command_topic: "home/switch/speaker/switch"
+  payload_on: "on"
+  payload_off: "off"
+  optimistic: false
+  retain: true
+  qos: 0
+
+#- platform: mqtt
+#  name: "Bedroom Outlet"
+#  state_topic: "home/switch/bedroom/switch"
+#  command_topic: "home/switch/bedroom/switch"
+#  payload_on: "on"
+#  payload_off: "off"
+#  optimistic: false
+#  retain: true
+#  qos: 0

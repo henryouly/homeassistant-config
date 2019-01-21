@@ -1,7 +1,12 @@
-switch:
-  - platform: edimax
-    host: 192.168.30.244
-    name: washer_outlet
+group:
+  washer_card:
+    name: Laundary
+    view: no
+    entities:
+      - input_boolean.laundry_done
+      - switch.washer_outlet
+      - binary_sensor.washer_mode
+      - sensor.washer_power
 
 sensor:
   - platform: template

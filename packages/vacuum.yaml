@@ -26,4 +26,3 @@ sensor:
           {{as_timestamp(state_attr('automation.vacuum_is_done', 'last_triggered'))
             | timestamp_custom("%m/%d", true)}}
         
-    

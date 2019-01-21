@@ -1,0 +1,60 @@
+binary_sensor:
+  - platform: template
+    sensors:
+      device_bananapi:
+        value_template: "{{ is_state('device_tracker.bananapi', 'home') }}"
+        friendly_name: "bananapi"
+      device_antscam_1:
+        value_template: "{{ is_state('device_tracker.antscam_1', 'home') }}"
+        friendly_name: "YiCam 1"
+      device_antscam_2:
+        value_template: "{{ is_state('device_tracker.antscam_2', 'home') }}"
+        friendly_name: "YiCam 2"
+      device_myq:
+        value_template: "{{ is_state('device_tracker.myq', 'home') }}"
+        friendly_name: "MyQ"
+      device_smartthings:
+        value_template: "{{ is_state('device_tracker.smartthings', 'home') }}"
+        friendly_name: "Smartthings Hub"
+      device_googlehome:
+        value_template: "{{ is_state('device_tracker.googlehome', 'home') }}"
+        friendly_name: "Google Home"
+      device_echodot_livingroom:
+        value_template: "{{ is_state('device_tracker.echodot_livingroom', 'home') }}"
+        friendly_name: "Echo Livingroom"
+      device_echodot_bedroom:
+        value_template: "{{ is_state('device_tracker.echodot_bedroom', 'home') }}"
+        friendly_name: "Echo Bedroom"
+      device_lumi_gateway:
+        value_template: "{{ is_state('device_tracker.lumi_gateway', 'home') }}"
+        friendly_name: "Lumi Gateway"
+      device_nas:
+        value_template: "{{ is_state('device_tracker.nas', 'home') }}"
+        friendly_name: "NAS"
+      device_macbookpro3:
+        value_template: "{{ is_state('device_tracker.macbookpro3', 'home') }}"
+        friendly_name: "VM Server"
+      device_pc:
+        value_template: "{{ is_state('device_tracker.pc', 'home') }}"
+        friendly_name: "PC"
+      device_mibox1s:
+        value_template: "{{ is_state('device_tracker.mibox1s', 'home') }}"
+        friendly_name: "Mi Box"
+      device_chromecast:
+        value_template: "{{ is_state('device_tracker.chromecast', 'home') }}"
+        friendly_name: "Chromecast"
+      device_roku:
+        value_template: "{{ is_state('device_tracker.roku', 'home') }}"
+        friendly_name: "Roku"
+      device_edimax_switch_1:
+        value_template: "{{ is_state('device_tracker.edimax_switch_1', 'home') }}"
+        friendly_name: "Edimax Switch 1"
+      device_edimax_switch_2:
+        value_template: "{{ is_state('device_tracker.edimax_switch_2', 'home') }}"
+        friendly_name: "Edimax Switch 2"
+      device_tplink_switch_1:
+        value_template: "{{ is_state('device_tracker.tplink_switch_1', 'home') }}"
+        friendly_name: "TPLink Switch 1"
+      device_tplink_switch_2:
+        value_template: "{{ is_state('device_tracker.tplink_switch_2', 'home') }}"
+        friendly_name: "TPLink Switch 2"

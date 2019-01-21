@@ -10,19 +10,10 @@ sensor:
       - type: load_1m
       - type: load_5m
       - type: load_15m
-      - type: since_last_boot
-  - platform: command_line
-    name: PMU Current
-    command: "cat /sys/devices/platform/soc@01c00000/1c2ac00.i2c/i2c-0/0-0034/ac/amperage"
-    unit_of_measurement: "mA"
-    value_template: '{{ value | multiply(0.001) | round(2) }}'
-  - platform: command_line
-    name: PMU Voltage
-    command: "cat /sys/devices/platform/soc@01c00000/1c2ac00.i2c/i2c-0/0-0034/ac/voltage"
-    unit_of_measurement: "V"
-    value_template: '{{ value | multiply(0.000001) | round(2) }}'
+      - type: last_boot
   - platform: template
     sensors:
       pmu_power:
-        value_template: '{{ (float(states.sensor.pmu_current.state) * float(states.sensor.pmu_voltage.state)) | multiply(0.001) | round(2) }}'
-        unit_of_measurement: "W"
+        friendly_name_template: "{{ states.switch.nas_outlet.name}} Power"
+        value_template: '{{ states.switch.nas_outlet.attributes["current_power_w"] | float | round(2) }}'
+        unit_of_measurement: 'W'
