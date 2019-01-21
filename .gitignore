@@ -52,8 +52,11 @@ __pycache__
 *.xml
 *.backup
 *.google.token
+*.key
 .google.token
 .HA_VERSION
+.cloud
+.storage
 home-assistant.env
 home-assistant.*
 known_devices.yaml
@@ -65,4 +68,5 @@ tts
 www
 icloud
 state.json
+emulated_hue_ids.json
 config.yml
