@@ -1,0 +1,22 @@
+speech:
+  sequence:
+    - service: script.tts
+      data_template:
+        value1: >-
+          {%- macro greeting() -%}
+            {% set hour = now().strftime('%H')|int %}
+            {% if hour > 6 and hour < 12 %}
+            Good morning.
+            {% elif hour < 17 %}
+            Good afternoon.
+            {% else %}
+            Good evening.
+            {% endif %}
+          {%- endmacro -%}
+          {% if Greeting | length == 0 %}
+            {% set Greeting = greeting() %}
+          {% endif %} 
+          {{ Greeting }}
+          {% if is_state('input_boolean.laundry_done', 'on') %}
+            Laundry is done.
+          {% endif %}
