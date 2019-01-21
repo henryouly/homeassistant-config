@@ -1,0 +1,5 @@
+light:
+  - platform: yeelight
+    devices:
+      192.168.30.88:
+        name: yeelightstrip

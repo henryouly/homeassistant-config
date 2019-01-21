@@ -1,0 +1,21 @@
+- alias: Laundry finishes light
+  trigger:
+    - platform: state
+      entity_id: input_boolean.laundry_done
+      to: "on"
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.yeelightstrip
+        color_temp: 250
+        brightness: 250
+
+- alias: Laundry notification off
+  trigger:
+    - platform: state
+      entity_id: light.yeelightstrip
+      to: 'off'
+  action:
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.laundry_done
