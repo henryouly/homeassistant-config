@@ -83,6 +83,22 @@ logger:
 # Amazon Echo
 emulated_hue:
   expose_by_default: false
+  entities:
+    light.yeelightstrip:
+      name: "laundry"
+      hidden: false
+    switch.living_room_outlet:
+      name: "living room"
+      hidden: false
+    switch.bedroom_outlet:
+      name: "bedroom"
+      hidden: false
+    switch.tv_outlet:
+      name: "tv"
+      hidden: false
+    input_boolean.night_mode:
+      name: "HA Night Routine"
+      hidden: false
 
 mqtt:
   broker: !secret mqtt_server
