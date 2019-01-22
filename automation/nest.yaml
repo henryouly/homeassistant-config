@@ -11,3 +11,16 @@
         entity_id: climate.upstairs
         operation_mode: "eco"
 
+- alias: Set Downstair Nest to Eco
+  trigger:
+    - platform: state
+      entity_id: climate.downstairs
+      to: "heat"
+      for:
+        minutes: 10
+  action:
+    - service: climate.set_operation_mode
+      data:
+        entity_id: climate.downstairs
+        operation_mode: "eco"
+
