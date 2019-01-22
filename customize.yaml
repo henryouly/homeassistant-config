@@ -50,6 +50,8 @@ sensor.downstairs_thermostat_humidity:
 sensor.upstairs_thermostat_humidity:
   friendly_name: 'Upstairs Humidity'
   icon: mdi:thermostat
+sensor.last_vacuum_time:
+  friendly_name: 'Last Vacuum'
 
 input_boolean.speech_notification:
   icon: mdi:speaker-wireless

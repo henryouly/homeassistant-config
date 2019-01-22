@@ -23,6 +23,5 @@ sensor:
     sensors:
       last_vacuum_time:
         value_template: >-
-          {{as_timestamp(state_attr('automation.vacuum_is_done', 'last_triggered'))
+          {{as_timestamp(state_attr('vacuum.xiaomi_vacuum_cleaner', 'clean_stop'))
             | timestamp_custom("%m/%d", true)}}
-        
