@@ -8,7 +8,6 @@ group.garage:
   icon: mdi:car
 group.tv:
   icon: mdi:television
-
 zone.work:
   icon: mdi:briefcase
 zone.home:
@@ -17,41 +16,40 @@ zone.dance:
   icon: mdi:karate
 zone.school:
   icon: mdi:school
-
 light.hallway_light:
-  friendly_name: 'Hallway Light'
+  friendly_name: Hallway Light
 light.yeelightstrip:
-  friendly_name: 'Light Strip'
+  friendly_name: Light Strip
 switch.living_room_outlet:
-  friendly_name: 'Living Room Light'
+  friendly_name: Living Room Light
   icon: mdi:lightbulb
 switch.bedroom_outlet:
-  friendly_name: 'Bedroom Light'
+  friendly_name: Bedroom Light
   icon: mdi:lightbulb
 switch.tv_outlet:
-  friendly_name: 'TV Switch'
+  friendly_name: TV Switch
   icon: mdi:television
 switch.speaker_outlet:
-  friendly_name: 'Speaker'
+  friendly_name: Speaker
   icon: mdi:speaker-wireless
 switch.washer_outlet:
-  friendly_name: 'Washer Outlet'
+  friendly_name: Washer Outlet
   icon: mdi:power-plug
-
 sensor.washer_power:
-  friendly_name: 'Washer Power'
+  friendly_name: Washer Power
   icon: mdi:flash
 sensor.pmu_power:
-  friendly_name: 'PMU Power'
+  friendly_name: PMU Power
   icon: mdi:flash
 sensor.downstairs_thermostat_humidity:
-  friendly_name: 'Downstairs Humidity'
+  friendly_name: Downstairs Humidity
   icon: mdi:thermostat
 sensor.upstairs_thermostat_humidity:
-  friendly_name: 'Upstairs Humidity'
+  friendly_name: Upstairs Humidity
   icon: mdi:thermostat
 sensor.last_vacuum_time:
-  friendly_name: 'Last Vacuum'
-
+  friendly_name: Last Vacuum
 input_boolean.speech_notification:
   icon: mdi:speaker-wireless
+switch.tv_switch:
+  icon: mdi:television
