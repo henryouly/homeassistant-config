@@ -145,6 +145,7 @@ conversation:
 sun:
 map:
 system_health:
+stream:
 
 google_assistant:
   project_id: !secret ASSISTANT_PROJECT_ID
