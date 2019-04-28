@@ -23,7 +23,7 @@ Garage:
   - sensor.garage_status
 
 TV:
-  - switch.tv_outlet
+  - switch.tv_switch
   - light.yeelightstrip
   - input_select.channel
   - input_select.cctv
