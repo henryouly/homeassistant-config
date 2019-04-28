@@ -1,0 +1,3 @@
+tesla:
+  username: !secret TESLA_USERNAME
+  password: !secret TESLA_PASSWORD
