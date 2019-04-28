@@ -24,7 +24,7 @@ Garage:
 
 TV:
   - switch.tv_switch
-  - light.yeelightstrip
+  - light.yeelight_strip1_286c072f4c87
   - input_select.channel
   - input_select.cctv
   - media_player.roku

@@ -6,14 +6,14 @@
   action:
     - service: light.turn_on
       data:
-        entity_id: light.yeelightstrip
+        entity_id: light.yeelight_strip1_286c072f4c87
         color_temp: 250
         brightness: 250
 
 - alias: Laundry notification off
   trigger:
     - platform: state
-      entity_id: light.yeelightstrip
+      entity_id: light.yeelight_strip1_286c072f4c87
       to: 'off'
   action:
     - service: input_boolean.turn_off

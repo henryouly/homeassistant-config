@@ -84,7 +84,7 @@ logger:
 emulated_hue:
   expose_by_default: false
   entities:
-    light.yeelightstrip:
+    light.yeelight_strip1_286c072f4c87:
       name: "laundry"
       hidden: false
     switch.living_room_outlet:
