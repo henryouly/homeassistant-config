@@ -1,11 +1,3 @@
-- platform: tplink
-  host: 192.168.30.90
-  name: tv_outlet
-
-- platform: tplink
-  host: 192.168.30.145
-  name: nas_outlet
-
 - platform: edimax
   host: 192.168.30.244
   name: washer_outlet
