@@ -5,7 +5,7 @@
   action:
     - service: switch.toggle
       data:
-        entity_id: switch.tv_outlet
+        entity_id: switch.tv_switch
 
 - alias: Dash button Quartet turns on bedroom
   trigger:

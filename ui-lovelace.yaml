@@ -9,7 +9,7 @@ views:
           - entity: input_boolean.laundry_done
             name: Laundry
           - light.hallway_light
-          - switch.tv_outlet
+          - switch.tv_switch
           - switch.living_room_outlet
           - switch.bedroom_outlet
         state_filter:

@@ -26,8 +26,8 @@ switch.living_room_outlet:
 switch.bedroom_outlet:
   friendly_name: Bedroom Light
   icon: mdi:lightbulb
-switch.tv_outlet:
-  friendly_name: TV Switch
+switch.tv_switch:
+  friendly_name: TV
   icon: mdi:television
 switch.speaker_outlet:
   friendly_name: Speaker
@@ -51,5 +51,3 @@ sensor.last_vacuum_time:
   friendly_name: Last Vacuum
 input_boolean.speech_notification:
   icon: mdi:speaker-wireless
-switch.tv_switch:
-  icon: mdi:television
