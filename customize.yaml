@@ -51,3 +51,5 @@ sensor.last_vacuum_time:
   friendly_name: Last Vacuum
 input_boolean.speech_notification:
   icon: mdi:speaker-wireless
+sensor.downstairs_thermostat_temperature:
+  friendly_name: Temperature
