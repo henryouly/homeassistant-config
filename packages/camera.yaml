@@ -1,10 +1,20 @@
+#camera:
+#  - platform: ffmpeg
+#    input: !secret GARAGE_CCTV_RTSP
+#    name: Garage
+#  - platform: ffmpeg
+#    input: !secret MAIN_CCTV_RTSP
+#    name: Main
 camera:
-  - platform: ffmpeg
-    input: !secret GARAGE_CCTV_RTSP
+  - platform: generic
+    still_image_url: https://www.mayline.com/products/images/product/noimage.jpg
+    stream_source: !secret GARAGE_CCTV_RTSP
     name: Garage
-  - platform: ffmpeg
-    input: !secret MAIN_CCTV_RTSP
+  - platform: generic
+    still_image_url: https://www.mayline.com/products/images/product/noimage.jpg
+    stream_source: !secret MAIN_CCTV_RTSP
     name: Main
+
 #---------------------------------------
 sensor:
   - platform: template
