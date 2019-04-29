@@ -12,7 +12,6 @@ default_view:
 
 Living Room:
   - switch.living_room_outlet
-  - switch.speaker_outlet
 
 Bedroom:
   - switch.bedroom_outlet

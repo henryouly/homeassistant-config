@@ -31,9 +31,6 @@ switch.bedroom_outlet:
 switch.tv_switch:
   friendly_name: TV
   icon: mdi:television
-switch.speaker_outlet:
-  friendly_name: Speaker
-  icon: mdi:speaker-wireless
 switch.washer_outlet:
   friendly_name: Washer Outlet
   icon: mdi:power-plug
