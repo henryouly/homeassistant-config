@@ -13,9 +13,8 @@ turn_off_everything:
       data:
         entity_id: 
           - switch.living_room_outlet
-          - switch.tv_outlet
           - switch.bedroom_outlet
-          - switch.speaker_outlet
+          - switch.tv_switch
     # set nest to eco
     - service: climate.set_operation_mode
       data:
