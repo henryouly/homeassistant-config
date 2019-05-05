@@ -1,4 +1,4 @@
-- alias: Set Nest to Eco
+- alias: Set Upstairs Nest to Eco
   trigger:
     - platform: state
       entity_id: climate.upstairs
@@ -11,7 +11,7 @@
         entity_id: climate.upstairs
         operation_mode: "eco"
 
-- alias: Set Downstair Nest to Eco
+- alias: Set Downstairs Nest to Eco
   trigger:
     - platform: state
       entity_id: climate.downstairs
