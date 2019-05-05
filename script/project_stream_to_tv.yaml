@@ -6,7 +6,7 @@
 #     value: "rstp://..."
 #############################################
 
-project_stream_to_kodi:
+project_stream_to_tv:
   sequence:
     - condition: and
       conditions:
@@ -15,13 +15,12 @@ project_stream_to_kodi:
           state: 'home'
         - condition: template
           value_template: >
-            {% if is_state('media_player.kodi', 'playing') and states('input_select.cctv') == 'None' %}
+            {% if is_state('media_player.living_room_tv', 'playing') %}
               false
             {% else %}
               true
             {% endif %}
-    - service: media_player.play_media
+    - service: camera.play_stream
       data_template:
-        entity_id: media_player.kodi
-        media_content_id: '{{ value }}'
-        media_content_type: VIDEO
+        entity_id: camera.garage
+        media_player: media_player.living_room_tv
