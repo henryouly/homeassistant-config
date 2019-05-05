@@ -1,4 +1,0 @@
-tesla:
-  username: !secret TESLA_USERNAME
-  password: !secret TESLA_PASSWORD
-  scan_interval: 3600
