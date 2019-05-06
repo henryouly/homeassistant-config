@@ -1,0 +1,56 @@
+title: Home
+path: default_view
+icon: 'mdi:home'
+panel: true
+
+cards:
+  - type: horizontal-stack
+    cards:
+    - type: vertical-stack
+      cards:
+        - type: glance
+          entities:
+            - device_tracker.henry_phone
+            - device_tracker.yingying_phone
+            - sensor.downstairs_thermostat_temperature
+            - input_boolean.laundry_done
+          title: My Lovely Home
+        - type: picture-entity
+          entity: camera.garage
+          camera_view: live
+        - type: entities
+          entities:
+            - entity: group.garage
+            - entity: vacuum.xiaomi_vacuum_cleaner
+    - type: vertical-stack
+      cards:
+        - type: weather-forecast
+          entity: weather.dark_sky
+        - type: horizontal-stack
+          cards:
+            - entity: switch.tv_switch
+              type: entity-button
+            - entity: switch.bedroom_outlet
+              type: entity-button
+            - entity: light.yeelight_strip1_286c072f4c87
+              type: entity-button
+        - type: horizontal-stack
+          cards:
+            - entity: light.gateway_light_04cf8c911730
+              type: entity-button
+            - entity: light.hallway_light
+              type: entity-button
+            - entity: input_boolean.night_mode
+              type: entity-button
+        - type: entities
+          entities:
+            - action_name: Start
+              name: Vacuum
+              service: vacuum.start
+              service_data:
+                entity_id: vacuum.xiaomi_vacuum_cleaner
+              type: call-service
+            - action_name: Restart
+              name: HASS
+              service: homeassistant.restart
+              type: call-service

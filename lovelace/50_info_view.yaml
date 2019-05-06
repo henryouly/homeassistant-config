@@ -1,0 +1,18 @@
+title: Setting
+path: information_view
+icon: 'mdi:information'
+
+cards:
+  - entities:
+      - entity: sensor.disk_free_usr
+      - entity: sensor.disk_use_percent_usr
+      - entity: sensor.memory_free
+      - entity: sensor.load_1m
+      - entity: sensor.load_5m
+      - entity: sensor.load_15m
+      - entity: sensor.pmu_power
+      - entity: sensor.washer_power
+      - entity: sensor.last_boot
+    show_header_toggle: false
+    title: Information
+    type: entities

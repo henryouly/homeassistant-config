@@ -1,0 +1,38 @@
+title: Setting
+path: setting_view
+icon: 'mdi:settings'
+
+cards:
+  - entities:
+      - entity: automation.turn_off_all_lights_when_no_one_at_home
+      - entity: automation.turn_off_night_mode_in_the_morning
+      - entity: automation.turn_off_all_lights_at_night_mode
+      - type: divider
+      - entity: automation.laundry_finishes_light
+      - entity: automation.laundry_notification_off
+      - entity: automation.on_mi_button_click
+      - type: divider
+      - entity: automation.set_downstairs_nest_to_eco
+      - entity: automation.set_upstairs_nest_to_eco
+      - type: divider
+      - entity: automation.notify_me_when_garage_door_is_open
+      - entity: automation.daily_backup_at_3_am
+      - type: divider
+      - entity: group.all_automations
+    title: Automation
+    type: entities
+  - entities:
+      - entity: input_boolean.speech_notification
+      - entity: input_boolean.laundry_done
+      - entity: input_boolean.night_mode
+      - entity: input_boolean.vacuum_done
+      - entity: binary_sensor.washer_mode
+      - entity: binary_sensor.downstairs_away_mode
+      - entity: binary_sensor.upstairs_away_mode
+    title: Status
+    type: entities
+  - entities:
+      - entity: script.turn_off_everything
+      - entity: script.project_stream_to_tv
+    title: Script
+    type: entities

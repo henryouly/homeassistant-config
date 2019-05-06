@@ -1,0 +1,11 @@
+title: Cameras
+path: camera_view
+icon: 'mdi:camcorder'
+
+cards:
+  - camera_view: live
+    entity: camera.garage
+    type: picture-entity
+  - camera_view: live
+    entity: camera.main
+    type: picture-entity

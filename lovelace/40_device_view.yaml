@@ -1,0 +1,51 @@
+title: Device
+path: device_view
+icon: 'mdi:laptop'
+
+badges:
+  - device_tracker.henrysmbp
+  - device_tracker.ipad_2017
+  - device_tracker.henryoumacbookpro
+  - device_tracker.macbookpro3
+  
+cards:
+  - entities:
+      - entity: binary_sensor.device_smartthings
+      - entity: binary_sensor.device_googlehome
+      - entity: binary_sensor.device_echodot_livingroom
+      - entity: binary_sensor.device_echodot_bedroom
+      - entity: binary_sensor.device_myq
+      - entity: binary_sensor.device_lumi_gateway
+      - entity: binary_sensor.downstairs_thermostat_online
+      - entity: binary_sensor.upstairs_thermostat_online
+    show_header_toggle: false
+    title: Smart Home Device
+    type: entities
+  - entities:
+      - entity: binary_sensor.device_chromecast
+      - entity: binary_sensor.device_roku
+    show_header_toggle: false
+    title: Media Player
+    type: entities
+  - entities:
+      - entity: binary_sensor.device_nas
+      - entity: binary_sensor.device_pc
+      - entity: binary_sensor.device_bananapi
+      - entity: binary_sensor.device_macbookpro3
+    show_header_toggle: false
+    title: Server
+    type: entities
+  - entities:
+      - entity: binary_sensor.device_antscam_1
+      - entity: binary_sensor.device_antscam_2
+    show_header_toggle: false
+    title: Cameras
+    type: entities
+  - entities:
+      - entity: binary_sensor.device_tplink_switch_1
+      - entity: binary_sensor.device_tplink_switch_2
+      - entity: binary_sensor.device_edimax_switch_1
+      - entity: binary_sensor.device_edimax_switch_2
+    show_header_toggle: false
+    title: Switch
+    type: entities
