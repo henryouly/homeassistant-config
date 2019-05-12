@@ -3,6 +3,17 @@ path: room_view
 icon: 'mdi:sofa'
 
 cards:
+  - type: glance
+    title: Motions
+    entities:
+      - entity: binary_sensor.motion_sensor_158d0000e86b52
+        name: Living Room
+      - entity: binary_sensor.motion_sensor_158d0000ee50b6
+        name: Upstairs
+      - entity: binary_sensor.motion_sensor_158d0000ee5125
+        name: Kitchen
+      - entity: binary_sensor.motion_sensor_158d0000ee51d2
+        name: Basement
   - entities:
       - entity: switch.living_room_outlet
       - entity: switch.bedroom_outlet
