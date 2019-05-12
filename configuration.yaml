@@ -108,21 +108,6 @@ mqtt:
   port: !secret mqtt_port
   client_id: home-assistant
 
-light:
-  - platform: mqtt
-    name: hallway_light
-    state_topic: "smartthings/Hallway/switch"
-    command_topic: "smartthings/Hallway/switch"
-    brightness_state_topic: "smartthings/Hallway/level"
-    brightness_command_topic: "smartthings/Hallway/level"
-    brightness_scale: 99
-    brightness_value_template: '{{ value }}'
-    payload_on: "on"
-    payload_off: "off"
-    retain: true
-    optimistic: false
-    qos: 0
-
 automation: !include_dir_merge_list automation
 group: !include group.yaml
 zone: !include zone.yaml

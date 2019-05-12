@@ -8,6 +8,7 @@
   retain: true
   qos: 0
 
+
 #- platform: mqtt
 #  name: "TV Outlet"
 #  state_topic: "home/switch/tv/switch"
