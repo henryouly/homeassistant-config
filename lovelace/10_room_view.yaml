@@ -43,3 +43,8 @@ cards:
     title: Laundary
     type: entities
     show_header_toggle: false
+
+  - type: history-graph
+    entities:
+      - sensor.downstairs_thermostat_temperature
+      - sensor.upstairs_thermostat_temperature
