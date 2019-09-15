@@ -38,15 +38,12 @@ cards:
           name: Hallway
         - entity: input_boolean.night_mode
           type: entity-button
-  - type: entities
-    entities:
-      - action_name: Start
-        name: Vacuum
-        service: vacuum.start
-        service_data:
-          entity_id: vacuum.xiaomi_vacuum_cleaner
-        type: call-service
-      - action_name: Restart
-        name: HASS
-        service: homeassistant.restart
-        type: call-service
+    - type: horizontal-stack
+      cards:
+        - entity: vacuum.xiaomi_vacuum_cleaner
+          type: entity-button
+          name: Vacuum
+        - entity: input_boolean.night_mode
+          type: entity-button
+        - entity: input_boolean.night_mode
+          type: entity-button
