@@ -7,3 +7,4 @@ views:
   - !include 30_setting_view.yaml
   - !include 40_device_view.yaml
   - !include 50_info_view.yaml
+  - !include 60_test.yaml

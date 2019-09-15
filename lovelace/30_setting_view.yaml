@@ -6,8 +6,6 @@ cards:
   - entities:
       - entity: automation.turn_off_all_lights_when_no_one_at_home
       - entity: automation.turn_off_all_lights_at_night_mode
-      - entity: automation.upstairs_light_turn_on
-      - entity: automation.upstairs_light_turn_off
       - entity: automation.turn_off_night_mode_in_the_morning
       - type: divider
       - entity: automation.laundry_finishes_light

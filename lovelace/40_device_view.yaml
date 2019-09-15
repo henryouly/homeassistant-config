@@ -5,7 +5,7 @@ icon: 'mdi:laptop'
 badges:
   - device_tracker.henrysmbp
   - device_tracker.ipad_2017
-  - device_tracker.henryoumacbookpro
+  - device_tracker.henryoumacbookpro2
   - device_tracker.macbookpro3
   
 cards:
