@@ -8,7 +8,6 @@ cards:
       - device_tracker.henry_phone
       - device_tracker.yingying_phone
       - sensor.downstairs_thermostat_temperature
-      - input_boolean.laundry_done
   - type: picture-entity
     entity: camera.garage
     camera_view: live
@@ -16,6 +15,7 @@ cards:
     entities:
       - entity: group.garage
       - entity: vacuum.xiaomi_vacuum_cleaner
+      - entity: input_boolean.laundry_done
   - type: weather-forecast
     entity: weather.dark_sky
   - type: vertical-stack
@@ -43,7 +43,7 @@ cards:
         - entity: vacuum.xiaomi_vacuum_cleaner
           type: entity-button
           name: Vacuum
-        - entity: input_boolean.night_mode
+        - entity: climate.downstairs
           type: entity-button
-        - entity: input_boolean.night_mode
+        - entity: climate.upstairs
           type: entity-button
