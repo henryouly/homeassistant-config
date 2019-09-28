@@ -6,10 +6,10 @@
       for:
         minutes: 10
   action:
-    - service: climate.set_operation_mode
+    - service: climate.set_preset_mode
       data:
         entity_id: climate.upstairs
-        operation_mode: "eco"
+        preset_mode: "eco"
 
 - alias: Set Downstairs Nest to Eco
   trigger:
@@ -19,8 +19,8 @@
       for:
         minutes: 10
   action:
-    - service: climate.set_operation_mode
+    - service: climate.set_preset_mode
       data:
         entity_id: climate.downstairs
-        operation_mode: "eco"
+        preset_mode: "eco"
 

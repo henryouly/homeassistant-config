@@ -16,9 +16,9 @@ turn_off_everything:
           - switch.bedroom_outlet
           - switch.tv_switch
     # set nest to eco
-    - service: climate.set_operation_mode
+    - service: climate.set_preset_mode
       data:
         entity_id: 
           - climate.downstairs
           - climate.upstairs
-        operation_mode: "eco"
+        preset_mode: "eco"
