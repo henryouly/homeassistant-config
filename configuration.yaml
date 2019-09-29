@@ -106,6 +106,8 @@ emulated_hue:
 mqtt:
   broker: !secret mqtt_server
   port: !secret mqtt_port
+  username: !secret mqtt_username
+  password: !secret mqtt_password
   client_id: home-assistant
 
 automation: !include_dir_merge_list automation
