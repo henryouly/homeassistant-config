@@ -2,7 +2,7 @@ language: python
 python:
   - "3.6"
 install:
-  - pip3 install homeassistant==0.92.2
+  - pip3 install homeassistant==0.99.3
 script:
   - hass -c . --script check_config
 before_install:
