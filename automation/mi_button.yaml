@@ -1,4 +1,4 @@
-- alias: On Mi button click
+- alias: MI button gateway light
   trigger:
     platform: event
     event_type: xiaomi_aqara.click
@@ -8,3 +8,15 @@
   action:
     service: light.toggle
     entity_id: light.gateway_light_04cf8c911730
+
+
+- alias: MI button bedroom light
+  trigger:
+    platform: event
+    event_type: xiaomi_aqara.click
+    event_data:
+      entity_id: binary_sensor.switch_158d0003502655
+      click_type: single
+  action:
+    service: switch.toggle
+    entity_id: switch.bedroom_outlet
