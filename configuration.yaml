@@ -110,8 +110,7 @@ mqtt:
   password: !secret mqtt_password
   client_id: home-assistant
 
-automation: !include automations.yaml
-automation old: !include_dir_merge_list automation
+automation: !include_dir_merge_list automation
 group: !include group.yaml
 zone: !include zone.yaml
 script: !include_dir_merge_named script
