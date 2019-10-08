@@ -1,0 +1,42 @@
+title: Babysit
+path: baby_view
+icon: 'mdi:baby-face'
+
+cards:
+  - type: glance
+    entities:
+      - entity: sensor.upstairs_thermostat_temperature
+        name: 室温
+      - entity: sensor.upstairs_thermostat_humidity
+        name: 湿度
+      - entity: sensor.last_vacuum_time
+        name: 上次喂奶时间
+  - type: picture-entity
+    entity: camera.baby_mon
+    camera_view: live
+  - type: entities
+    entities:
+      - entity: group.garage
+      - entity: vacuum.xiaomi_vacuum_cleaner
+  - type: thermostat
+    entity: climate.upstairs
+  - type: vertical-stack
+    cards:
+    - type: horizontal-stack
+      cards:
+        - entity: switch.bedroom_outlet
+          type: entity-button
+          name: 💡床头灯
+        - entity: input_boolean.night_mode
+          type: entity-button
+          name: 🍼记录
+        - entity: input_boolean.night_mode
+          type: entity-button
+    - type: horizontal-stack
+      cards:
+        - entity: input_boolean.night_mode
+          type: entity-button
+        - entity: input_boolean.night_mode
+          type: entity-button
+        - entity: input_boolean.night_mode
+          type: entity-button

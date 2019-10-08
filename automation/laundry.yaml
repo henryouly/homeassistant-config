@@ -9,9 +9,6 @@
         entity_id: light.gateway_light_04cf8c911730
         color_temp: 250
         brightness: 250
-    - service: xiaomi_aqara.play_ringtone
-      data:
-        ringtone_id: 10
 
 - alias: Laundry notification off
   trigger:

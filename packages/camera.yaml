@@ -14,6 +14,10 @@ camera:
     still_image_url: https://www.mayline.com/products/images/product/noimage.jpg
     stream_source: !secret MAIN_CCTV_RTSP
     name: Main
+  - platform: generic
+    still_image_url: https://www.mayline.com/products/images/product/noimage.jpg
+    stream_source: !secret BABY_WATCH_RTSP
+    name: baby_mon
 
 #---------------------------------------
 sensor:

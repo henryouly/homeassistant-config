@@ -2,6 +2,7 @@ title: Home
 
 views:
   - !include 00_default_view.yaml
+  - !include 05_baby_view.yaml
   - !include 10_room_view.yaml
   - !include 20_camera_view.yaml
   - !include 30_setting_view.yaml

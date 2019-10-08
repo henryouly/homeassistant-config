@@ -9,3 +9,6 @@ cards:
   - camera_view: live
     entity: camera.main
     type: picture-entity
+  - camera_view: live
+    entity: camera.baby_mon
+    type: picture-entity
