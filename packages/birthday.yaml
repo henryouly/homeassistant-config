@@ -1,0 +1,15 @@
+input_datetime:
+  birthday:
+    name: Birthday
+    has_date: true
+    has_time: false
+
+sensor:
+  - platform: template
+    sensors:
+      andrew_age:
+        unit_of_measurement: '天'
+        value_template: >- 
+          {% set today=as_timestamp(now()) %}
+          {% set birthday=state_attr('input_datetime.birthday', 'timestamp') | int %}
+          {{ ((today - birthday) / 86400) | round(1) }}

@@ -9,6 +9,8 @@ cards:
         name: 室温
       - entity: sensor.upstairs_thermostat_humidity
         name: 湿度
+      - entity: sensor.andrew_age
+        name: 岁数
   - type: picture-glance
     entities:
       - switch.bedroom_outlet
