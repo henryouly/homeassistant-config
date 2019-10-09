@@ -9,15 +9,15 @@ cards:
         name: 室温
       - entity: sensor.upstairs_thermostat_humidity
         name: 湿度
-      - entity: sensor.last_vacuum_time
-        name: 上次喂奶时间
-  - type: picture-entity
-    entity: camera.baby_mon
+  - type: picture-glance
+    entities:
+      - switch.bedroom_outlet
+    camera_image: camera.baby_mon
     camera_view: live
   - type: entities
     entities:
       - entity: group.garage
-      - entity: vacuum.xiaomi_vacuum_cleaner
+        name: 上次喂奶时间
   - type: thermostat
     entity: climate.upstairs
   - type: vertical-stack
