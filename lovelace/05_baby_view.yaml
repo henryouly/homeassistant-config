@@ -16,7 +16,7 @@ cards:
     camera_view: live
   - type: entities
     entities:
-      - entity: group.garage
+      - entity: sensor.last_feeding_time
         name: 上次喂奶时间
   - type: thermostat
     entity: climate.upstairs
@@ -30,6 +30,9 @@ cards:
         - entity: input_boolean.night_mode
           type: entity-button
           name: 🍼记录
+          tap_action:
+            action: call-service
+            service: script.log_feeding_time
         - entity: input_boolean.night_mode
           type: entity-button
     - type: horizontal-stack

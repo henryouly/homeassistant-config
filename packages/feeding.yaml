@@ -1,0 +1,14 @@
+sensor:
+  - platform: mqtt
+    state_topic: "test/last_feeding_time"
+    name: last_feeding_time
+
+script:
+  log_feeding_time:
+    sequence:
+      - service: mqtt.publish
+        data_template:
+          topic: test/last_feeding_time
+          payload_template: "{{ now().strftime('%-I:%M %p') }}"
+          retain: true
+          qos: 2
