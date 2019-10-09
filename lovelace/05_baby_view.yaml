@@ -12,6 +12,7 @@ cards:
   - type: picture-glance
     entities:
       - switch.bedroom_outlet
+      - binary_sensor.motion_sensor_158d0000ee50b6
     camera_image: camera.baby_mon
     camera_view: live
   - type: entities
@@ -33,13 +34,5 @@ cards:
           tap_action:
             action: call-service
             service: script.log_feeding_time
-        - entity: input_boolean.night_mode
-          type: entity-button
-    - type: horizontal-stack
-      cards:
-        - entity: input_boolean.night_mode
-          type: entity-button
-        - entity: input_boolean.night_mode
-          type: entity-button
         - entity: input_boolean.night_mode
           type: entity-button
