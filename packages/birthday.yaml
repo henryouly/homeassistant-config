@@ -12,4 +12,4 @@ sensor:
         value_template: >- 
           {% set today=as_timestamp(now()) %}
           {% set birthday=state_attr('input_datetime.birthday', 'timestamp') | int %}
-          {{ ((today - birthday) / 86400) | round(1) }}
+          {{ ((today - birthday) / 86400) | int }}
