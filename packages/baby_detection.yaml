@@ -4,3 +4,11 @@ binary_sensor:
     name: baby_noise
     peak: -20
     duration: 1
+
+sensor:
+  - platform: template
+    sensors:
+      last_noise:
+        value_template: >-
+          {% set last_changed=states.binary_sensor.baby_noise.last_changed %}
+          {{ as_timestamp(last_changed) | timestamp_custom('%-I:%M %p') }}

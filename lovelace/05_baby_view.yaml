@@ -22,6 +22,8 @@ cards:
     entities:
       - entity: sensor.last_feeding_time
         name: 上次喂奶时间
+      - entity: sensor.last_noise
+        name: 最近啼哭时间
   - type: thermostat
     entity: climate.upstairs
   - type: vertical-stack
@@ -33,7 +35,7 @@ cards:
           name: 💡床头灯
         - entity: input_boolean.night_mode
           type: entity-button
-          name: 🍼记录
+          name: 🍼记录喂奶
           tap_action:
             action: call-service
             service: script.log_feeding_time
