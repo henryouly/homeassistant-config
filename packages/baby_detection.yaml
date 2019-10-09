@@ -1,0 +1,6 @@
+binary_sensor:
+  - platform: ffmpeg_noise
+    input: !secret BABY_WATCH_RTSP
+    name: baby_noise
+    peak: -20
+    duration: 1

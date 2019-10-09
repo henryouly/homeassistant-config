@@ -15,6 +15,7 @@ cards:
     entities:
       - switch.bedroom_outlet
       - binary_sensor.motion_sensor_158d0000ee50b6
+      - binary_sensor.baby_noise
     camera_image: camera.baby_mon
     camera_view: live
   - type: entities
@@ -38,3 +39,4 @@ cards:
             service: script.log_feeding_time
         - entity: input_boolean.night_mode
           type: entity-button
+          name: 🌃夜间模式
