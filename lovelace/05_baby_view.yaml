@@ -10,7 +10,7 @@ cards:
       - entity: sensor.upstairs_thermostat_humidity
         name: 湿度
       - entity: sensor.andrew_age
-        name: 岁数
+        name: 出生天数
       - entity: weather.dark_sky
         name: 天气
   - type: picture-glance
@@ -25,11 +25,15 @@ cards:
       - entity: sensor.last_feeding_time
         name: 上次喂奶时间
       - entity: sensor.last_noise
-        name: 最近哭喊时间
+        name: 上次哭喊时间
   - type: thermostat
     entity: climate.upstairs
   - type: vertical-stack
     cards:
+    - type: markdown
+      content: >
+        你的宝宝出生天数为 {{states.sensor.andrew_age.state | int}} 天，
+        每次吃奶量为 **80～100** ml
     - type: horizontal-stack
       cards:
         - entity: switch.bedroom_outlet
@@ -41,17 +45,6 @@ cards:
           tap_action:
             action: call-service
             service: script.log_feeding_time
-        - entity: input_boolean.night_mode
-          type: entity-button
-          name: 未使用
-    - type: horizontal-stack
-      cards:
-        - entity: input_boolean.night_mode
-          type: entity-button
-          name: 🛀洗澡模式
-        - entity: input_boolean.night_mode
-          type: entity-button
-          name: 🍼喂奶模式
         - entity: input_boolean.night_mode
           type: entity-button
           name: 🌃夜间模式
