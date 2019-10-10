@@ -1,14 +1,19 @@
 sensor:
-  - platform: mqtt
-    state_topic: "test/last_feeding_time"
-    name: last_feeding_time
+  - platform: template
+    sensors:
+      last_feeding_time:
+        value_template: >-
+          {{ states.input_datetime.feed_time.state }}
 
 script:
   log_feeding_time:
     sequence:
-      - service: mqtt.publish
+      - service: input_datetime.set_datetime
         data_template:
-          topic: test/last_feeding_time
-          payload_template: "{{ now().strftime('%-I:%M %p') }}"
-          retain: true
-          qos: 2
+          time: "{{ now().strftime('%H:%M:%S') }}"
+
+input_datetime:
+  feed_time:
+    name: Feed Time
+    has_date: false
+    has_time: true

@@ -24,5 +24,6 @@ cards:
     type: entities
   - entities:
       - entity: input_datetime.birthday
+      - entity: input_datetime.feed_time
     title: Input
     type: entities
