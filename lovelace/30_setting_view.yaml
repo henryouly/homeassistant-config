@@ -19,6 +19,10 @@ cards:
     type: entities
   - entities:
       - entity: script.turn_off_everything
-      - entity: script.project_stream_to_tv
+      - entity: script.log_feeding_time
     title: Script
+    type: entities
+  - entities:
+      - entity: input_datetime.birthday
+    title: Input
     type: entities

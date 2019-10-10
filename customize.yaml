@@ -54,3 +54,9 @@ sensor.downstairs_thermostat_temperature:
   friendly_name: Temperature
 binary_sensor.motion_sensor_158d0000e86b52:
   friendly_name: Living Room
+sensor.andrew_age:
+  icon: mdi:calendar
+sensor.last_feeding_time:
+  icon: mdi:baby-bottle
+sensor.last_noise:
+  icon: mdi:voice
