@@ -25,7 +25,7 @@ cards:
       - entity: sensor.last_feeding_time
         name: 上次喂奶时间
       - entity: sensor.last_noise
-        name: 最近啼哭时间
+        name: 最近哭喊时间
   - type: thermostat
     entity: climate.upstairs
   - type: vertical-stack
