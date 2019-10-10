@@ -43,4 +43,15 @@ cards:
             service: script.log_feeding_time
         - entity: input_boolean.night_mode
           type: entity-button
+          name: 未使用
+    - type: horizontal-stack
+      cards:
+        - entity: input_boolean.night_mode
+          type: entity-button
+          name: 🛀洗澡模式
+        - entity: input_boolean.night_mode
+          type: entity-button
+          name: 🍼喂奶模式
+        - entity: input_boolean.night_mode
+          type: entity-button
           name: 🌃夜间模式
