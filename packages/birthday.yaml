@@ -9,6 +9,7 @@ sensor:
     sensors:
       andrew_age:
         unit_of_measurement: 'Days'
+        entity_id: sensor.date
         value_template: >- 
           {% set today=as_timestamp(now()) %}
           {% set birthday=state_attr('input_datetime.birthday', 'timestamp') | int %}
