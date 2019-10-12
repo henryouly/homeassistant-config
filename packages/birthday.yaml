@@ -8,7 +8,7 @@ sensor:
   - platform: template
     sensors:
       andrew_age:
-        unit_of_measurement: '天'
+        unit_of_measurement: 'Days'
         value_template: >- 
           {% set today=as_timestamp(now()) %}
           {% set birthday=state_attr('input_datetime.birthday', 'timestamp') | int %}
