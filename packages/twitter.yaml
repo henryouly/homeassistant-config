@@ -1,0 +1,7 @@
+notify:
+  - name: twitter
+    platform: twitter
+    consumer_key: !secret TWITTER_API_KEY
+    consumer_secret: !secret TWITTER_API_SECRET
+    access_token: !secret TWITTER_ACCESS_TOKEN
+    access_token_secret: !secret TWITTER_TOKEN_SECRET
