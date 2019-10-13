@@ -1,0 +1,22 @@
+- alias: Twitter about baby awake
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.baby_noise
+      from: "off"
+      to: "on"
+  condition:
+    condition: and
+    conditions:
+      # no motion upstairs
+      - condition: state
+        entity_id: binary_sensor.motion_sensor_158d0000ee50b6
+        state: 'off'
+      # noise detected a second time in 30 seconds.
+      - condition: template
+        value_template: >-
+          {% set last_changed=states.binary_sensor.baby_noise.last_changed %}
+          {{ as_timestamp(now()) - as_timestamp(last_changed) < 30 }}
+  action:
+    service: notify.twitter
+    data_template:
+      message: “小航航醒来啦!"
