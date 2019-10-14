@@ -2,8 +2,9 @@ binary_sensor:
   - platform: ffmpeg_noise
     input: !secret BABY_WATCH_RTSP
     name: baby_noise
-    peak: -15
-    duration: 1
+    peak: -20
+    duration: 2
+    extra_arguments: -filter:a highpass=f=300,lowpass=f=2500,volume=volume=2
 
 sensor:
   - platform: template
