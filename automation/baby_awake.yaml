@@ -11,6 +11,8 @@
       - condition: state
         entity_id: binary_sensor.motion_sensor_158d0000ee50b6
         state: 'off'
+        for:
+          minutes: 10
       # noise detected a second time in 30 seconds.
       - condition: template
         value_template: >-
@@ -19,4 +21,4 @@
   action:
     service: notify.twitter
     data_template:
-      message: “小航航醒来啦!"
+      message: “现在是{{ now().strftime('%H:%M') }}, 小航航醒来啦！"
