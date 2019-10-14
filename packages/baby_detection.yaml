@@ -4,6 +4,7 @@ binary_sensor:
     name: baby_noise
     peak: -15
     duration: 1
+    initial_state: false
 
 sensor:
   - platform: template
