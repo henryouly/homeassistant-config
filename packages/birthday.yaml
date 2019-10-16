@@ -14,3 +14,6 @@ sensor:
           {% set today=as_timestamp(now()) %}
           {% set birthday=state_attr('input_datetime.birthday', 'timestamp') | int %}
           {{ ((today - birthday) / 86400) | int }}
+  - platform: time_date
+    display_options:
+      - 'date'
