@@ -43,9 +43,6 @@ binary_sensor:
       device_chromecast:
         value_template: "{{ is_state('device_tracker.chromecast', 'home') }}"
         friendly_name: "Chromecast"
-      device_roku:
-        value_template: "{{ is_state('device_tracker.roku', 'home') }}"
-        friendly_name: "Roku"
       device_edimax_switch_1:
         value_template: "{{ is_state('device_tracker.edimax_switch_1', 'home') }}"
         friendly_name: "Edimax Switch 1"

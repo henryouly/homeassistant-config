@@ -26,7 +26,6 @@ TV:
   - light.yeelight_strip1_286c072f4c87
   - input_select.channel
   - input_select.cctv
-  - media_player.roku
 
 Family:
   - device_tracker.henry_phone

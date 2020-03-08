@@ -23,7 +23,6 @@ cards:
     type: entities
   - entities:
       - entity: binary_sensor.device_chromecast
-      - entity: binary_sensor.device_roku
     show_header_toggle: false
     title: Media Player
     type: entities
