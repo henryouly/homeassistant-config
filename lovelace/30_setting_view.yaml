@@ -4,10 +4,6 @@ icon: 'mdi:settings'
 
 cards:
   - entities:
-      - entity: group.all_automations
-    title: Automation
-    type: entities
-  - entities:
       - entity: input_boolean.speech_notification
       - entity: input_boolean.laundry_done
       - entity: input_boolean.night_mode
