@@ -31,11 +31,12 @@ cards:
     show_header_toggle: false
   - entities:
       - entity: switch.tv_switch
-      - entity: light.yeelight_strip1_286c072f4c87
       - entity: input_select.channel
       - entity: input_select.cctv
     title: TV
     type: entities
+  - type: media-control
+    entity: media_player.living_room_tv
   - entities:
       - entity: switch.washer_outlet
       - entity: sensor.washer_power
