@@ -1,2 +1,4 @@
-light:
-  - platform: yeelight
+yeelight:
+  devices:
+    192.168.30.201:
+      name: 'TV backlight'

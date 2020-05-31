@@ -1,10 +1,5 @@
 homeassistant:
   name: Home
-  latitude: !secret home_lat
-  longitude: !secret home_long
-  elevation: 29
-  unit_system: imperial
-  time_zone: America/Los_Angeles
   customize: !include customize.yaml
   packages: !include_dir_named packages
   customize_glob:
@@ -112,7 +107,6 @@ mqtt:
 
 automation: !include_dir_merge_list automation
 group: !include group.yaml
-zone: !include zone.yaml
 script: !include_dir_merge_named script
 switch: !include_dir_merge_list switches/
 input_boolean: !include input_boolean.yaml
@@ -126,15 +120,11 @@ input_select:
       - Reuters TV
     initial: ABC News
 
+default_config:
 ffmpeg:
-config:
-frontend:
-updater:
 discovery:
-conversation:
-sun:
-map:
-system_health:
+  ignore:
+    - yeelight
 stream:
 
 google_assistant:

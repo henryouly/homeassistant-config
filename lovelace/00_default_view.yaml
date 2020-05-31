@@ -22,20 +22,10 @@ cards:
     cards:
     - type: horizontal-stack
       cards:
-        - entity: switch.tv_switch
-          type: entity-button
-        - entity: switch.bedroom_outlet
-          type: entity-button
-          name: Bedroom
-        - entity: light.yeelight_strip1_286c072f4c87
-          type: entity-button
-    - type: horizontal-stack
-      cards:
         - entity: light.gateway_light_04cf8c911730
           type: entity-button
-        - entity: light.hallway_light
+        - entity: switch.tv_switch
           type: entity-button
-          name: Hallway
         - entity: input_boolean.night_mode
           type: entity-button
     - type: horizontal-stack

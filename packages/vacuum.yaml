@@ -1,6 +1,6 @@
 vacuum:
   - platform: xiaomi_miio
-    host: 192.168.30.124
+    host: rockrobo
     token: 417a537556545764474a505330443153
 
 input_boolean:

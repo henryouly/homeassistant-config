@@ -1,7 +1,6 @@
 group:
   washer_card:
     name: Laundary
-    view: no
     entities:
       - input_boolean.laundry_done
       - switch.washer_outlet

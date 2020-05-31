@@ -8,11 +8,11 @@ sensor:
 - platform: template
   sensors:
     garage_status:
-      value_template: '{{ states.cover.garage_door.state }}'
+      value_template: '{{ states.cover.garage_door_2.state }}'
 #---------------------------------------
 homeassistant:
   customize:
-    cover.garage_door:
+    cover.garage_door_2:
       icon: mdi:car
     sensor.garage_status:
       friendly_name: 'State of the door'
@@ -32,7 +32,7 @@ automation:
   - alias: Notify me when garage door is open
     trigger:
       platform: state
-      entity_id: cover.garage_door
+      entity_id: cover.garage_door_2
       from: "closed"
       to: "open"
     action:

@@ -2,6 +2,6 @@
   host: 192.168.30.244
   name: washer_outlet
 
-- platform: edimax
-  host: 192.168.30.173
-  name: bedroom_outlet
+#- platform: edimax
+#  host: 192.168.30.173
+#  name: bedroom_outlet

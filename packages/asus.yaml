@@ -3,7 +3,6 @@ device_tracker:
     interval_seconds: 120
     new_device_defaults:
       track_new_devices: true
-      hide_if_away: false
 
 asuswrt:
   host: !secret ROUTER_IP

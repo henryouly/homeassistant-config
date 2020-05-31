@@ -1,6 +1,5 @@
 default_view:
   name: Home
-  view: yes
   entities:
     - device_tracker.henry_phone
     - device_tracker.yingying_phone
