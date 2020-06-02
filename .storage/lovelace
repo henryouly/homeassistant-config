@@ -126,15 +126,6 @@
                                     "entity": "switch.living_room_outlet"
                                 },
                                 {
-                                    "entity": "switch.bedroom_outlet"
-                                },
-                                {
-                                    "entity": "light.hallway_light"
-                                },
-                                {
-                                    "entity": "light.yeelight_strip1_286c072f4c87"
-                                },
-                                {
                                     "entity": "light.gateway_light_04cf8c911730"
                                 }
                             ],
@@ -145,7 +136,7 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "cover.garage_door"
+                                    "entity": "cover.garage_door_2"
                                 },
                                 {
                                     "entity": "sensor.garage_status"
@@ -251,39 +242,6 @@
                         {
                             "entity": "climate.upstairs",
                             "type": "thermostat"
-                        },
-                        {
-                            "cards": [
-                                {
-                                    "content": "\u4f60\u7684\u5b9d\u5b9d\u51fa\u751f\u5929\u6570\u4e3a {{states.sensor.andrew_age.state | int}} \u5929\uff0c \u6bcf\u6b21\u5403\u5976\u91cf\u4e3a **80\uff5e100** ml\n",
-                                    "type": "markdown"
-                                },
-                                {
-                                    "cards": [
-                                        {
-                                            "entity": "switch.bedroom_outlet",
-                                            "name": "\ud83d\udca1\u5e8a\u5934\u706f",
-                                            "type": "entity-button"
-                                        },
-                                        {
-                                            "entity": "input_boolean.night_mode",
-                                            "name": "\ud83c\udf7c\u8bb0\u5f55\u5582\u5976",
-                                            "tap_action": {
-                                                "action": "call-service",
-                                                "service": "script.log_feeding_time"
-                                            },
-                                            "type": "entity-button"
-                                        },
-                                        {
-                                            "entity": "input_boolean.night_mode",
-                                            "name": "\ud83c\udf03\u591c\u95f4\u6a21\u5f0f",
-                                            "type": "entity-button"
-                                        }
-                                    ],
-                                    "type": "horizontal-stack"
-                                }
-                            ],
-                            "type": "vertical-stack"
                         }
                     ],
                     "icon": "mdi:baby-face",
