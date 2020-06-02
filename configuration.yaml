@@ -25,8 +25,6 @@ history:
       - switch
       - light
 
-logbook:
-
 recorder:
   purge_keep_days: 2
   purge_interval: 1
@@ -102,7 +100,6 @@ mqtt:
 automation: !include_dir_merge_list automation
 script: !include_dir_merge_named script
 switch: !include_dir_merge_list switches/
-input_boolean: !include input_boolean.yaml
 
 default_config:
 ffmpeg:

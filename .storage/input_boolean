@@ -1,0 +1,13 @@
+{
+    "data": {
+        "items": [
+            {
+                "icon": "mdi:speaker-wireless",
+                "id": "speech_notification",
+                "name": "Speech Notification"
+            }
+        ]
+    },
+    "key": "input_boolean",
+    "version": 1
+}

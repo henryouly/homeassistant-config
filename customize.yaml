@@ -48,8 +48,6 @@ sensor.upstairs_thermostat_humidity:
   icon: mdi:thermostat
 sensor.last_vacuum_time:
   friendly_name: Last Vacuum
-input_boolean.speech_notification:
-  icon: mdi:speaker-wireless
 sensor.downstairs_thermostat_temperature:
   friendly_name: Temperature
 binary_sensor.motion_sensor_158d0000e86b52:
