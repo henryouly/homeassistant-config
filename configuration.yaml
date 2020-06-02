@@ -26,9 +26,6 @@ history:
       - light
 
 logbook:
-  exclude:
-    domains:
-      - group
 
 recorder:
   purge_keep_days: 2
@@ -103,19 +100,9 @@ mqtt:
   client_id: home-assistant
 
 automation: !include_dir_merge_list automation
-group: !include group.yaml
 script: !include_dir_merge_named script
 switch: !include_dir_merge_list switches/
 input_boolean: !include input_boolean.yaml
-
-# CCTV
-input_select:
-  channel:
-    name: Channel
-    options:
-      - ABC News
-      - Reuters TV
-    initial: ABC News
 
 default_config:
 ffmpeg:
@@ -129,5 +116,4 @@ google_assistant:
   exposed_domains:
     - switch
     - light
-    - group
     - media_player
