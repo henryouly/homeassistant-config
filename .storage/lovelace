@@ -247,6 +247,86 @@
                     "icon": "mdi:baby-face",
                     "path": "baby_view",
                     "title": "Babysit"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entity": "sensor.disk_free_usr",
+                            "max": 100,
+                            "min": 0,
+                            "type": "gauge"
+                        },
+                        {
+                            "entity": "sensor.disk_use_percent_usr",
+                            "max": 100,
+                            "min": 0,
+                            "type": "gauge"
+                        },
+                        {
+                            "entity": "sensor.memory_free",
+                            "max": 100,
+                            "min": 0,
+                            "type": "gauge"
+                        },
+                        {
+                            "entity": "sensor.load_1m",
+                            "max": 100,
+                            "min": 0,
+                            "type": "gauge"
+                        },
+                        {
+                            "entity": "sensor.load_5m",
+                            "max": 100,
+                            "min": 0,
+                            "type": "gauge"
+                        },
+                        {
+                            "entity": "sensor.load_15m",
+                            "max": 100,
+                            "min": 0,
+                            "type": "gauge"
+                        },
+                        {
+                            "entity": "sensor.upstairs_thermostat_target",
+                            "max": 100,
+                            "min": 0,
+                            "type": "gauge"
+                        },
+                        {
+                            "entity": "sensor.downstairs_thermostat_humidity",
+                            "max": 100,
+                            "min": 0,
+                            "type": "gauge"
+                        },
+                        {
+                            "entity": "sensor.downstairs_thermostat_target",
+                            "max": 100,
+                            "min": 0,
+                            "type": "gauge"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.last_boot"
+                                }
+                            ],
+                            "title": "System",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.washer_power"
+                                }
+                            ],
+                            "title": "Energy",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:information",
+                    "path": "information",
+                    "title": "Information"
                 }
             ]
         }
