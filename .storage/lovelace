@@ -1,0 +1,298 @@
+{
+    "data": {
+        "config": {
+            "title": "",
+            "views": [
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "device_tracker.henry_phone"
+                                },
+                                {
+                                    "entity": "device_tracker.yingying_phone"
+                                },
+                                {
+                                    "entity": "sensor.andrew_age"
+                                },
+                                {
+                                    "entity": "sensor.downstairs_thermostat_temperature"
+                                }
+                            ],
+                            "type": "glance"
+                        },
+                        {
+                            "aspect_ratio": "50%",
+                            "camera_view": "live",
+                            "entity": "camera.garage",
+                            "image": "https://demo.home-assistant.io/stub_config/bedroom.png",
+                            "show_name": true,
+                            "show_state": false,
+                            "type": "picture-entity"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.garage_status"
+                                },
+                                {
+                                    "entity": "vacuum.xiaomi_vacuum_cleaner"
+                                },
+                                {
+                                    "entity": "input_boolean.laundry_done"
+                                }
+                            ],
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "weather.dark_sky",
+                            "type": "weather-forecast"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "cards": [
+                                        {
+                                            "entity": "switch.tv_switch",
+                                            "type": "entity-button"
+                                        },
+                                        {
+                                            "entity": "switch.living_room_outlet",
+                                            "type": "entity-button"
+                                        },
+                                        {
+                                            "entity": "light.gateway_light_04cf8c911730",
+                                            "type": "entity-button"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                },
+                                {
+                                    "cards": [
+                                        {
+                                            "entity": "vacuum.xiaomi_vacuum_cleaner",
+                                            "type": "entity-button"
+                                        },
+                                        {
+                                            "entity": "climate.downstairs",
+                                            "type": "entity-button"
+                                        },
+                                        {
+                                            "entity": "climate.upstairs",
+                                            "show_icon": true,
+                                            "show_name": true,
+                                            "type": "entity-button"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        }
+                    ],
+                    "icon": "mdi:home",
+                    "path": "default_view",
+                    "title": "Home"
+                },
+                {
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.motion_sensor_158d0000e86b52",
+                                    "name": "Living Room"
+                                },
+                                {
+                                    "entity": "binary_sensor.motion_sensor_158d0000ee50b6",
+                                    "name": "Upstairs"
+                                },
+                                {
+                                    "entity": "binary_sensor.motion_sensor_158d0000ee5125",
+                                    "name": "Kitchen"
+                                },
+                                {
+                                    "entity": "binary_sensor.motion_sensor_158d0000ee51d2",
+                                    "name": "Basement"
+                                }
+                            ],
+                            "title": "Motions",
+                            "type": "glance"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.living_room_outlet"
+                                },
+                                {
+                                    "entity": "switch.bedroom_outlet"
+                                },
+                                {
+                                    "entity": "light.hallway_light"
+                                },
+                                {
+                                    "entity": "light.yeelight_strip1_286c072f4c87"
+                                },
+                                {
+                                    "entity": "light.gateway_light_04cf8c911730"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Lights",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "cover.garage_door"
+                                },
+                                {
+                                    "entity": "sensor.garage_status"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Garage",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.tv_switch"
+                                },
+                                {
+                                    "entity": "input_select.channel"
+                                },
+                                {
+                                    "entity": "input_select.cctv"
+                                }
+                            ],
+                            "title": "TV",
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "media_player.living_room_tv",
+                            "type": "media-control"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.washer_outlet"
+                                },
+                                {
+                                    "entity": "sensor.washer_power"
+                                },
+                                {
+                                    "entity": "input_boolean.laundry_done"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "Laundary",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "sensor.downstairs_thermostat_temperature",
+                                "sensor.upstairs_thermostat_temperature"
+                            ],
+                            "type": "history-graph"
+                        }
+                    ],
+                    "icon": "mdi:sofa",
+                    "path": "room_view",
+                    "title": "Rooms"
+                },
+                {
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.upstairs_thermostat_temperature",
+                                    "name": "\u5ba4\u6e29"
+                                },
+                                {
+                                    "entity": "sensor.upstairs_thermostat_humidity",
+                                    "name": "\u6e7f\u5ea6"
+                                },
+                                {
+                                    "entity": "sensor.andrew_age",
+                                    "name": "\u51fa\u751f\u5929\u6570"
+                                },
+                                {
+                                    "entity": "weather.dark_sky",
+                                    "name": "\u5929\u6c14"
+                                }
+                            ],
+                            "type": "glance"
+                        },
+                        {
+                            "camera_image": "camera.baby_mon",
+                            "camera_view": "live",
+                            "entities": [
+                                "switch.bedroom_outlet",
+                                "binary_sensor.motion_sensor_158d0000ee50b6",
+                                "binary_sensor.baby_noise"
+                            ],
+                            "type": "picture-glance"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.last_feeding_time",
+                                    "name": "\u4e0a\u6b21\u5582\u5976\u65f6\u95f4"
+                                },
+                                {
+                                    "entity": "sensor.last_noise",
+                                    "name": "\u4e0a\u6b21\u54ed\u558a\u65f6\u95f4"
+                                }
+                            ],
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "climate.upstairs",
+                            "type": "thermostat"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "content": "\u4f60\u7684\u5b9d\u5b9d\u51fa\u751f\u5929\u6570\u4e3a {{states.sensor.andrew_age.state | int}} \u5929\uff0c \u6bcf\u6b21\u5403\u5976\u91cf\u4e3a **80\uff5e100** ml\n",
+                                    "type": "markdown"
+                                },
+                                {
+                                    "cards": [
+                                        {
+                                            "entity": "switch.bedroom_outlet",
+                                            "name": "\ud83d\udca1\u5e8a\u5934\u706f",
+                                            "type": "entity-button"
+                                        },
+                                        {
+                                            "entity": "input_boolean.night_mode",
+                                            "name": "\ud83c\udf7c\u8bb0\u5f55\u5582\u5976",
+                                            "tap_action": {
+                                                "action": "call-service",
+                                                "service": "script.log_feeding_time"
+                                            },
+                                            "type": "entity-button"
+                                        },
+                                        {
+                                            "entity": "input_boolean.night_mode",
+                                            "name": "\ud83c\udf03\u591c\u95f4\u6a21\u5f0f",
+                                            "type": "entity-button"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        }
+                    ],
+                    "icon": "mdi:baby-face",
+                    "path": "baby_view",
+                    "title": "Babysit"
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}

@@ -13,9 +13,6 @@ http:
   ip_ban_enabled: True
   login_attempts_threshold: 3
 
-lovelace:
-  mode: yaml
-
 history:
   include:
     entities:
