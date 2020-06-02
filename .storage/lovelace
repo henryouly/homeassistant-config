@@ -217,12 +217,16 @@
                             "type": "glance"
                         },
                         {
+                            "aspect_ratio": "0%",
                             "camera_image": "camera.baby_mon",
                             "camera_view": "live",
                             "entities": [
-                                "switch.bedroom_outlet",
-                                "binary_sensor.motion_sensor_158d0000ee50b6",
-                                "binary_sensor.baby_noise"
+                                {
+                                    "entity": "binary_sensor.motion_sensor_158d0000ee50b6"
+                                },
+                                {
+                                    "entity": "binary_sensor.baby_noise"
+                                }
                             ],
                             "type": "picture-glance"
                         },
