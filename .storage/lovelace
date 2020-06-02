@@ -38,7 +38,7 @@
                                     "entity": "sensor.garage_status"
                                 },
                                 {
-                                    "entity": "vacuum.xiaomi_vacuum_cleaner"
+                                    "entity": "sensor.last_vacuum_time"
                                 },
                                 {
                                     "entity": "input_boolean.laundry_done"
