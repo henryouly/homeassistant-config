@@ -151,10 +151,10 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "switch.tv_switch"
+                                    "entity": "media_player.living_room_tv"
                                 },
                                 {
-                                    "entity": "input_select.channel"
+                                    "entity": "switch.tv_switch"
                                 },
                                 {
                                     "entity": "input_select.cctv"

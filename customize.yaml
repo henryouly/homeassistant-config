@@ -1,13 +1,3 @@
-group.default_view:
-  icon: mdi:home
-group.living_room:
-  icon: mdi:home
-group.bedroom:
-  icon: mdi:home
-group.garage:
-  icon: mdi:car
-group.tv:
-  icon: mdi:television
 zone.work:
   icon: mdi:briefcase
 zone.home:
@@ -29,8 +19,8 @@ switch.bedroom_outlet:
   friendly_name: Bedroom Light
   icon: mdi:lightbulb
 switch.tv_switch:
-  friendly_name: TV
-  icon: mdi:television
+  friendly_name: XBOX
+  icon: mdi:xbox
 switch.washer_outlet:
   friendly_name: Washer Outlet
   icon: mdi:power-plug

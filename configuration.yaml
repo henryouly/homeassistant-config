@@ -1,7 +1,6 @@
 homeassistant:
-  name: Home
-  customize: !include customize.yaml
   packages: !include_dir_named packages
+  customize: !include customize.yaml
   customize_glob:
     "binary_sensor.device_*":
        device_class: connectivity
