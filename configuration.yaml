@@ -26,8 +26,8 @@ history:
       - light
 
 recorder:
-  purge_keep_days: 2
-  purge_interval: 1
+  purge_keep_days: 7
+  commit_interval: 1
   exclude:
     domains:
       - sun
