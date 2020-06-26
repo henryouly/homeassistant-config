@@ -61,11 +61,6 @@ tts:
   cache_dir: /tmp/tts
   time_memory: 300
 
-notify:
-  - platform: pushbullet
-    name: pushbullet
-    api_key: !secret PUSHBULLET_API_KEY
-
 logger:
   default: error
 
