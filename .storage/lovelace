@@ -104,23 +104,27 @@
                             "entities": [
                                 {
                                     "entity": "binary_sensor.motion_sensor_158d0000e86b52",
-                                    "name": "Living Room"
+                                    "name": "Living Room",
+                                    "secondary_info": "last-changed"
                                 },
                                 {
                                     "entity": "binary_sensor.motion_sensor_158d0000ee50b6",
-                                    "name": "Upstairs"
+                                    "name": "Upstairs",
+                                    "secondary_info": "last-changed"
                                 },
                                 {
                                     "entity": "binary_sensor.motion_sensor_158d0000ee5125",
-                                    "name": "Kitchen"
+                                    "name": "Kitchen",
+                                    "secondary_info": "last-changed"
                                 },
                                 {
                                     "entity": "binary_sensor.motion_sensor_158d0000ee51d2",
-                                    "name": "Basement"
+                                    "name": "Basement",
+                                    "secondary_info": "last-changed"
                                 }
                             ],
                             "title": "Motions",
-                            "type": "glance"
+                            "type": "entities"
                         },
                         {
                             "entities": [
@@ -322,6 +326,36 @@
                                 }
                             ],
                             "title": "Temperature",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "binary_sensor.downstairs_thermostat_online"
+                                },
+                                {
+                                    "entity": "binary_sensor.upstairs_thermostat_online"
+                                },
+                                {
+                                    "entity": "binary_sensor.488_myq_gateway"
+                                },
+                                {
+                                    "entity": "binary_sensor.device_antscam_1"
+                                },
+                                {
+                                    "entity": "binary_sensor.device_antscam_2"
+                                },
+                                {
+                                    "entity": "binary_sensor.device_nas"
+                                },
+                                {
+                                    "entity": "binary_sensor.device_edimax_switch_1"
+                                },
+                                {
+                                    "entity": "binary_sensor.device_tplink_switch_2"
+                                }
+                            ],
+                            "title": "Status",
                             "type": "entities"
                         },
                         {
