@@ -138,7 +138,7 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "cover.garage_door_2"
+                                    "entity": "cover.garage_door"
                                 },
                                 {
                                     "entity": "sensor.garage_status"
