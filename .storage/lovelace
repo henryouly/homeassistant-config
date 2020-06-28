@@ -186,13 +186,6 @@
                             "show_header_toggle": false,
                             "title": "Laundary",
                             "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                "sensor.downstairs_thermostat_temperature",
-                                "sensor.upstairs_thermostat_temperature"
-                            ],
-                            "type": "history-graph"
                         }
                     ],
                     "icon": "mdi:sofa",
@@ -396,6 +389,13 @@
                             ],
                             "title": "Energy",
                             "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "sensor.downstairs_thermostat_temperature",
+                                "sensor.upstairs_thermostat_temperature"
+                            ],
+                            "type": "history-graph"
                         }
                     ],
                     "icon": "mdi:information",
@@ -445,7 +445,6 @@
                                                     "entity": "sensor.last_vacuum_time"
                                                 }
                                             ],
-                                            "title": "My Title",
                                             "type": "entities"
                                         }
                                     ],
