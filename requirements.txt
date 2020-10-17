@@ -1,0 +1,2 @@
+homeassistant==0.110.4
+colorlog
