@@ -1,0 +1,17 @@
+- id: '1602970233608'
+  alias: Mi Button Dining Room Single Press
+  description: ''
+  trigger:
+  - platform: event
+    event_type: xiaomi_aqara.click
+    event_data:
+      entity_id: binary_sensor.mibutton_dining
+      click_type: single
+  condition: []
+  action:
+  - service: tts.google_translate_say
+    entity_id: media_player.google_home
+    data:
+      message: Lunch is ready
+      cache: true
+  mode: single
