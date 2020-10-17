@@ -91,7 +91,7 @@ mqtt:
   password: !secret mqtt_password
   client_id: home-assistant
 
-automation: !include_dir_merge_list automation
+automation: !include automations.yaml
 script: !include_dir_merge_named script
 switch: !include_dir_merge_list switches/
 

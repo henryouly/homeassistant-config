@@ -1,4 +1,6 @@
 {
+    "version": 1,
+    "key": "lovelace",
     "data": {
         "config": {
             "title": "",
@@ -40,6 +42,9 @@
                                 },
                                 {
                                     "entity": "input_boolean.laundry_done"
+                                },
+                                {
+                                    "entity": "binary_sensor.door_window_sensor_158d0000e69172"
                                 }
                             ],
                             "type": "entities"
@@ -186,6 +191,14 @@
                             "show_header_toggle": false,
                             "title": "Laundary",
                             "type": "entities"
+                        },
+                        {
+                            "entity": "climate.downstairs",
+                            "type": "thermostat"
+                        },
+                        {
+                            "entity": "climate.upstairs",
+                            "type": "thermostat"
                         }
                     ],
                     "icon": "mdi:sofa",
@@ -238,7 +251,8 @@
                                 },
                                 {
                                     "entity": "sensor.last_noise",
-                                    "name": "\u4e0a\u6b21\u54ed\u558a\u65f6\u95f4"
+                                    "name": "\u4e0a\u6b21\u54ed\u558a\u65f6\u95f4",
+                                    "secondary_info": "last-changed"
                                 }
                             ],
                             "type": "entities"
@@ -396,6 +410,12 @@
                                 "sensor.upstairs_thermostat_temperature"
                             ],
                             "type": "history-graph"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                "binary_sensor.door_window_sensor_158d0000e69172"
+                            ]
                         }
                     ],
                     "icon": "mdi:information",
@@ -554,7 +574,5 @@
                 }
             ]
         }
-    },
-    "key": "lovelace",
-    "version": 1
+    }
 }
