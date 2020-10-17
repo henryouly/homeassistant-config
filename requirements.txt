@@ -1,2 +1,2 @@
-homeassistant==0.110.4
+homeassistant==0.115.6
 colorlog
