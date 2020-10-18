@@ -114,12 +114,12 @@
                                 },
                                 {
                                     "entity": "binary_sensor.motion_sensor_158d0000ee50b6",
-                                    "name": "Upstairs",
+                                    "name": "Main Entry",
                                     "secondary_info": "last-changed"
                                 },
                                 {
                                     "entity": "binary_sensor.motion_sensor_158d0000ee5125",
-                                    "name": "Kitchen",
+                                    "name": "Office",
                                     "secondary_info": "last-changed"
                                 },
                                 {
@@ -235,27 +235,10 @@
                             "entities": [
                                 {
                                     "entity": "binary_sensor.motion_sensor_158d0000ee50b6"
-                                },
-                                {
-                                    "entity": "binary_sensor.baby_noise"
                                 }
                             ],
                             "title": "Baby",
                             "type": "picture-glance"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.last_feeding_time",
-                                    "name": "\u4e0a\u6b21\u5582\u5976\u65f6\u95f4"
-                                },
-                                {
-                                    "entity": "sensor.last_noise",
-                                    "name": "\u4e0a\u6b21\u54ed\u558a\u65f6\u95f4",
-                                    "secondary_info": "last-changed"
-                                }
-                            ],
-                            "type": "entities"
                         },
                         {
                             "entity": "climate.upstairs",
