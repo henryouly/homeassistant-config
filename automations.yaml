@@ -15,3 +15,20 @@
       message: Lunch is ready
       cache: true
   mode: single
+- id: '1603049096680'
+  alias: Notify me when motion is detected at main entry
+  description: ''
+  trigger:
+  - platform: device
+    domain: binary_sensor
+    entity_id: binary_sensor.motion_entry_50b6
+    device_id: 9446c182001d11eb99bbd71d6c07a148
+    type: motion
+  condition: []
+  action:
+  - service: tts.google_translate_say
+    entity_id: media_player.google_home
+    data:
+      message: Motion
+      cache: true
+  mode: single

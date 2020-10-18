@@ -1224,6 +1224,22 @@
                 "unit_of_measurement": null,
                 "original_name": "Motion Sensor_158d0000ee51d2",
                 "original_icon": null
+            },
+            {
+                "entity_id": "automation.notify_me_when_motion_is_detected_at_main_entry",
+                "config_entry_id": null,
+                "device_id": null,
+                "unique_id": "1603049096680",
+                "platform": "automation",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "Notify me when motion is detected at main entry",
+                "original_icon": null
             }
         ]
     }
