@@ -479,7 +479,7 @@
                 "device_id": "943cd9b5001d11ebbeb45d0b9214aa38",
                 "unique_id": "rgb04cf8c911730",
                 "platform": "xiaomi_aqara",
-                "name": null,
+                "name": "Gateway Light",
                 "icon": null,
                 "disabled_by": null,
                 "capabilities": {},
