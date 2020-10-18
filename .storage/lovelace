@@ -108,19 +108,19 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "binary_sensor.motion_sensor_158d0000e86b52",
+                                    "entity": "binary_sensor.motion_living_6b52",
                                     "secondary_info": "last-changed"
                                 },
                                 {
-                                    "entity": "binary_sensor.motion_sensor_158d0000ee50b6",
+                                    "entity": "binary_sensor.motion_entry_50b6",
                                     "secondary_info": "last-changed"
                                 },
                                 {
-                                    "entity": "binary_sensor.motion_sensor_158d0000ee5125",
+                                    "entity": "binary_sensor.motion_office_5125",
                                     "secondary_info": "last-changed"
                                 },
                                 {
-                                    "entity": "binary_sensor.motion_sensor_158d0000ee51d2",
+                                    "entity": "binary_sensor.motion_basement_51d2",
                                     "secondary_info": "last-changed"
                                 }
                             ],
