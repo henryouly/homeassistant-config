@@ -40,17 +40,11 @@ sensor.last_vacuum_time:
   friendly_name: Last Vacuum
 sensor.downstairs_thermostat_temperature:
   friendly_name: Temperature
-binary_sensor.motion_sensor_158d0000e86b52:
-  friendly_name: motion_living_room_6b52
 sensor.andrew_age:
   icon: mdi:calendar
 sensor.last_feeding_time:
   icon: mdi:baby-bottle
 sensor.last_noise:
   icon: mdi:voice
-binary_sensor.motion_sensor_158d0000ee50b6:
-  friendly_name: motion_upstairs_50b6
-binary_sensor.motion_sensor_158d0000ee5125:
-  friendly_name: motion_kitchen_5125
 binary_sensor.motion_sensor_158d0000ee51d2:
   friendly_name: motion_basement_51d2

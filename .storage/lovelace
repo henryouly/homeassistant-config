@@ -109,17 +109,14 @@
                             "entities": [
                                 {
                                     "entity": "binary_sensor.motion_sensor_158d0000e86b52",
-                                    "name": "Living Room",
                                     "secondary_info": "last-changed"
                                 },
                                 {
                                     "entity": "binary_sensor.motion_sensor_158d0000ee50b6",
-                                    "name": "Main Entry",
                                     "secondary_info": "last-changed"
                                 },
                                 {
                                     "entity": "binary_sensor.motion_sensor_158d0000ee5125",
-                                    "name": "Office",
                                     "secondary_info": "last-changed"
                                 },
                                 {
