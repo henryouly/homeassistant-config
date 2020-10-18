@@ -511,7 +511,7 @@
                 "device_id": "94470007001d11eb84e5bbc485fc1517",
                 "unique_id": "status158d0000ee51d2",
                 "platform": "xiaomi_aqara",
-                "name": null,
+                "name": "Basement",
                 "icon": null,
                 "disabled_by": null,
                 "capabilities": {},

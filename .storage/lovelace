@@ -121,7 +121,6 @@
                                 },
                                 {
                                     "entity": "binary_sensor.motion_sensor_158d0000ee51d2",
-                                    "name": "Basement",
                                     "secondary_info": "last-changed"
                                 }
                             ],
