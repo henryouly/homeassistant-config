@@ -6,22 +6,6 @@ zone.dance:
   icon: mdi:karate
 zone.school:
   icon: mdi:school
-light.hallway_light:
-  friendly_name: Hallway Light
-light.yeelight_strip1_286c072f4c87:
-  friendly_name: Light Strip
-switch.living_room_outlet:
-  friendly_name: Living Room Light
-  icon: mdi:lightbulb
-switch.bedroom_outlet:
-  friendly_name: Bedroom Light
-  icon: mdi:lightbulb
-switch.tv_switch:
-  friendly_name: XBOX
-  icon: mdi:xbox
-switch.washer_outlet:
-  friendly_name: Washer Outlet
-  icon: mdi:power-plug
 sensor.washer_power:
   friendly_name: Washer Power
   icon: mdi:flash
