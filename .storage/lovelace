@@ -97,6 +97,10 @@
                                 }
                             ],
                             "type": "vertical-stack"
+                        },
+                        {
+                            "type": "light",
+                            "entity": "light.yeelight_stripe_0x0000000003426916"
                         }
                     ],
                     "icon": "mdi:home",
