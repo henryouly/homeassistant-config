@@ -1304,6 +1304,44 @@
                 "unit_of_measurement": null,
                 "original_name": "Google Home",
                 "original_icon": null
+            },
+            {
+                "entity_id": "light.yeelight_stripe_0x0000000003426916",
+                "config_entry_id": "cd3c79f9303f11eba76659b187510cd0",
+                "device_id": "ced2aef8303f11eb9be8f51c48eaf1fc",
+                "unique_id": "0x0000000003426916",
+                "platform": "yeelight",
+                "name": "Lightstripe",
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {
+                    "min_mireds": 153,
+                    "max_mireds": 588,
+                    "effect_list": [
+                        "Strobe color",
+                        "Police",
+                        "Christmas",
+                        "RGB",
+                        "Random Loop",
+                        "Fast Random Loop",
+                        "LSD",
+                        "Slowdown",
+                        "Disco",
+                        "Strobe epilepsy!",
+                        "Alarm",
+                        "Police2",
+                        "WhatsApp",
+                        "Facebook",
+                        "Twitter",
+                        "Slow Temp",
+                        "Stop"
+                    ]
+                },
+                "supported_features": 63,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "yeelight_stripe_0x0000000003426916",
+                "original_icon": null
             }
         ]
     }
