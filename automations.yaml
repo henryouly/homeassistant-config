@@ -26,9 +26,9 @@
     type: motion
   condition: []
   action:
-  - service: tts.google_translate_say
-    entity_id: media_player.google_home
+  - service: media_player.play_media
     data:
-      message: Motion
-      cache: true
+      entity_id: media_player.google_home
+      media_content_id: https://raw.githubusercontent.com/CCOSTAN/Home-AssistantConfig/master/config/sounds/one-tone-chime.mp3
+      media_content_type: audio/mp4
   mode: single
