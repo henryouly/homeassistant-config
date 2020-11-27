@@ -101,7 +101,13 @@
                         {
                             "type": "light",
                             "entity": "light.yeelight_stripe_0x0000000003426916"
-                        }
+                        },
+                        [
+                            {
+                                "type": "custom:xiaomi-vacuum-card",
+                                "entity": "vacuum.xiaomi_vacuum_cleaner"
+                            }
+                        ]
                     ],
                     "icon": "mdi:home",
                     "path": "default_view",
@@ -156,25 +162,6 @@
                             "show_header_toggle": false,
                             "title": "Garage",
                             "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "media_player.living_room_tv"
-                                },
-                                {
-                                    "entity": "switch.tv_switch"
-                                },
-                                {
-                                    "entity": "input_select.cctv"
-                                }
-                            ],
-                            "title": "TV",
-                            "type": "entities"
-                        },
-                        {
-                            "entity": "media_player.living_room_tv",
-                            "type": "media-control"
                         },
                         {
                             "entities": [

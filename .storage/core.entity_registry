@@ -1306,13 +1306,29 @@
                 "original_icon": null
             },
             {
+                "entity_id": "sensor.hacs",
+                "config_entry_id": "04498fcb30e611eb83202f1562424580",
+                "device_id": "0527416430e611eb8233a78597926458",
+                "unique_id": "0717a0cd-745c-48fd-9b16-c8534c9704f9-bc944b0f-fd42-4a58-a072-ade38d1444cd",
+                "platform": "hacs",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": "pending update(s)",
+                "original_name": "hacs",
+                "original_icon": "hacs:hacs"
+            },
+            {
                 "entity_id": "light.yeelight_stripe_0x0000000003426916",
-                "config_entry_id": "cd3c79f9303f11eba76659b187510cd0",
-                "device_id": "ced2aef8303f11eb9be8f51c48eaf1fc",
+                "config_entry_id": "2570b78230f411ebb432f57bd1c51fb4",
+                "device_id": "26b8e5c530f411ebae68e18886b02859",
                 "unique_id": "0x0000000003426916",
                 "platform": "yeelight",
                 "name": "Lightstripe",
-                "icon": null,
+                "icon": "mdi:led-strip-variant",
                 "disabled_by": null,
                 "capabilities": {
                     "min_mireds": 153,
