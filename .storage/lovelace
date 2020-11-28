@@ -302,6 +302,28 @@
                             "type": "entities"
                         },
                         {
+                            "type": "custom:auto-entities",
+                            "card": {
+                                "type": "entities",
+                                "title": "Devices",
+                                "show_header_toggle": false
+                            },
+                            "filter": {
+                                "include": [
+                                    {
+                                        "domain": "device_tracker",
+                                        "options": {
+                                            "secondary_info": "last-changed"
+                                        }
+                                    }
+                                ]
+                            },
+                            "sort": {
+                                "method": "last_changed",
+                                "count": 10
+                            }
+                        },
+                        {
                             "entities": [
                                 {
                                     "entity": "binary_sensor.downstairs_thermostat_online"
