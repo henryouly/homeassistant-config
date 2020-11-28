@@ -43,8 +43,9 @@
                             "type": "entities"
                         },
                         {
+                            "type": "custom:weather-card",
                             "entity": "weather.dark_sky",
-                            "type": "weather-forecast"
+                            "number_of_forecasts": "5"
                         },
                         {
                             "type": "custom:xiaomi-vacuum-card",
