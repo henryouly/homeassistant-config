@@ -11,9 +11,3 @@ sensor:
       - type: load_5m
       - type: load_15m
       - type: last_boot
-  - platform: template
-    sensors:
-      pmu_power:
-        friendly_name_template: "{{ states.switch.nas_outlet.name}} Power"
-        value_template: '{{ states.switch.nas_outlet.attributes["current_power_w"] | float | round(2) }}'
-        unit_of_measurement: 'W'
