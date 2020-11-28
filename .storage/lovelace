@@ -180,12 +180,17 @@
                             "type": "entities"
                         },
                         {
-                            "entity": "climate.downstairs",
-                            "type": "thermostat"
-                        },
-                        {
-                            "entity": "climate.upstairs",
-                            "type": "thermostat"
+                            "type": "horizontal-stack",
+                            "cards": [
+                                {
+                                    "type": "thermostat",
+                                    "entity": "climate.downstairs"
+                                },
+                                {
+                                    "type": "thermostat",
+                                    "entity": "climate.upstairs"
+                                }
+                            ]
                         }
                     ],
                     "icon": "mdi:sofa",
