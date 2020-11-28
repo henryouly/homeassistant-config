@@ -102,12 +102,10 @@
                             "type": "light",
                             "entity": "light.yeelight_stripe_0x0000000003426916"
                         },
-                        [
-                            {
-                                "type": "custom:xiaomi-vacuum-card",
-                                "entity": "vacuum.xiaomi_vacuum_cleaner"
-                            }
-                        ]
+                        {
+                            "type": "custom:xiaomi-vacuum-card",
+                            "entity": "vacuum.xiaomi_vacuum_cleaner"
+                        }
                     ],
                     "icon": "mdi:home",
                     "path": "default_view",
