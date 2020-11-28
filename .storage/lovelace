@@ -119,26 +119,23 @@
                 {
                     "cards": [
                         {
-                            "entities": [
-                                {
-                                    "entity": "binary_sensor.motion_living_6b52",
-                                    "secondary_info": "last-changed"
-                                },
-                                {
-                                    "entity": "binary_sensor.motion_entry_50b6",
-                                    "secondary_info": "last-changed"
-                                },
-                                {
-                                    "entity": "binary_sensor.motion_office_5125",
-                                    "secondary_info": "last-changed"
-                                },
-                                {
-                                    "entity": "binary_sensor.motion_basement_51d2",
-                                    "secondary_info": "last-changed"
-                                }
-                            ],
-                            "title": "Motions",
-                            "type": "entities"
+                            "type": "custom:auto-entities",
+                            "card": {
+                                "type": "entities"
+                            },
+                            "filter": {
+                                "include": [
+                                    {
+                                        "domain": "binary_sensor",
+                                        "attributes": {
+                                            "device_class": "motion"
+                                        },
+                                        "options": {
+                                            "secondary_info": "last-changed"
+                                        }
+                                    }
+                                ]
+                            }
                         },
                         {
                             "entities": [
