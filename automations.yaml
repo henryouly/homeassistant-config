@@ -32,3 +32,19 @@
       media_content_id: https://raw.githubusercontent.com/CCOSTAN/Home-AssistantConfig/master/config/sounds/one-tone-chime.mp3
       media_content_type: audio/mp4
   mode: single
+- id: '1606525914238'
+  alias: When motion is detected in basement, turn on lightstripe
+  description: ''
+  trigger:
+  - type: motion
+    platform: device
+    device_id: 94470007001d11eb84e5bbc485fc1517
+    entity_id: binary_sensor.motion_basement_51d2
+    domain: binary_sensor
+  condition: []
+  action:
+  - domain: light
+    entity_id: light.yeelight_stripe_0x0000000003426916
+    device_id: 26b8e5c530f411ebae68e18886b02859
+    type: turn_on
+  mode: single

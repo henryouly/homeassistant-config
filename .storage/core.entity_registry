@@ -1358,6 +1358,22 @@
                 "unit_of_measurement": null,
                 "original_name": "yeelight_stripe_0x0000000003426916",
                 "original_icon": null
+            },
+            {
+                "entity_id": "automation.when_motion_is_detected_in_office_turn_on_lightstripe",
+                "config_entry_id": null,
+                "device_id": null,
+                "unique_id": "1606525914238",
+                "platform": "automation",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "When motion is detected in basement, turn on lightstripe",
+                "original_icon": null
             }
         ]
     }
