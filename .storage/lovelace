@@ -107,7 +107,7 @@
                         },
                         {
                             "camera_view": "live",
-                            "entity": "camera.garage",
+                            "entity": "camera.entry_way",
                             "show_name": true,
                             "show_state": false,
                             "type": "picture-entity"

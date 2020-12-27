@@ -17,7 +17,11 @@ camera:
   - platform: generic
     still_image_url: https://www.mayline.com/products/images/product/noimage.jpg
     stream_source: !secret BABY_WATCH_RTSP
-    name: baby_mon
+    name: Baby Mon
+  - platform: generic
+    still_image_url: https://www.mayline.com/products/images/product/noimage.jpg
+    stream_source: !secret ENTRYWAY_RTSP
+    name: Entry Way
 
 #---------------------------------------
 sensor:
