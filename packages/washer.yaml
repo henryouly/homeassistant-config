@@ -1,12 +1,3 @@
-group:
-  washer_card:
-    name: Laundary
-    entities:
-      - input_boolean.laundry_done
-      - switch.washer_outlet
-      - binary_sensor.washer_mode
-      - sensor.washer_power
-
 sensor:
   - platform: template
     sensors:
@@ -14,23 +5,35 @@ sensor:
         value_template: '{{ states.switch.washer_outlet.attributes["current_power_w"] | float | round(2) }}'
         unit_of_measurement: 'W'
 
-binary_sensor:
-  - platform: template
-    sensors:
-      washer_mode:
-        value_template: '{{ states.sensor.washer_power.state | int > 10 }}'
-
 input_boolean:
-  laundry_done:
-    name: Laundry notification
+  washer_status:
+    name: Washer Status
+    initial: off
 
 automation:
-  - alias: Laundary is done
+  - alias: Set washer status to on
     trigger:
-      - platform: state
-        entity_id: binary_sensor.washer_mode
-        to: "off"
-        for: "00:03:00"
+      - platform: numeric_state
+        entity_id: sensor.washer_power
+        above: 10
+    condition:
+      - condition: state
+        entity_id: input_boolean.washer_status
+        state: 'off'
     action:
       - service: input_boolean.turn_on
-        entity_id: input_boolean.laundry_done
+        entity_id: input_boolean.washer_status
+  - alias: Set washer status to off
+    trigger:
+      - platform: numeric_state
+        entity_id: sensor.washer_power
+        below: 3
+        for:
+          minutes: 1
+    condition:
+      - condition: state
+        entity_id: input_boolean.washer_status
+        state: 'on'
+    action:
+      - service: input_boolean.turn_off
+        entity_id: input_boolean.washer_status
