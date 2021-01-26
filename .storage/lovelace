@@ -34,7 +34,10 @@
                                     "entity": "sensor.last_vacuum_time"
                                 },
                                 {
-                                    "entity": "input_boolean.laundry_done"
+                                    "entity": "input_boolean.washer_status"
+                                },
+                                {
+                                    "entity": "sensor.washer_power"
                                 },
                                 {
                                     "entity": "binary_sensor.door_window_sensor_158d0000e69172"
@@ -170,10 +173,10 @@
                                     "entity": "switch.washer_outlet"
                                 },
                                 {
-                                    "entity": "sensor.washer_power"
+                                    "entity": "input_boolean.washer_status"
                                 },
                                 {
-                                    "entity": "input_boolean.laundry_done"
+                                    "entity": "sensor.washer_power"
                                 }
                             ],
                             "show_header_toggle": false,
@@ -192,6 +195,10 @@
                                     "entity": "climate.upstairs"
                                 }
                             ]
+                        },
+                        {
+                            "type": "custom:xiaomi-vacuum-card",
+                            "entity": "vacuum.xiaomi_vacuum_cleaner"
                         }
                     ],
                     "icon": "mdi:sofa",
