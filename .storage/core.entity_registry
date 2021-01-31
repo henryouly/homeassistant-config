@@ -1348,7 +1348,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": "%",
                 "original_name": "Pixel 3 Battery Level",
-                "original_icon": "mdi:battery-40"
+                "original_icon": "mdi:battery"
             },
             {
                 "entity_id": "sensor.pixel_3_battery_state",
@@ -1365,7 +1365,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Pixel 3 Battery State",
-                "original_icon": "mdi:battery-plus"
+                "original_icon": "mdi:battery-minus"
             },
             {
                 "entity_id": "binary_sensor.pixel_3_is_charging",
@@ -1382,7 +1382,7 @@
                 "device_class": "plug",
                 "unit_of_measurement": null,
                 "original_name": "Pixel 3 Is Charging",
-                "original_icon": "mdi:power-plug"
+                "original_icon": "mdi:power-plug-off"
             },
             {
                 "entity_id": "sensor.pixel_3_charger_type",
@@ -1399,7 +1399,7 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Pixel 3 Charger Type",
-                "original_icon": "mdi:power-plug"
+                "original_icon": "mdi:battery"
             },
             {
                 "entity_id": "sensor.pixel_3_battery_health",
