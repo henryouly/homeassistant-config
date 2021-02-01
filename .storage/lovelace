@@ -417,6 +417,44 @@
                             "entities": [
                                 "binary_sensor.door_window_sensor_158d0000e69172"
                             ]
+                        },
+                        {
+                            "type": "sensor",
+                            "entity": "sensor.pixel_3_battery_level",
+                            "graph": "line"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "sensor.pi_hole_ads_blocked_today"
+                                },
+                                {
+                                    "entity": "sensor.pi_hole_ads_percentage_blocked_today"
+                                },
+                                {
+                                    "entity": "sensor.pi_hole_dns_queries_cached"
+                                },
+                                {
+                                    "entity": "sensor.pi_hole_dns_queries_forwarded"
+                                },
+                                {
+                                    "entity": "sensor.pi_hole_dns_queries_today"
+                                },
+                                {
+                                    "entity": "sensor.pi_hole_dns_unique_clients"
+                                },
+                                {
+                                    "entity": "sensor.pi_hole_dns_unique_domains"
+                                },
+                                {
+                                    "entity": "sensor.pi_hole_domains_blocked"
+                                },
+                                {
+                                    "entity": "sensor.pi_hole_seen_clients"
+                                }
+                            ],
+                            "title": "Pi-Hole"
                         }
                     ],
                     "icon": "mdi:information",
