@@ -332,8 +332,8 @@
                                 ]
                             },
                             "sort": {
-                                "method": "last_changed",
-                                "count": 10
+                                "method": "state",
+                                "count": 30
                             }
                         },
                         {
