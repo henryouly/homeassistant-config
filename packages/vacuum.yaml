@@ -1,7 +1,7 @@
 vacuum:
   - platform: xiaomi_miio
-    host: rockrobo
-    token: 41655478536d704a4a655230584e3558
+    host: !secret XIAOMI_VACUUM_HOST
+    token: !secret XIAOMI_VACUUM_TOKEN
 
 input_boolean:
   vacuum_done:
