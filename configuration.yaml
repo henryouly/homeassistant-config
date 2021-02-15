@@ -105,3 +105,11 @@ google_assistant:
     - switch
     - light
     - media_player
+
+influxdb:
+  host: localhost
+  database: !secret INFLUXDB_DB
+  username: !secret INFLUXDB_USER
+  password: !secret INFLUXDB_PASSWD
+  tags:
+    source: hass
