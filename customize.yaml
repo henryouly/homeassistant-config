@@ -12,19 +12,9 @@ sensor.washer_power:
 sensor.pmu_power:
   friendly_name: PMU Power
   icon: mdi:flash
-sensor.downstairs_thermostat_humidity:
-  friendly_name: Downstairs Humidity
-  icon: mdi:thermostat
-sensor.upstairs_thermostat_humidity:
-  friendly_name: Upstairs Humidity
-  icon: mdi:thermostat
 sensor.last_vacuum_time:
   friendly_name: Last Vacuum
-sensor.downstairs_thermostat_temperature:
-  friendly_name: Temperature
 sensor.andrew_age:
   icon: mdi:calendar
-sensor.last_feeding_time:
-  icon: mdi:baby-bottle
 sensor.last_noise:
   icon: mdi:voice
