@@ -1280,7 +1280,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": "%",
                 "original_name": "Pixel 3 Battery Level",
-                "original_icon": "mdi:battery-90"
+                "original_icon": "mdi:battery-10"
             },
             {
                 "entity_id": "sensor.pixel_3_battery_state",
@@ -1663,7 +1663,7 @@
                 "name": null,
                 "icon": null,
                 "disabled_by": null,
-                "capabilities": null,
+                "capabilities": {},
                 "supported_features": 0,
                 "device_class": null,
                 "unit_of_measurement": null,
