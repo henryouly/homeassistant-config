@@ -535,23 +535,6 @@
                 "original_icon": null
             },
             {
-                "entity_id": "switch.tv_switch",
-                "config_entry_id": "4d2f8a3bb3fd4d6a8cfdef70a7fc5072",
-                "device_id": "1a38d99b386f4ba2b2fda1a1ba91f368",
-                "area_id": null,
-                "unique_id": "50:C7:BF:C7:D9:54",
-                "platform": "tplink",
-                "name": null,
-                "icon": null,
-                "disabled_by": null,
-                "capabilities": {},
-                "supported_features": 0,
-                "device_class": null,
-                "unit_of_measurement": null,
-                "original_name": "Xbox Switch",
-                "original_icon": null
-            },
-            {
                 "entity_id": "binary_sensor.switch_158d0003502655",
                 "config_entry_id": "942f178b001d11ebb458375f973e9d06",
                 "device_id": "94474000001d11eba3ce8d24d7f29891",
@@ -1297,7 +1280,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": "%",
                 "original_name": "Pixel 3 Battery Level",
-                "original_icon": "mdi:battery-50"
+                "original_icon": "mdi:battery-90"
             },
             {
                 "entity_id": "sensor.pixel_3_battery_state",
@@ -1634,6 +1617,57 @@
                 "device_class": null,
                 "unit_of_measurement": null,
                 "original_name": "Google Home",
+                "original_icon": null
+            },
+            {
+                "entity_id": "sensor.brother_hl_l2380dw_series_uptime",
+                "config_entry_id": "77d86168f9542579979327d606e993ea",
+                "device_id": "b1b9d5ceb4de023b58c1c9a8c55a73d8",
+                "area_id": null,
+                "unique_id": "e3248000-80ce-11db-8000-30055c957488_uptime",
+                "platform": "ipp",
+                "name": null,
+                "icon": null,
+                "disabled_by": "integration",
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": "timestamp",
+                "unit_of_measurement": null,
+                "original_name": "Brother HL-L2380DW series Uptime",
+                "original_icon": "mdi:clock-outline"
+            },
+            {
+                "entity_id": "sensor.brother_hl_l2380dw_series",
+                "config_entry_id": "77d86168f9542579979327d606e993ea",
+                "device_id": "b1b9d5ceb4de023b58c1c9a8c55a73d8",
+                "area_id": null,
+                "unique_id": "e3248000-80ce-11db-8000-30055c957488_printer",
+                "platform": "ipp",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": {},
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "Brother HL-L2380DW series",
+                "original_icon": "mdi:printer"
+            },
+            {
+                "entity_id": "switch.xbox_switch",
+                "config_entry_id": "aa5bc7c1191e6bd7dd6dc168f6454ea1",
+                "device_id": "5b5134b207345ccbc2473cd4d5f51616",
+                "area_id": null,
+                "unique_id": "50:C7:BF:C7:D9:54",
+                "platform": "tplink",
+                "name": null,
+                "icon": null,
+                "disabled_by": null,
+                "capabilities": null,
+                "supported_features": 0,
+                "device_class": null,
+                "unit_of_measurement": null,
+                "original_name": "Xbox Switch",
                 "original_icon": null
             }
         ]

@@ -26,6 +26,13 @@
                             "type": "glance"
                         },
                         {
+                            "camera_view": "live",
+                            "entity": "camera.entry_way",
+                            "show_name": true,
+                            "show_state": false,
+                            "type": "picture-entity"
+                        },
+                        {
                             "entities": [
                                 {
                                     "entity": "sensor.garage_status"
@@ -37,10 +44,13 @@
                                     "entity": "input_boolean.washer_status"
                                 },
                                 {
-                                    "entity": "sensor.washer_power"
+                                    "entity": "binary_sensor.door_window_sensor_158d0000e69172"
                                 },
                                 {
-                                    "entity": "binary_sensor.door_window_sensor_158d0000e69172"
+                                    "entity": "sensor.downstairs_thermostat_humidity"
+                                },
+                                {
+                                    "entity": "sensor.upstairs_thermostat_humidity"
                                 }
                             ],
                             "type": "entities"
@@ -55,24 +65,11 @@
                             "entity": "vacuum.xiaomi_vacuum_cleaner"
                         },
                         {
-                            "type": "horizontal-stack",
-                            "cards": [
-                                {
-                                    "type": "light",
-                                    "entity": "light.yeelight_stripe_0x0000000003426916"
-                                },
-                                {
-                                    "type": "thermostat",
-                                    "entity": "climate.downstairs"
-                                }
-                            ]
-                        },
-                        {
                             "cards": [
                                 {
                                     "cards": [
                                         {
-                                            "entity": "switch.tv_switch",
+                                            "entity": "switch.xbox_switch",
                                             "type": "entity-button"
                                         },
                                         {
@@ -93,11 +90,11 @@
                                             "type": "entity-button"
                                         },
                                         {
-                                            "entity": "climate.downstairs",
+                                            "entity": "switch.washer_outlet",
                                             "type": "entity-button"
                                         },
                                         {
-                                            "entity": "climate.upstairs",
+                                            "entity": "binary_sensor.device_nas",
                                             "show_icon": true,
                                             "show_name": true,
                                             "type": "entity-button"
@@ -109,11 +106,17 @@
                             "type": "vertical-stack"
                         },
                         {
-                            "camera_view": "live",
-                            "entity": "camera.entry_way",
-                            "show_name": true,
-                            "show_state": false,
-                            "type": "picture-entity"
+                            "type": "horizontal-stack",
+                            "cards": [
+                                {
+                                    "type": "thermostat",
+                                    "entity": "climate.downstairs"
+                                },
+                                {
+                                    "type": "thermostat",
+                                    "entity": "climate.upstairs"
+                                }
+                            ]
                         }
                     ],
                     "icon": "mdi:home",
@@ -121,6 +124,15 @@
                     "title": "Home"
                 },
                 {
+                    "icon": "mdi:sofa",
+                    "path": "room_view",
+                    "title": "Rooms",
+                    "visible": [
+                        {
+                            "user": "2210bc6b05234afcad915a9b46e87099"
+                        }
+                    ],
+                    "badges": [],
                     "cards": [
                         {
                             "type": "custom:auto-entities",
@@ -144,7 +156,7 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "switch.living_room_outlet"
+                                    "entity": "light.yeelight_stripe_0x0000000003426916"
                                 },
                                 {
                                     "entity": "light.gateway_light_04cf8c911730"
@@ -200,10 +212,7 @@
                             "type": "custom:xiaomi-vacuum-card",
                             "entity": "vacuum.xiaomi_vacuum_cleaner"
                         }
-                    ],
-                    "icon": "mdi:sofa",
-                    "path": "room_view",
-                    "title": "Rooms"
+                    ]
                 },
                 {
                     "cards": [
@@ -246,6 +255,14 @@
                     "title": "Babysit"
                 },
                 {
+                    "icon": "mdi:information",
+                    "path": "information",
+                    "title": "Information",
+                    "visible": [
+                        {
+                            "user": "2210bc6b05234afcad915a9b46e87099"
+                        }
+                    ],
                     "badges": [],
                     "cards": [
                         {
@@ -455,13 +472,37 @@
                                 }
                             ],
                             "title": "Pi-Hole"
+                        },
+                        {
+                            "type": "custom:auto-entities",
+                            "card": {
+                                "type": "entities",
+                                "title": "Motions"
+                            },
+                            "filter": {
+                                "include": [
+                                    {
+                                        "domain": "binary_sensor",
+                                        "attributes": {
+                                            "device_class": "motion"
+                                        },
+                                        "options": {
+                                            "secondary_info": "last-changed"
+                                        }
+                                    }
+                                ]
+                            }
                         }
-                    ],
-                    "icon": "mdi:information",
-                    "path": "information",
-                    "title": "Information"
+                    ]
                 },
                 {
+                    "icon": "mdi:home",
+                    "panel": true,
+                    "visible": [
+                        {
+                            "user": "2210bc6b05234afcad915a9b46e87099"
+                        }
+                    ],
                     "badges": [],
                     "cards": [
                         {
@@ -512,8 +553,9 @@
                                 {
                                     "cards": [
                                         {
+                                            "type": "custom:weather-card",
                                             "entity": "weather.dark_sky",
-                                            "type": "weather-forecast"
+                                            "number_of_forecasts": "5"
                                         },
                                         {
                                             "cards": [
@@ -531,7 +573,7 @@
                                         {
                                             "cards": [
                                                 {
-                                                    "entity": "switch.tv_switch",
+                                                    "entity": "switch.xbox_switch",
                                                     "hold_action": {
                                                         "action": "more-info"
                                                     },
@@ -616,9 +658,7 @@
                             ],
                             "type": "horizontal-stack"
                         }
-                    ],
-                    "icon": "mdi:home",
-                    "panel": true
+                    ]
                 }
             ]
         }
