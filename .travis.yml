@@ -1,7 +1,7 @@
 language: python
-python: "3.7.7"
+python: "3.8.0"
 install:
-  - pip3 install homeassistant==0.115.6
+  - pip3 install homeassistant==2021.2.3
   - pip3 install colorlog
 script:
   - hass -c . --script check_config --info all
