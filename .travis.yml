@@ -1,9 +1,10 @@
 language: python
-python: "3.8.0"
+python: "3.8"
 install:
-  - pip3 install homeassistant==2021.2.3
+  - pip3 install homeassistant
   - pip3 install colorlog
 script:
   - hass -c . --script check_config --info all
 before_install:
+  - touch travis_fake_ssh_key
   - mv travis_secrets.yaml secrets.yaml
