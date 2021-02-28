@@ -1,9 +1,3 @@
-cover:
-  - platform: myq
-    username: !secret MYQ_USERNAME
-    password: !secret MYQ_PASSWORD
-    type: liftmaster
-#---------------------------------------
 sensor:
 - platform: template
   sensors:
