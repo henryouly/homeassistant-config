@@ -1,8 +1,7 @@
 language: python
 python: "3.8"
 install:
-  - pip3 install homeassistant
-  - pip3 install colorlog
+  - pip3 install -r requirements.txt
 script:
   - hass -c . --script check_config --info all
 before_install:
