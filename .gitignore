@@ -58,6 +58,7 @@ __pycache__
 .cloud
 home-assistant.env
 home-assistant.*
+ip_bans.yaml
 known_devices.yaml
 secrets.yaml
 google_calendars.yaml
@@ -69,3 +70,8 @@ icloud
 state.json
 emulated_hue_ids.json
 config.yml
+!*.yaml
+!.gitignore
+!*.md
+.storage
+.cloud
