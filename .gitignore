@@ -41,6 +41,9 @@ __pycache__
 *.pyc
 
 # Other
+!*.yaml
+!*.md
+!.gitignore
 *.uuid
 *.conf
 *.db
@@ -67,11 +70,10 @@ deps
 tts
 www
 icloud
+custom_components
+blueprints
 state.json
 emulated_hue_ids.json
 config.yml
-!*.yaml
-!.gitignore
-!*.md
 .storage
 .cloud
