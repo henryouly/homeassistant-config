@@ -107,7 +107,7 @@ google_assistant:
     - media_player
 
 influxdb:
-  host: localhost
+  host: influxdb
   database: !secret INFLUXDB_DB
   username: !secret INFLUXDB_USER
   password: !secret INFLUXDB_PASSWD
