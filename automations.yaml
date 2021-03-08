@@ -9,11 +9,12 @@
       click_type: single
   condition: []
   action:
-  - service: tts.google_translate_say
+  - service: media_player.play_media
     entity_id: media_player.google_home
     data:
-      message: Lunch is ready
-      cache: true
+      entity_id: media_player.google_home
+      media_content_id: https://jasonsavard.com/sounds/ding.ogg
+      media_content_type: audio/ogg
   mode: single
 - id: '1603049096680'
   alias: Notify me when motion is detected at main entry
@@ -29,8 +30,8 @@
   - service: media_player.play_media
     data:
       entity_id: media_player.google_home
-      media_content_id: https://raw.githubusercontent.com/CCOSTAN/Home-AssistantConfig/master/config/sounds/one-tone-chime.mp3
-      media_content_type: audio/mp4
+      media_content_id: https://jasonsavard.com/sounds/ios.ogg
+      media_content_type: audio/ogg
   mode: single
 - id: '1606525914238'
   alias: When motion is detected in basement, turn on lightstripe

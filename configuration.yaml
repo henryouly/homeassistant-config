@@ -59,6 +59,7 @@ tts:
   cache: true
   cache_dir: /tmp/tts
   time_memory: 300
+  base_url: !secret TTS_BASE_URL
 
 logger:
   default: error
