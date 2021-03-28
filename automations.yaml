@@ -65,3 +65,21 @@
     entity_id: switch.xbox_switch
     domain: switch
   mode: single
+- id: '1615594839919'
+  alias: Notify me when Mi Button Garage is pressed
+  description: ''
+  trigger:
+  - platform: event
+    event_type: xiaomi_aqara.click
+    event_data:
+      entity_id: binary_sensor.mibutton_garage
+      click_type: single
+  condition: []
+  action:
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.google_home
+      media_content_id: https://jasonsavard.com/sounds/ding.ogg
+      media_content_type: audio/ogg
+    entity_id: media_player.google_home
+  mode: single
