@@ -11,10 +11,10 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "device_tracker.henry_phone"
+                                    "entity": "person.henry"
                                 },
                                 {
-                                    "entity": "device_tracker.yingying_phone"
+                                    "entity": "person.yingying"
                                 },
                                 {
                                     "entity": "sensor.andrew_age"
@@ -27,7 +27,7 @@
                         },
                         {
                             "camera_view": "live",
-                            "entity": "camera.entry_way",
+                            "entity": "camera.main",
                             "show_name": true,
                             "show_state": false,
                             "type": "picture-entity"
@@ -69,11 +69,11 @@
                                 {
                                     "cards": [
                                         {
-                                            "entity": "switch.xbox_switch",
+                                            "entity": "switch.bedroom_outlet",
                                             "type": "entity-button"
                                         },
                                         {
-                                            "entity": "light.yeelight_stripe_0x0000000003426916",
+                                            "entity": "light.192_168_2_13",
                                             "type": "entity-button"
                                         },
                                         {
@@ -94,7 +94,7 @@
                                             "type": "entity-button"
                                         },
                                         {
-                                            "entity": "binary_sensor.device_nas",
+                                            "entity": "device_tracker.nas_2",
                                             "show_icon": true,
                                             "show_name": true,
                                             "type": "entity-button"
@@ -156,7 +156,7 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "light.yeelight_stripe_0x0000000003426916"
+                                    "entity": "light.192_168_2_13"
                                 },
                                 {
                                     "entity": "light.gateway_light_04cf8c911730"
@@ -365,19 +365,19 @@
                                     "entity": "binary_sensor.488_myq_gateway"
                                 },
                                 {
-                                    "entity": "binary_sensor.device_antscam_1"
+                                    "entity": "device_tracker.antscam_1"
                                 },
                                 {
-                                    "entity": "binary_sensor.device_antscam_2"
+                                    "entity": "device_tracker.antscam_2"
                                 },
                                 {
-                                    "entity": "binary_sensor.device_nas"
+                                    "entity": "device_tracker.nas_2"
                                 },
                                 {
-                                    "entity": "binary_sensor.device_edimax_switch_1"
+                                    "entity": "device_tracker.edimax_switch_1"
                                 },
                                 {
-                                    "entity": "binary_sensor.device_tplink_switch_2"
+                                    "entity": "device_tracker.edimax_switch_2"
                                 }
                             ],
                             "title": "Status",
@@ -417,6 +417,30 @@
                             "entities": [
                                 {
                                     "entity": "sensor.washer_power"
+                                },
+                                {
+                                    "entity": "sensor.pixel_3_battery_level"
+                                },
+                                {
+                                    "entity": "sensor.battery_158d0000e64642"
+                                },
+                                {
+                                    "entity": "sensor.battery_158d0000e69172"
+                                },
+                                {
+                                    "entity": "sensor.battery_158d0000e86b52"
+                                },
+                                {
+                                    "entity": "sensor.battery_158d0000ee50b6"
+                                },
+                                {
+                                    "entity": "sensor.battery_158d0000ee5125"
+                                },
+                                {
+                                    "entity": "sensor.battery_158d0000ee51d2"
+                                },
+                                {
+                                    "entity": "sensor.battery_158d0003502655"
                                 }
                             ],
                             "title": "Energy",
@@ -512,10 +536,10 @@
                                         {
                                             "entities": [
                                                 {
-                                                    "entity": "device_tracker.henry_phone"
+                                                    "entity": "person.henry"
                                                 },
                                                 {
-                                                    "entity": "device_tracker.yingying_phone"
+                                                    "entity": "person.yingying"
                                                 },
                                                 {
                                                     "entity": "sensor.andrew_age"
@@ -560,7 +584,7 @@
                                         {
                                             "cards": [
                                                 {
-                                                    "entity": "light.yeelight_stripe_0x0000000003426916",
+                                                    "entity": "light.192_168_2_13",
                                                     "type": "light"
                                                 },
                                                 {
