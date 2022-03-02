@@ -1,0 +1,5 @@
+vacuum:
+  - platform: xiaomi_vacuum
+    host: !secret DREAME_VACUUM_HOST
+    token: !secret DREAME_VACUUM_TOKEN
+    name: Dreame
