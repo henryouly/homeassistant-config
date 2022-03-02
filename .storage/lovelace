@@ -61,10 +61,6 @@
                             "number_of_forecasts": "5"
                         },
                         {
-                            "type": "custom:xiaomi-vacuum-card",
-                            "entity": "vacuum.xiaomi_vacuum_cleaner"
-                        },
-                        {
                             "cards": [
                                 {
                                     "cards": [
@@ -73,8 +69,9 @@
                                             "type": "entity-button"
                                         },
                                         {
-                                            "entity": "light.192_168_2_13",
-                                            "type": "entity-button"
+                                            "type": "entity-button",
+                                            "name": "Lightstrip",
+                                            "entity": "light.192_168_2_14"
                                         },
                                         {
                                             "entity": "light.gateway_light_04cf8c911730",
@@ -106,6 +103,75 @@
                             "type": "vertical-stack"
                         },
                         {
+                            "type": "custom:vacuum-card",
+                            "entity": "vacuum.xiaomi_vacuum_cleaner",
+                            "actions": {
+                                "start": {
+                                    "service": "xiaomi_miio.vacuum_clean_segment",
+                                    "service_data": {
+                                        "entity_id": "vacuum.vacuum_cleaner",
+                                        "segments": [
+                                            16,
+                                            20
+                                        ]
+                                    }
+                                }
+                            },
+                            "stats": {
+                                "default": [
+                                    {
+                                        "attribute": "filter_left",
+                                        "unit": "hours",
+                                        "subtitle": "Filter"
+                                    },
+                                    {
+                                        "attribute": "side_brush_left",
+                                        "unit": "hours",
+                                        "subtitle": "Side brush"
+                                    },
+                                    {
+                                        "attribute": "main_brush_left",
+                                        "unit": "hours",
+                                        "subtitle": "Main brush"
+                                    },
+                                    {
+                                        "attribute": "sensor_dirty_left",
+                                        "unit": "hours",
+                                        "subtitle": "Sensors"
+                                    }
+                                ],
+                                "cleaning": [
+                                    {
+                                        "attribute": "cleaned_area",
+                                        "unit": "m2",
+                                        "subtitle": "Cleaning area"
+                                    },
+                                    {
+                                        "attribute": "cleaning_time",
+                                        "unit": "minutes",
+                                        "subtitle": "Cleaning time"
+                                    }
+                                ]
+                            },
+                            "shortcuts": [
+                                {
+                                    "name": "Clean living room",
+                                    "service": "script.clean_living_room",
+                                    "icon": "mdi:sofa"
+                                },
+                                {
+                                    "name": "Clean bedroom",
+                                    "service": "script.clean_bedroom",
+                                    "icon": "mdi:bed-empty"
+                                },
+                                {
+                                    "name": "Clean kitchen",
+                                    "service": "script.clean_kitchen",
+                                    "icon": "mdi:silverware-fork-knife"
+                                }
+                            ]
+                        },
+                        {
                             "type": "horizontal-stack",
                             "cards": [
                                 {
@@ -117,6 +183,11 @@
                                     "entity": "climate.upstairs"
                                 }
                             ]
+                        },
+                        {
+                            "type": "custom:vacuum-card",
+                            "entity": "vacuum.dreame",
+                            "image": "default"
                         }
                     ],
                     "icon": "mdi:home",
@@ -419,9 +490,6 @@
                                     "entity": "sensor.washer_power"
                                 },
                                 {
-                                    "entity": "sensor.pixel_3_battery_level"
-                                },
-                                {
                                     "entity": "sensor.battery_158d0000e64642"
                                 },
                                 {
@@ -458,44 +526,6 @@
                             "entities": [
                                 "binary_sensor.door_window_sensor_158d0000e69172"
                             ]
-                        },
-                        {
-                            "type": "sensor",
-                            "entity": "sensor.pixel_3_battery_level",
-                            "graph": "line"
-                        },
-                        {
-                            "type": "entities",
-                            "entities": [
-                                {
-                                    "entity": "sensor.pi_hole_ads_blocked_today"
-                                },
-                                {
-                                    "entity": "sensor.pi_hole_ads_percentage_blocked_today"
-                                },
-                                {
-                                    "entity": "sensor.pi_hole_dns_queries_cached"
-                                },
-                                {
-                                    "entity": "sensor.pi_hole_dns_queries_forwarded"
-                                },
-                                {
-                                    "entity": "sensor.pi_hole_dns_queries_today"
-                                },
-                                {
-                                    "entity": "sensor.pi_hole_dns_unique_clients"
-                                },
-                                {
-                                    "entity": "sensor.pi_hole_dns_unique_domains"
-                                },
-                                {
-                                    "entity": "sensor.pi_hole_domains_blocked"
-                                },
-                                {
-                                    "entity": "sensor.pi_hole_seen_clients"
-                                }
-                            ],
-                            "title": "Pi-Hole"
                         },
                         {
                             "type": "custom:auto-entities",
