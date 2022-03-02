@@ -32,26 +32,9 @@ recorder:
       - sun
       - camera
       - weather
+      - sensor
+      - binary_sensor
     entities:
-      - sensor.last_boot
-      - sensor.load_1m
-      - sensor.load_5m
-      - sensor.load_15m
-      - sensor.memory_free
-      - sensor.pmu_power
-      - sensor.washer_power
-      - sensor.asuswrt_download_speed
-      - sensor.asuswrt_upload_speed
-      - sensor.asuswrt_download
-      - sensor.asuswrt_upload
-      - sensor.rt_ac68u_bytes_sent
-      - sensor.rt_ac68u_bytes_received
-      - sensor.rt_ac68u_packets_sec_sent
-      - sensor.rt_ac68u_packets_sec_received
-      - sensor.rt_ac68u_kbyte_sec_sent
-      - sensor.rt_ac68u_kbyte_sec_received
-      - sensor.rt_ac68u_packets_sent
-      - sensor.rt_ac68u_packets_received
       - switch.tv_switch
 
 tts:
@@ -106,11 +89,3 @@ google_assistant:
     - switch
     - light
     - media_player
-
-influxdb:
-  host: influxdb
-  database: !secret INFLUXDB_DB
-  username: !secret INFLUXDB_USER
-  password: !secret INFLUXDB_PASSWD
-  tags:
-    source: hass
